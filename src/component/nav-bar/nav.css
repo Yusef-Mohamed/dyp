@@ -152,8 +152,8 @@
 }
 .nav .container .login {
   position: relative;
-  font-size: 1.2em;
-  padding: 8px 12px;
+  font-size: 0.8em;
+  padding: 8px 16px;
   background-color: var(--my-color);
   text-decoration: none;
   border: none;
@@ -187,4 +187,31 @@
   .nav-active {
     left: 13% !important;
   }
+}
+
+.whoWeAre {
+  position: relative;
+}
+
+.whoWeAre:hover div {
+  display: flex;
+}
+
+.whoWeAre div {
+  position: absolute;
+  display: none;
+  gap: 10px;
+  background-color: white;
+  left: 40%;
+  transform: translateX(-50%);
+  z-index: 100;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+
+.whoWeAre div a {
+  font-size: 16px;
+  padding: 8px 16px;
 }/*# sourceMappingURL=nav.css.map */

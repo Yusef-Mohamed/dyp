@@ -1,4 +1,5 @@
 import React from "react";
+import ImageWithPopup from "../../ImageWithPopup/ImageWithPopup";
 
 function EventsSec() {
   return (
@@ -12,38 +13,62 @@ function EventsSec() {
         </p>
       </div>
       <div className="col-sm img-container py-3 px-0">
-        <img
-          src="https://igeniusglobal.com/static/media/IgnitePublicBanner.d8a9f705a6fed0e5d1fd.png"
-          alt=""
-          className="w-100 h-100 my-2 my-sm-0"
+        <ImageWithPopup
+          src={
+            "https://igeniusglobal.com/static/media/IgnitePublicBanner.d8a9f705a6fed0e5d1fd.png"
+          }
+          class={"w-100 h-100 my-2 my-sm-0"}
           style={{ gridColumn: "span 2" }}
+          youtube={
+            "https://youtu.be/tPSHBw_2huc?list=PLDoPjvoNmBAy532K9M_fjiAmrJ0gkCyLJ"
+          }
         />
-        <img
-          src="https://igeniusglobal.com/static/media/egypt-homepage.4ba3b7c2caa0a915893a.png"
-          alt=""
-          className="w-100 h-100 mb-2 mb-sm-0"
+        <ImageWithPopup
+          src={
+            "https://igeniusglobal.com/static/media/egypt-homepage.4ba3b7c2caa0a915893a.png"
+          }
+          class={"w-100 h-100 my-2 my-sm-0"}
+          youtube={
+            "https://youtu.be/tPSHBw_2huc?list=PLDoPjvoNmBAy532K9M_fjiAmrJ0gkCyLJ"
+          }
         />
-        <img
-          src="https://igeniusglobal.com/static/media/womens-gala-homepage.fdeb91479a2f61463bf3.png"
-          alt=""
-          className="w-100 h-100 mb-2 mb-sm-0"
+        <ImageWithPopup
+          src={
+            "https://igeniusglobal.com/static/media/womens-gala-homepage.fdeb91479a2f61463bf3.png"
+          }
+          class={"w-100 h-100 my-2 my-sm-0"}
           style={{ gridRow: "span 2" }}
+          youtube={
+            "https://youtu.be/tPSHBw_2huc?list=PLDoPjvoNmBAy532K9M_fjiAmrJ0gkCyLJ"
+          }
         />
-        <img
-          src="https://igeniusglobal.com/static/media/punta-cana-homepage.a0699ffaee62f8926710.png"
-          alt=""
-          className="w-100 h-100 mb-2 mb-sm-0"
+        <ImageWithPopup
+          src={
+            "https://igeniusglobal.com/static/media/punta-cana-homepage.a0699ffaee62f8926710.png"
+          }
+          class={"w-100 h-100 my-2 my-sm-0"}
+          youtube={
+            "https://youtu.be/tPSHBw_2huc?list=PLDoPjvoNmBAy532K9M_fjiAmrJ0gkCyLJ"
+          }
         />
-        <img
-          src="https://igeniusglobal.com/static/media/jamaica-homepage.379a1caa122c9b392f53.png"
-          alt=""
-          className="w-100 h-100 mb-2 mb-sm-0 "
+        <ImageWithPopup
+          src={
+            "https://igeniusglobal.com/static/media/jamaica-homepage.379a1caa122c9b392f53.png"
+          }
+          class={"w-100 h-100 my-2 my-sm-0"}
+          youtube={
+            "https://youtu.be/tPSHBw_2huc?list=PLDoPjvoNmBAy532K9M_fjiAmrJ0gkCyLJ"
+          }
         />
-        <img
-          src="https://igeniusglobal.com/static/media/island-crete-homepage.a43d175bd44cf3a60e53.png"
-          alt=""
-          className="w-100 h-100 "
+        <ImageWithPopup
+          src={
+            "https://igeniusglobal.com/static/media/island-crete-homepage.a43d175bd44cf3a60e53.png"
+          }
+          class={"w-100 h-100 "}
           style={{ gridColumn: "span 2" }}
+          youtube={
+            "https://youtu.be/tPSHBw_2huc?list=PLDoPjvoNmBAy532K9M_fjiAmrJ0gkCyLJ"
+          }
         />
       </div>
     </div>

@@ -8,6 +8,13 @@ import Home from "./component/Home/Home";
 import Footer from "./component/Footer/Footer";
 import Login from "./component/login/Login"
 import Signin from "./component/sign-in/SignIn"
+import ContactUs from "./component/ContactUs/ContactUs";
+import Polises from "./component/Polises/Polises";
+import Privacy from "./component/Polises/Privacy";
+import Compliance from "./component/Polises/Compliance";
+import Purchaseterms from "./component/Polises/Purchaseterms";
+import Distributoragreement from "./component/Polises/Distributoragreement";
+import Privacypolicy from "./component/Polises/Privacypolicy";
 
 export const AppContext = createContext();
 
@@ -91,6 +98,15 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/sign-in" element={<Signin />} />
+          <Route path="/contact" element={<ContactUs />} />
+          <Route path="/polises" element={<Polises />} />
+          <Route path="/polises/compliance" element={<Compliance />} />
+          <Route path="/polises/purchaseterms" element={<Purchaseterms />} />
+          <Route
+            path="/polises/distributoragreement"
+            element={<Distributoragreement />}
+          />
+          <Route path="/polises/privacypolicy" element={<Privacypolicy />} />
         </Routes>
       </div>
       <Footer />

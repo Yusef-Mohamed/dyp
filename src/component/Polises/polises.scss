@@ -1,0 +1,68 @@
+.policie {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  margin: 0 auto;
+  background-color: transparent;
+  transform: 1s;
+  -webkit-transform: 1s;
+  -moz-transform: 1s;
+  -ms-transform: 1s;
+  -o-transform: 1s;
+  color: white;
+}
+
+.policie img {
+  width: 100px;
+  margin-bottom: 30px;
+}
+.policie h6 {
+  text-align: center;
+}
+
+@media (min-width: 992px) {
+  .policies-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    row-gap: 0px;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+    padding: 20px 0px;
+  }
+  .policie {
+    width: 175px;
+    height: 175px;
+  }
+  .policie img {
+    width: 70px;
+  }
+}
+.policie:hover {
+  background-color: rgb(68, 178, 221);
+}
+.p-border {
+  padding: 20px;
+  border: 2px solid rgb(68, 178, 221);
+}
+.policies-content a {
+  color: blue;
+  text-decoration: underline;
+}
+.policies-content p {
+  margin: 20px 0;
+  line-height: 1.8;
+}
+.policies-content li {
+  margin: 15px 0;
+  line-height: 1.8;
+}
