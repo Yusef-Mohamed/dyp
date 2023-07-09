@@ -8,15 +8,15 @@ const SignIn = () => {
     const [name,setName]=useState("")
     const [email,setEmail]=useState("")
     const [password,setPassword]=useState("")
-    const [phone,setPhone]=useState("")
+    const [confirmPassword,setConfirmPassword]=useState("")
     const {route,setRoute}=useContext(AppContext)
     const {loader,setLoader}=useContext(AppContext)
     const {messageError}=useContext(AppContext)
 const handleName =(e)=>{
     setName(e.target.value)
 }
-const handlePhone =(e)=>{
-    setPhone(e.target.value)
+const handleConfirmPassword =(e)=>{
+    setConfirmPassword(e.target.value)
 }
 const handleEmail =(e)=>{
     setEmail(e.target.value)
@@ -33,21 +33,30 @@ const handleSign = async(e)=>{
     formData.append('name', name);
     formData.append('email', email);
     formData.append('password', password);
-    formData.append('phone', phone);
+    formData.append('passwordConfirm', confirmPassword);
 
     try {
-        const response = await fetch(`${route}/register`, {
+        const response = await fetch(`${route}/auth/signup`, {
           method: 'POST',
-          body: formData,
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            name : name ,
+            email :email ,
+            password : password ,
+            passwordConfirm : confirmPassword
+          })
         })
         .then(res=>res.json())
-        if (response.status=="Success") {
+        if (response.data) {
             setLoader(false)
          history("/login")
+         console.log(response)
         } else {
             setLoader(false)
             console.log(response)
-            messageError(response.errors.error)
+            messageError("Try Again with Another Data")
         }
       } catch (error) {
       
@@ -64,8 +73,8 @@ const handleSign = async(e)=>{
     <span class="signup">Sign Up</span>
     <input type="text" placeholder="Name" value={name} onChange={handleName} class="form--input" /> 
     <input type="email" value={email} onChange={handleEmail} placeholder="Email address" class="form--input" /> 
-    <input type="text" value={phone} onChange={handlePhone} placeholder="Phone Number" class="form--input" /> 
     <input type="password" value={password} onChange={handlePassword} placeholder="Password" class="form--input" />
+    <input type="text" value={confirmPassword} onChange={handleConfirmPassword} placeholder="Confirm Password" class="form--input" /> 
  
 
     <button class="form--submit" type='submit'>

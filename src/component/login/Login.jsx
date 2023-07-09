@@ -25,32 +25,35 @@ const handleSign = async(e)=>{
     e.preventDefault()
     setLoader(true)
 
-    const formData = new FormData();
-   
-    formData.append('email', email);
-    formData.append('password', password);
 
 
     try {
-        const response = await fetch(`${route}/login`, {
+        const response = await fetch(`${route}/auth/login`, {
           method: 'POST',
-          body: formData,
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            email ,password
+          }),
         })
         .then(res=>res.json())
-        if (response.status=="Success") {
+        if (response.token) {
             setLoader(false)
-            sessionStorage.setItem("token",response.token)
-            sessionStorage.setItem("userName",response.user.name)
-            sessionStorage.setItem("userId",response.user.id)
-            sessionStorage.setItem("login",true)
-            sessionStorage.setItem("email",response.user.email)
+            
+            // sessionStorage.setItem("token",response.token)
+            // sessionStorage.setItem("userName",response.user.name)
+            // sessionStorage.setItem("userId",response.user.id)
+            // sessionStorage.setItem("login",true)
+            // sessionStorage.setItem("email",response.user.email)
             setLogin(true)
          
          history("/")
         } else {
             setLoader(false)
           
-            messageError(response.error)
+            messageError(response.message)
+            console.log(response)
         }
       } catch (error) {
       

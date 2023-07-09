@@ -1,9 +1,9 @@
 @import "../helpers/mixins";
 .nav {
-  position: fixed;
+  // position: fixed;
   width: 100%;
   top: 0;
-  z-index: 1000;
+  // z-index: 100;
   background-color: white;
   @include media(mopile) {
     background-color: white;

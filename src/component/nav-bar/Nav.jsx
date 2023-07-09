@@ -62,15 +62,12 @@ const Nav = () => {
             who we are{" "}
           </Link>
 
-          {login ? (
-            <Link onClick={logOut} className="login" to="/login">
-              Log Out
-            </Link>
-          ) : (
+        
+          
             <Link className="login" onClick={showMenu} to="/login">
               Login
             </Link>
-          )}
+          
         </div>
       </div>
     </div>

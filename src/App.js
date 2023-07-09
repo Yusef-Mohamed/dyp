@@ -6,12 +6,14 @@ import React, { useContext } from "react";
 import Nav from "./component/nav-bar/Nav";
 import Home from "./component/Home/Home";
 import Footer from "./component/Footer/Footer";
+import Login from "./component/login/Login"
+import Signin from "./component/sign-in/SignIn"
 
 export const AppContext = createContext();
 
 function App() {
   const [loader, setLoader] = useState(false);
-  const [route, setRoute] = useState("https://edu.welo.org.uk/api");
+  const [route, setRoute] = useState("https://api.wealthmakers-fx.com/api/v1");
   const [showMessage, setShowMessage] = useState(false);
   const [message, setMessage] = useState("");
   const [login, setLogin] = useState(false);
@@ -87,6 +89,8 @@ function App() {
 
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/sign-in" element={<Signin />} />
         </Routes>
       </div>
       <Footer />
