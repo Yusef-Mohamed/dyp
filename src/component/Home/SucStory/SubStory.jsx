@@ -1,4 +1,5 @@
 import React from "react";
+import ImageWithPopup from "../../ImageWithPopup/ImageWithPopup";
 
 function SubStory() {
   return (
@@ -13,25 +14,43 @@ function SubStory() {
       </div>
       <div className="row my-5">
         <div className="col-sm-4 p-0">
-          <img
-            src="https://igeniusglobal.com/static/media/Larger Testimonial thumbnails-03.f700e2795c184d262ee9.png"
-            alt=""
-            className="w-100"
-          />
+          <div className="px-2">
+            <ImageWithPopup
+              src={
+                "https://igeniusglobal.com/static/media/Larger Testimonial thumbnails-03.f700e2795c184d262ee9.png"
+              }
+              class={"w-100 "}
+              youtube={
+                "https://youtu.be/tPSHBw_2huc?list=PLDoPjvoNmBAy532K9M_fjiAmrJ0gkCyLJ"
+              }
+            />
+          </div>
         </div>
         <div className="col-sm-4 p-0">
-          <img
-            src="https://igeniusglobal.com/static/media/Larger Testimonial thumbnails-03.f700e2795c184d262ee9.png"
-            alt=""
-            className="w-100 mx-sm-3 my-3 my-sm-0"
-          />
+          <div className="px-2">
+            <ImageWithPopup
+              src={
+                "https://igeniusglobal.com/static/media/Larger Testimonial thumbnails-03.f700e2795c184d262ee9.png"
+              }
+              class={"w-100 "}
+              youtube={
+                "https://youtu.be/tPSHBw_2huc?list=PLDoPjvoNmBAy532K9M_fjiAmrJ0gkCyLJ"
+              }
+            />
+          </div>
         </div>
         <div className="col-sm-4 p-0">
-          <img
-            src="https://igeniusglobal.com/static/media/Larger Testimonial thumbnails-03.f700e2795c184d262ee9.png"
-            alt=""
-            className="w-100"
-          />
+          <div className="px-2">
+            <ImageWithPopup
+              src={
+                "https://igeniusglobal.com/static/media/Larger Testimonial thumbnails-03.f700e2795c184d262ee9.png"
+              }
+              class={"w-100 "}
+              youtube={
+                "https://youtu.be/tPSHBw_2huc?list=PLDoPjvoNmBAy532K9M_fjiAmrJ0gkCyLJ"
+              }
+            />
+          </div>
         </div>
       </div>
     </div>

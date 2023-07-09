@@ -37,6 +37,30 @@
     font-size: 50px;
   }
 }
+.heading2 {
+  font-size: 25px;
+}
+
+@media (min-width: 576px) {
+  .heading2 {
+    font-size: 30px;
+  }
+}
+@media (min-width: 768px) {
+  .heading2 {
+    font-size: 35px;
+  }
+}
+@media (min-width: 992px) {
+  .heading2 {
+    font-size: 40px;
+  }
+}
+@media (min-width: 1200px) {
+  .heading2 {
+    font-size: 45px;
+  }
+}
 @media (min-width: 576px) {
   .img-container {
     display: grid;

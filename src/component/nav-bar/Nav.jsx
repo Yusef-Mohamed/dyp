@@ -58,8 +58,14 @@ const Nav = () => {
             member benifits
           </Link>
 
-          <Link onClick={showMenu} to="conact">
-            who we are{" "}
+          <Link onClick={showMenu} to="/contact" className="whoWeAre">
+            who we are
+            <div>
+              <Link to={"/polises"}>Polises</Link>
+              <Link to={"/contact"}>ContactUs</Link>
+              <Link to={"/"}>Leadership</Link>
+              <Link to={"/"}>AboutUs</Link>
+            </div>
           </Link>
 
           {login ? (
