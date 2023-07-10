@@ -27,7 +27,7 @@ const Landing = () => {
           init={particlesInit}
           loaded={particlesLoaded}
           options={{
-            fpsLimit: 120,
+            fpsLimit: 80,
             interactivity: {
               events: {
                 onClick: {

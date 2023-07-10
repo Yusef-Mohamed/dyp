@@ -47,9 +47,9 @@ function App() {
   useEffect(() => {
     setUserName(sessionStorage.getItem("userName"));
     setToken(sessionStorage.getItem("token"));
-    setUserId(sessionStorage.getItem("userId"));
+    // setUserId(sessionStorage.getItem("userId"));
     setLogin(sessionStorage.getItem("login"));
-    setUserEmail(sessionStorage.getItem("email"));
+    // setUserEmail(sessionStorage.getItem("email"));
   }, [login]);
 
   return (

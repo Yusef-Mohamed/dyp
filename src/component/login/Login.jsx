@@ -41,12 +41,14 @@ const handleSign = async(e)=>{
         if (response.token) {
             setLoader(false)
             
-            // sessionStorage.setItem("token",response.token)
-            // sessionStorage.setItem("userName",response.user.name)
+            sessionStorage.setItem("token",response.token)
+            sessionStorage.setItem("userName",response.data.name)
             // sessionStorage.setItem("userId",response.user.id)
-            // sessionStorage.setItem("login",true)
+            sessionStorage.setItem("login",true)
+            sessionStorage.setItem("active",response.data.acive)
             // sessionStorage.setItem("email",response.user.email)
             setLogin(true)
+        
          
          history("/")
         } else {
