@@ -64,16 +64,13 @@ const Nav = () => {
               <Link to={"/polises"}>Polises</Link>
               <Link to={"/contact"}>ContactUs</Link>
               <Link to={"/"}>Leadership</Link>
-              <Link to={"/"}>AboutUs</Link>
+              <Link to={"/aboutus"}>AboutUs</Link>
             </div>
           </Link>
 
-        
-          
-            <Link className="login" onClick={showMenu} to="/login">
-              Login
-            </Link>
-          
+          <Link className="login" onClick={showMenu} to="/login">
+            Login
+          </Link>
         </div>
       </div>
     </div>

@@ -4,7 +4,11 @@ import ImageWithPopup from "../ImageWithPopup/ImageWithPopup";
 function Cares() {
   return (
     <div className="content-container row align-items-center py-5">
-      <div className="col-sm p-0">
+      <div
+        className="col-sm p-0"
+        data-aos="fade-right"
+        data-aos-duration="1000"
+      >
         <ImageWithPopup
           src={
             "https://igeniusglobal.com/static/media/newIgeniusHomeOverview.207333d6451a3aa9df30.png"
@@ -13,7 +17,11 @@ function Cares() {
           youtube={"https://youtu.be/SvKDtzJ157M"}
         />
       </div>
-      <div className="col-sm p-0 pl-sm-5">
+      <div
+        className="col-sm p-0 pl-sm-5"
+        data-aos="fade-left"
+        data-aos-duration="1000"
+      >
         <img
           src="https://igeniusglobal.com/static/media/igenius-cares-logo.84fad53572b33833c06b.png"
           alt=""

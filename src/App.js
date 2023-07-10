@@ -6,8 +6,8 @@ import React, { useContext } from "react";
 import Nav from "./component/nav-bar/Nav";
 import Home from "./component/Home/Home";
 import Footer from "./component/Footer/Footer";
-import Login from "./component/login/Login"
-import Signin from "./component/sign-in/SignIn"
+import Login from "./component/login/Login";
+import Signin from "./component/sign-in/SignIn";
 import ContactUs from "./component/ContactUs/ContactUs";
 import Polises from "./component/Polises/Polises";
 import Privacy from "./component/Polises/Privacy";
@@ -15,6 +15,7 @@ import Compliance from "./component/Polises/Compliance";
 import Purchaseterms from "./component/Polises/Purchaseterms";
 import Distributoragreement from "./component/Polises/Distributoragreement";
 import Privacypolicy from "./component/Polises/Privacypolicy";
+import AboutUs from "./component/AboutUS/AboutUs";
 
 export const AppContext = createContext();
 
@@ -107,6 +108,7 @@ function App() {
             element={<Distributoragreement />}
           />
           <Route path="/polises/privacypolicy" element={<Privacypolicy />} />
+          <Route path="/aboutus" element={<AboutUs />} />
         </Routes>
       </div>
       <Footer />
