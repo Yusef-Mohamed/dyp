@@ -1,10 +1,8 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import "./nav.css";
-import { BsFacebook } from "react-icons/bs";
-import { BsInstagram } from "react-icons/bs";
-import { SiGmail } from "react-icons/si";
-import { AiFillLinkedin } from "react-icons/ai";
+import Dropdown from 'react-bootstrap/Dropdown';
+import DropdownButton from 'react-bootstrap/DropdownButton';
 import { AppContext } from "../../App";
 import logo from "../../assets/logs.png";
 const Nav = () => {
@@ -45,12 +43,11 @@ const Nav = () => {
         </div>
       </div>
       <div className="container">
-        <div className="list">
-          <Link to="/">
-            <img src={logo} alt="Logo" />
+      <Link to="/">
+            <img src={logo} alt="Logo"  className="logo"/>
           </Link>
-        </div>
-        <div className="social">
+        <div className="list">
+        
           <Link onClick={showMenu} to="/">
             Home
           </Link>
@@ -58,23 +55,20 @@ const Nav = () => {
             member benifits
           </Link>
 
-          <Link onClick={showMenu} to="/contact" className="whoWeAre">
-            who we are
-            <div>
-              <Link to={"/polises"}>Polises</Link>
-              <Link to={"/contact"}>ContactUs</Link>
-              <Link to={"/"}>Leadership</Link>
-              <Link to={"/"}>AboutUs</Link>
-            </div>
-          </Link>
-
+       
+    <DropdownButton id="dropdown-basic-button" title="who we are">
+      <Dropdown.Item > <Link onClick={showMenu} to={"/polises"}>Polises</Link></Dropdown.Item>
+      <Dropdown.Item  > <Link onClick={showMenu} to={"/contact"}>ContactUs</Link></Dropdown.Item>
+      <Dropdown.Item >   <Link onClick={showMenu} to={"/"}>Leadership</Link></Dropdown.Item>
+      <Dropdown.Item >   <Link onClick={showMenu} to={"/"}>AboutUs</Link></Dropdown.Item>
+    </DropdownButton>
         
           
             <Link className="login" onClick={showMenu} to="/login">
               Login
             </Link>
-          
         </div>
+  
       </div>
     </div>
   );

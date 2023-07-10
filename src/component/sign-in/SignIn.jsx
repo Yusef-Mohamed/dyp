@@ -51,7 +51,7 @@ const handleSign = async(e)=>{
         .then(res=>res.json())
         if (response.data) {
             setLoader(false)
-         history("/login")
+         history("/activate")
          console.log(response)
         } else {
             setLoader(false)

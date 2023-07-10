@@ -15,6 +15,7 @@ import Compliance from "./component/Polises/Compliance";
 import Purchaseterms from "./component/Polises/Purchaseterms";
 import Distributoragreement from "./component/Polises/Distributoragreement";
 import Privacypolicy from "./component/Polises/Privacypolicy";
+import Activate from "./component/activation/Activate";
 
 export const AppContext = createContext();
 
@@ -102,6 +103,7 @@ function App() {
           <Route path="/polises" element={<Polises />} />
           <Route path="/polises/compliance" element={<Compliance />} />
           <Route path="/polises/purchaseterms" element={<Purchaseterms />} />
+          <Route path="/activate" element={<Activate />} />
           <Route
             path="/polises/distributoragreement"
             element={<Distributoragreement />}

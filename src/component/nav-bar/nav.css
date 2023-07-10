@@ -8,6 +8,7 @@
     background-color: white;
     position: fixed;
     top: 0;
+    z-index: 1000;
     border-radius: 0% 0% 51% 49%/10% 10% 24% 32%;
   }
 }
@@ -89,66 +90,49 @@
 .nav .container {
   padding: 10px;
   display: flex;
+  align-items: center;
   position: relative;
   justify-content: space-between;
   min-width: 95%;
 }
 @media (max-width: 767px) {
   .nav .container {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.863);
     border-radius: 20px;
-    width: 70%;
+    max-width: 75%;
+    min-width: 30%;
     padding: 20px;
     position: fixed;
     top: 140px;
     left: -400px;
     transition: 0.3s;
+    flex-direction: column;
+    gap: 30px;
   }
 }
 .nav .container img {
   width: 50px;
 }
 .nav .container .list {
-  gap: 20px;
+  width: 50%;
+  display: flex;
+  gap: 40px;
+  justify-content: center;
   text-transform: capitalize;
   align-items: center;
+}
+.nav .container .list a {
+  text-decoration: none;
+  transition: 0.2s;
+  font-weight: 500;
+  font-size: 18px;
 }
 @media (max-width: 767px) {
   .nav .container .list {
     flex-direction: column;
+    width: 80%;
+    font-weight: 800;
   }
-}
-.nav .container .social {
-  display: flex;
-  background-color: rgb(255, 255, 255);
-  height: 100%;
-  position: absolute;
-  top: 0;
-  right: 0;
-  align-items: center;
-  width: 75%;
-  justify-content: flex-end;
-  display: flex;
-  gap: 40px;
-  color: black;
-  font-size: 20px;
-}
-@media (max-width: 767px) {
-  .nav .container .social {
-    display: none;
-  }
-}
-.nav .container .social a {
-  text-decoration: none;
-  transition: 0.2s;
-  text-transform: capitalize;
-  color: black;
-}
-.nav .container .social svg {
-  transition: 0.2s;
-}
-.nav .container .social svg:hover {
-  color: blue;
 }
 .nav .container .login {
   position: relative;
