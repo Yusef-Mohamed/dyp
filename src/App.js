@@ -17,7 +17,8 @@ import Distributoragreement from "./component/Polises/Distributoragreement";
 import Privacypolicy from "./component/Polises/Privacypolicy";
 import Activate from "./component/activation/Activate";
 import AboutUs from "./component/AboutUS/AboutUs";
-
+import Memberbenifits from "./component/Memberbenifits/Memberbenifits";
+import Leadership from "./component/Leadership/Leadership";
 
 export const AppContext = createContext();
 
@@ -112,6 +113,8 @@ function App() {
           />
           <Route path="/polises/privacypolicy" element={<Privacypolicy />} />
           <Route path="/aboutus" element={<AboutUs />} />
+          <Route path="/memberbenifits" element={<Memberbenifits />} />
+          <Route path="/leadership" element={<Leadership />} />
         </Routes>
       </div>
       <Footer />
