@@ -6,6 +6,8 @@ function Footer() {
       style={{
         background:
           "linear-gradient(rgb(255, 255, 255) 0%, rgba(79, 80, 82, 0.25) 10%, rgba(79, 80, 82, 0.5) 25%, rgb(79, 80, 82) 100%)",
+        position: "relative",
+        zIndex: "3",
       }}
       className="text-white fw-bolder py-4"
     >
