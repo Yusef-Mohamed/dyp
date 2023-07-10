@@ -4,7 +4,11 @@ import ImageWithPopup from "../../ImageWithPopup/ImageWithPopup";
 function Education() {
   return (
     <div className="content-container row align-items-center">
-      <div className="col-sm p-0">
+      <div
+        className="col-sm p-0"
+        data-aos="fade-right"
+        data-aos-duration="1000"
+      >
         <ImageWithPopup
           src={
             "https://igeniusglobal.com/static/media/newIgeniusHomeOverview.207333d6451a3aa9df30.png"
@@ -13,7 +17,11 @@ function Education() {
           youtube={"https://youtu.be/SvKDtzJ157M"}
         />
       </div>
-      <div className="col-sm p-0 pl-sm-5">
+      <div
+        className="col-sm p-0 pl-sm-5"
+        data-aos="fade-left"
+        data-aos-duration="1000"
+      >
         <h2 className="my-4 text-center text-sm-left heading">
           Education & Tools
         </h2>

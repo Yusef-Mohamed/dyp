@@ -10,7 +10,11 @@ function Products() {
       }}
     >
       <div className="content-container row align-items-center py-5">
-        <div className="col-md-5 p-0">
+        <div
+          className="col-md-5 p-0"
+          data-aos="fade-left"
+          data-aos-duration="1000"
+        >
           <h2 className="my-4 text-center text-sm-left heading">Products</h2>
           <div className="border-bottom mx-auto mx-sm-3"></div>
           <p>
@@ -31,51 +35,79 @@ function Products() {
             src="https://igeniusglobal.com/static/media/newUniversityC.4ba4f543d7839f570e17.png"
             alt=""
             className="w-100"
+            data-aos="fade-down"
+            data-aos-duration="1000"
           />
           <img
             src="https://igeniusglobal.com/static/media/newUniversityC.4ba4f543d7839f570e17.png"
             alt=""
             className="w-100"
+            data-aos="fade-down"
+            data-aos-duration="1000"
+            data-aos-delay="300"
           />
           <img
             src="https://igeniusglobal.com/static/media/newUniversityC.4ba4f543d7839f570e17.png"
             alt=""
             className="w-100"
+            data-aos="fade-down"
+            data-aos-duration="1000"
+            data-aos-delay="600"
           />
           <img
             src="https://igeniusglobal.com/static/media/newUniversityC.4ba4f543d7839f570e17.png"
             alt=""
             className="w-100"
+            data-aos="fade-down"
+            data-aos-duration="1000"
+            data-aos-delay="900"
           />
           <img
             src="https://igeniusglobal.com/static/media/newUniversityC.4ba4f543d7839f570e17.png"
             alt=""
             className="w-100"
+            data-aos="fade-down"
+            data-aos-duration="1000"
+            data-aos-delay="1200"
           />
           <img
             src="https://igeniusglobal.com/static/media/newUniversityC.4ba4f543d7839f570e17.png"
             alt=""
             className="w-100"
+            data-aos="fade-down"
+            data-aos-duration="1000"
           />
           <img
             src="https://igeniusglobal.com/static/media/newUniversityC.4ba4f543d7839f570e17.png"
             alt=""
             className="w-100"
+            data-aos="fade-down"
+            data-aos-duration="1000"
+            data-aos-delay="300"
           />
           <img
             src="https://igeniusglobal.com/static/media/newUniversityC.4ba4f543d7839f570e17.png"
             alt=""
             className="w-100"
+            data-aos="fade-down"
+            data-aos-duration="1000"
+            data-aos-delay="600"
           />
           <img
             src="https://igeniusglobal.com/static/media/newUniversityC.4ba4f543d7839f570e17.png"
             alt=""
             className="w-100"
+            data-aos="fade-down"
+            data-aos-duration="1000"
+            data-aos-delay="900"
           />
           <img
             src="https://igeniusglobal.com/static/media/newUniversityC.4ba4f543d7839f570e17.png"
             alt=""
             className="w-100"
+            data-aos="fade-down"
+            data-aos-duration="1000"
+            data-aos-delay="1200"
           />
         </div>
       </div>

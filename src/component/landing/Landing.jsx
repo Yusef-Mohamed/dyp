@@ -42,7 +42,7 @@ const Landing = () => {
         </div>
       </div>
 
-      <div className="container">
+      <div className="container" data-aos="fade-up" data-aos-duration="1000">
         <h1>Live smarter </h1>
         <p>Enhance your lifestyle.</p>
         <button>Get Started</button>
