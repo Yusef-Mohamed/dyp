@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import "./nav.css";
-import Dropdown from 'react-bootstrap/Dropdown';
-import DropdownButton from 'react-bootstrap/DropdownButton';
+import Dropdown from "react-bootstrap/Dropdown";
+import DropdownButton from "react-bootstrap/DropdownButton";
 import { AppContext } from "../../App";
 import logo from "../../assets/logs.png";
 const Nav = () => {
@@ -43,36 +43,48 @@ const Nav = () => {
         </div>
       </div>
       <div className="container">
-      <Link to="/">
-            <img src={logo} alt="Logo"  className="logo"/>
-          </Link>
+        <Link to="/">
+          <img src={logo} alt="Logo" className="logo" />
+        </Link>
         <div className="list">
-        
           <Link onClick={showMenu} to="/">
             Home
           </Link>
-          <Link onClick={showMenu} to="/about-us">
+          <Link onClick={showMenu} to="/memberbenifits">
             member benifits
           </Link>
 
+          <DropdownButton id="dropdown-basic-button" title="who we are">
+            <Dropdown.Item>
+              {" "}
+              <Link onClick={showMenu} to={"/polises"}>
+                Polises
+              </Link>
+            </Dropdown.Item>
+            <Dropdown.Item>
+              {" "}
+              <Link onClick={showMenu} to={"/contact"}>
+                ContactUs
+              </Link>
+            </Dropdown.Item>
+            <Dropdown.Item>
+              {" "}
+              <Link onClick={showMenu} to={"/leadership"}>
+                Leadership
+              </Link>
+            </Dropdown.Item>
+            <Dropdown.Item>
+              {" "}
+              <Link onClick={showMenu} to={"/aboutus"}>
+                AboutUs
+              </Link>
+            </Dropdown.Item>
+          </DropdownButton>
 
-       
-    <DropdownButton id="dropdown-basic-button" title="who we are">
-      <Dropdown.Item > <Link onClick={showMenu} to={"/polises"}>Polises</Link></Dropdown.Item>
-      <Dropdown.Item  > <Link onClick={showMenu} to={"/contact"}>ContactUs</Link></Dropdown.Item>
-      <Dropdown.Item >   <Link onClick={showMenu} to={"/"}>Leadership</Link></Dropdown.Item>
-      <Dropdown.Item >   <Link onClick={showMenu} to={"/aboutus"}>AboutUs</Link></Dropdown.Item>
-    </DropdownButton>
-        
-          
-            <Link className="login" onClick={showMenu} to="/login">
-              Login
-            </Link>
-
-      
-
+          <Link className="login" onClick={showMenu} to="/login">
+            Login
+          </Link>
         </div>
-  
       </div>
     </div>
   );

@@ -1,0 +1,44 @@
+.leaderCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.leaderCard h4 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.leaderCard p {
+  font-size: 16px;
+  line-height: 1.8;
+  text-align: center;
+}
+
+.leaderCard:nth-child(2n) {
+  flex-direction: row-reverse;
+}
+
+.leaderCard img {
+  width: 50vw;
+  height: 50vw;
+}
+
+@media (min-width: 768px) {
+  .leaderCard {
+    flex-direction: row;
+  }
+  .leaderCard:nth-child(2n) {
+    flex-direction: row-reverse;
+  }
+  .leaderCard img {
+    width: 25vw;
+    height: 25vw;
+  }
+  .leaderCard p {
+    text-align: left;
+  }
+}/*# sourceMappingURL=Leadership.css.map */

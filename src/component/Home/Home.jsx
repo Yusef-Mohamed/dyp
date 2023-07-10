@@ -13,14 +13,15 @@ const Home = () => {
   return (
     <div className="home">
       <Landing />
-      <Education />
-
-      <Products />
-      <EventsSec />
-      <Details />
-      <SubStory />
-      <Opportunity />
-      <Cares />
+      <div style={{ position: "relative", zIndex: "2" }}>
+        <Education />
+        <Products />
+        <EventsSec />
+        <Details />
+        <SubStory />
+        <Opportunity />
+        <Cares />
+      </div>
     </div>
   );
 };
