@@ -199,14 +199,12 @@ body {
 }
 
 .whoWeAre:hover div {
-  opacity: 1;
+  display: flex;
 }
 
 .whoWeAre div {
-  opacity: 0;
-  transition: 0.5s ease;
   position: absolute;
-  display: flex;
+  display: none;
   gap: 10px;
   background-color: white;
   left: 0;
@@ -216,10 +214,6 @@ body {
   -moz-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   -o-transform: translateX(-50%);
-  -webkit-transition: 0.5s ease;
-  -moz-transition: 0.5s ease;
-  -ms-transition: 0.5s ease;
-  -o-transition: 0.5s ease;
 }
 
 .whoWeAre div a {
