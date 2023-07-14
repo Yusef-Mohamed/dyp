@@ -74,4 +74,7 @@
   -moz-transition: 0.5s;
   -ms-transition: 0.5s;
   -o-transition: 0.5s;
+}
+.memberbenifits table td img {
+  width: 20px;
 }/*# sourceMappingURL=memberbenifits.css.map */
