@@ -1,0 +1,122 @@
+.courses{
+    padding: 20px;
+    display: flex;
+    width: 95%;
+    margin: auto;
+   flex-direction: column;
+   gap: 20px;
+   
+    .courses-data{
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 20px;
+        border-bottom:1px solid rgb(99, 95, 95);
+        padding-bottom: 15px;
+    }
+    .course{
+        background-color: rgb(202, 194, 194);
+        padding: 10px;
+        cursor: pointer;
+        font-weight: 800;
+        text-transform: capitalize;
+        transition: 0.2s;
+        &:hover{
+        background-color: black;
+        color: white;
+        }
+        .course-active{
+            background-color: black;
+            color: white;
+        }
+    }
+    .content{
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      width: 100%;
+      
+      min-height: 70vh;
+        padding: 10px;
+        position: relative;
+        .recorded{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        h3{
+            background-color: burlywood;
+            padding: 5px 20px;
+            text-transform: capitalize;
+        }
+ 
+        .content-loader{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            z-index: 20;
+        }
+        .chosen{
+            background-color: rgb(189, 188, 186);
+            text-align: center;
+            text-transform: capitalize;
+            font-size: 30px;
+            padding: 40px;
+            width: 100%;
+        }
+        .lesson{
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            border-radius: 10px;
+            overflow: hidden;
+            max-width: 20%;
+            min-width: 20%;
+            background-color: black;
+            color: white;
+            text-align: center;
+            text-transform: capitalize;
+            padding-bottom: 10px;
+            border: 1px solid;
+            max-height: 220px;
+            position: relative;
+            &::after{
+                content: "start";
+                position: absolute;
+                top: -40px;
+                left: 50%;
+                transform: translateX(-50%);
+                background-color: rgb(6, 112, 182);
+                color: white;
+                padding: 5px;
+                border-radius: 10px;
+                transition: 0.2s;
+            }
+            &:hover::after{
+                top: 10px;
+            }
+            img{
+                max-width: 100%;
+                min-width: 100%;
+                max-height: 130px;
+                min-height: 130px;
+                
+          
+            }
+            .button{
+                background-color: rgb(6, 90, 199);
+                width: 50%;
+                margin: auto;
+               border-radius: 5px;
+               cursor: pointer;
+            }
+
+        }
+    }
+      
+}

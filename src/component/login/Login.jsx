@@ -50,7 +50,7 @@ const handleSign = async(e)=>{
             setLogin(true)
         
          
-         history("/")
+         history("/loginHome")
         } else {
             setLoader(false)
           
