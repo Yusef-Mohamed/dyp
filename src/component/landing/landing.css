@@ -1,5 +1,6 @@
 .landing {
   width: 100%;
+  position: relative;
   height: 100vh;
   background: rgb(84, 95, 96);
   background: linear-gradient(0deg, rgb(84, 95, 96) 0%, rgb(0, 0, 0) 94%);
@@ -110,9 +111,9 @@
 }
 .landing .container {
   gap: 30px;
-  height: 100vh;
-  position: relative;
+  margin: 0 auto;
   z-index: 100;
+  height: 100%;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -137,4 +138,13 @@
   padding: 16px 20px;
   width: -moz-fit-content;
   width: fit-content;
+}
+
+.holder {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.249);
 }/*# sourceMappingURL=landing.css.map */
