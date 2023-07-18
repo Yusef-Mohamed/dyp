@@ -1,3 +1,4 @@
+@import "../helpers/mixins";
 .sign{
     height: 85vh;
     .form {
@@ -10,6 +11,13 @@
         align-items: center;
         box-shadow: 5px 5px 15px -1px rgba(0,0,0,0.75);
         margin: 100px auto;
+        @include media(mopile) {
+        
+          width: 80%;
+      
+          
+        
+        }
       }
       
       .signup {

@@ -52,6 +52,7 @@ const handleSign = async(e)=>{
         if (response.data) {
             setLoader(false)
          history("/activate")
+         sessionStorage.setItem("token",response.token)
          console.log(response)
         } else {
             setLoader(false)

@@ -1,6 +1,10 @@
+.App{
+  overflow-x: hidden;
+}
 .container {
   width: 90%;
   margin: auto;
+ 
 }
 ::-webkit-scrollbar {
   height: 12px;

@@ -19,6 +19,8 @@ import Activate from "./component/activation/Activate";
 import AboutUs from "./component/AboutUS/AboutUs";
 import Memberbenifits from "./component/Memberbenifits/Memberbenifits";
 import Leadership from "./component/Leadership/Leadership";
+import LoginHome from "./component/loginHome/LoginHome";
+import Courses from "./component/courses/Courses";
 
 export const AppContext = createContext();
 
@@ -32,6 +34,8 @@ function App() {
   const [userName, setUserName] = useState("");
   const [userId, setUserId] = useState("");
   const [userEmail, setUserEmail] = useState("");
+  const [currentStep, setCurrentStep] = useState("home");
+  const [categoryId, setCategoryId] = useState("");
   useEffect(() => {
     let timeout;
     if (showMessage) {
@@ -48,9 +52,9 @@ function App() {
   useEffect(() => {
     setUserName(sessionStorage.getItem("userName"));
     setToken(sessionStorage.getItem("token"));
-    setUserId(sessionStorage.getItem("userId"));
+    // setUserId(sessionStorage.getItem("userId"));
     setLogin(sessionStorage.getItem("login"));
-    setUserEmail(sessionStorage.getItem("email"));
+    // setUserEmail(sessionStorage.getItem("email"));
   }, [login]);
 
   return (
@@ -71,6 +75,10 @@ function App() {
         setLoader,
         route,
         setRoute,
+        currentStep ,
+        setCurrentStep,
+        categoryId,
+        setCategoryId
       }}
     >
       <div className="App">
@@ -96,7 +104,8 @@ function App() {
           </div>
         ) : null}
 
-        <Nav />
+{login ? null : <Nav />}
+        
 
         <Routes>
           <Route path="/" element={<Home />} />
@@ -115,9 +124,12 @@ function App() {
           <Route path="/aboutus" element={<AboutUs />} />
           <Route path="/memberbenifits" element={<Memberbenifits />} />
           <Route path="/leadership" element={<Leadership />} />
+          <Route path="/loginHome" element={<LoginHome />} />
+          <Route path="/course/64afdcabb76f30db60b23568" element={<Courses />} />
         </Routes>
       </div>
-      <Footer />
+      {login ? null : <Footer />}
+      
     </AppContext.Provider>
   );
 }

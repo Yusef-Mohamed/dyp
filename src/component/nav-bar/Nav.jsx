@@ -53,6 +53,9 @@ const Nav = () => {
           <Link onClick={showMenu} to="/memberbenifits">
             member benifits
           </Link>
+          <Link onClick={showMenu} to={"/leadership"}>
+                Leadership
+              </Link>
 
           <DropdownButton id="dropdown-basic-button" title="who we are">
             <Dropdown.Item>
@@ -69,9 +72,7 @@ const Nav = () => {
             </Dropdown.Item>
             <Dropdown.Item>
               {" "}
-              <Link onClick={showMenu} to={"/leadership"}>
-                Leadership
-              </Link>
+             
             </Dropdown.Item>
             <Dropdown.Item>
               {" "}

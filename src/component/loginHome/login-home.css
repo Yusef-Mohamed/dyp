@@ -1,0 +1,92 @@
+.login-home,
+.courses {
+  display: flex;
+}
+.login-home .side,
+.courses .side {
+  width: 20%;
+  background-color: rgb(64, 64, 65);
+  padding: 20px 0;
+  height: 100vh;
+}
+.login-home .side img,
+.courses .side img {
+  width: 70%;
+  margin: 20px auto;
+  position: relative;
+  left: 50%;
+  height: 100px;
+  transform: translateX(-50%);
+}
+.login-home .side .list,
+.courses .side .list {
+  width: 90%;
+  margin-left: 32px;
+  text-transform: capitalize;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.login-home .side .list div,
+.courses .side .list div {
+  text-decoration: none;
+  color: white;
+  min-width: 200px;
+  font-size: 17px;
+  transition: 0.2s;
+  padding: 8px 12px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+.login-home .side .list div:hover,
+.courses .side .list div:hover {
+  background-color: white;
+  color: black;
+}
+.login-home .container,
+.courses .container {
+  padding: 20px;
+  height: 100vh;
+  overflow-y: scroll;
+  padding: 0;
+}
+.login-home .container .top-nav,
+.courses .container .top-nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 25px;
+  width: 100%;
+  padding: 11px 30px;
+  font-size: 20px;
+  align-items: center;
+  text-transform: capitalize;
+  box-shadow: 1px 1px 10px;
+}
+.login-home .container .top-nav svg,
+.courses .container .top-nav svg {
+  font-size: 30px;
+}
+.login-home .container .top-nav .user,
+.courses .container .top-nav .user {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.login-home .container .top-nav .user button,
+.courses .container .top-nav .user button {
+  text-transform: capitalize;
+}
+.login-home .container .top-nav span,
+.courses .container .top-nav span {
+  transition: 0.2s;
+  padding: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.login-home .container .top-nav span:hover,
+.courses .container .top-nav span:hover {
+  background-color: rgb(129, 127, 124);
+}/*# sourceMappingURL=login-home.css.map */
