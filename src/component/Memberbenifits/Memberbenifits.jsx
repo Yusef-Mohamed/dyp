@@ -1,8 +1,34 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./memberbenifits.css";
 import check from "../../assets/checkmark.svg";
 import x from "../../assets/x.svg";
 function Memberbenifits() {
+  const [data, setData] = useState([]);
+  const [courses, setCourses] = useState([]);
+
+  useEffect(() => {
+    fetch(`https://api.wealthmakers-fx.com/api/v1/education/packages`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        setData(data.data);
+      });
+    fetch(`https://api.wealthmakers-fx.com/api/v1/education/courses`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        setCourses(data.data);
+        console.log(data);
+      });
+  }, []);
   return (
     <div className="memberbenifits">
       <div style={{ backgroundColor: "#ededed" }} className="p-5">
@@ -217,6 +243,34 @@ function Memberbenifits() {
                 <img src={check} alt="check" />
               </td>
             </tr>
+          </tbody>
+        </table>
+        <table>
+          <thead>
+            <tr>
+              <td>Title</td>
+              <td>Description</td>
+              <td>Courses</td>
+              <td>Expiration Time</td>
+              <td>Price</td>
+            </tr>
+          </thead>
+          <tbody>
+            {data?.map((packagee) => (
+              <tr>
+                <td>{packagee.title}</td>
+                <td>{packagee.description}</td>
+                <td>
+                  {/* {packagee.courses.map((e) =>
+                    courses.map((c) => (c._id == e ? `${c.title} &` : ""))
+                  )} */}
+                  {packagee.courses.join("&")}
+                </td>
+                <td>{packagee.expirationTime}</td>
+
+                <td>{packagee.price}</td>
+              </tr>
+            ))}
           </tbody>
         </table>
       </div>
