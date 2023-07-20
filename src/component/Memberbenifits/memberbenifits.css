@@ -77,4 +77,56 @@
 }
 .memberbenifits table td img {
   width: 20px;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  height: 100%;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-swap {
+  width: 400px;
+  min-height: 500px;
+  background: linear-gradient(to top, rgb(23, 161, 196), #007bff);
+  color: white;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.card-swap h1 {
+  font-weight: bold;
+  text-align: center;
+  margin: 20px;
+}
+.card-swap h2 {
+  text-align: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+  padding: 20px;
+  border-bottom: 1px solid #ccc;
+}
+.card-swap p {
+  text-align: center;
+  margin: 20px;
+}
+.card-swap h4 {
+  text-align: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+  padding: 20px;
+  border-bottom: 1px solid #ccc;
 }/*# sourceMappingURL=memberbenifits.css.map */
