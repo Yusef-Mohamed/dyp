@@ -38,6 +38,7 @@ const handleSign = async(e)=>{
           }),
         })
         .then(res=>res.json())
+      
         if (response.token) {
             setLoader(false)
             

@@ -2,6 +2,7 @@ import "./App.css";
 import { Link, Route, Routes } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { createContext } from "react";
+import { useNavigate } from "react-router-dom";
 import React, { useContext } from "react";
 import Nav from "./component/nav-bar/Nav";
 import Home from "./component/Home/Home";
@@ -56,6 +57,8 @@ function App() {
     setLogin(sessionStorage.getItem("login"));
     // setUserEmail(sessionStorage.getItem("email"));
   }, [login]);
+
+
 
   return (
     <AppContext.Provider

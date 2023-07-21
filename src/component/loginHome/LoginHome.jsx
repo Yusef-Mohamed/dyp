@@ -12,6 +12,9 @@ import DropdownButton from 'react-bootstrap/DropdownButton';
 import HomeForKogin from '../homPgaeFOrLogin/HomeForKogin'
 import EduCategs from '../educationCategory/EduCategs'
 import Courses from '../courses/Courses'
+import Analytic from '../analytic/Analytic'
+import Lives from '../lives/Lives'
+import Packages from '../packages/Packages'
 
 const LoginHome = () => {
 const {currentStep,setCurrentStep}=useContext(AppContext)
@@ -27,6 +30,12 @@ const history =useNavigate()
             return <EduCategs />;
           case "courses":
             return <Courses />;
+          case "analytic" :
+             return <Analytic /> ;  
+          case "lives" :
+            return <Lives />
+          case "packages" :
+            return <Packages />
       
          
           default:
@@ -36,6 +45,7 @@ const history =useNavigate()
       const logOut =()=>{
         sessionStorage.clear()
         setLogin(false)
+        sessionStorage.setItem("step","home")
 
       }
       
@@ -68,8 +78,7 @@ const history =useNavigate()
 
             <DropdownButton id="dropdown-basic-button" title={userName}>
       <Dropdown.Item ><Link onClick={logOut} to="/">Log Out</Link></Dropdown.Item>
-      <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-      <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+ 
     </DropdownButton>
             </div>
 

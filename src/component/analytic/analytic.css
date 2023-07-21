@@ -1,0 +1,56 @@
+.analytec {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 50px 0;
+}
+.analytec .post {
+  width: 90%;
+  margin: auto;
+  padding: 15px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: rgb(255, 255, 255);
+}
+.analytec .post button {
+  width: 100px;
+}
+.analytec .post .shared {
+  background-color: var(--my-color);
+  padding: 5px 20px;
+  color: white;
+  text-transform: capitalize;
+  border-radius: 10px;
+}
+.analytec .post img {
+  max-width: 80%;
+  min-width: 80%;
+  min-height: 300px;
+  max-height: 300px;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+.analytec .post label {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  align-items: center;
+}
+.analytec .post label input {
+  width: 60%;
+  padding: 0 10px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 1px 1px 5px;
+}
+.analytec .post label button {
+  background-color: var(--my-color);
+  color: white;
+  text-transform: capitalize;
+  border: none;
+  cursor: pointer;
+}/*# sourceMappingURL=analytic.css.map */
