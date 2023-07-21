@@ -7,7 +7,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCoverflow } from "swiper";
+import { Autoplay, EffectCoverflow } from "swiper";
 
 function Memberbenifits() {
   const [data, setData] = useState([]);
@@ -266,11 +266,25 @@ function Memberbenifits() {
       </div>
       <div className="container">
         <Swiper
+          autoplay={{
+            pauseOnMouseEnter: true,
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
+          breakpoints={{
+            500: {
+              slidesPerView: 1.5,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+          }}
           effect={"coverflow"}
           loop={true}
           grabCursor={true}
           centeredSlides={true}
-          slidesPerView={2}
           coverflowEffect={{
             rotate: 0,
             stretch: 0,
@@ -278,7 +292,7 @@ function Memberbenifits() {
             modifier: 2.5,
             slideShadows: false,
           }}
-          modules={[EffectCoverflow]}
+          modules={[EffectCoverflow, Autoplay]}
           spaceBetween={10}
           pagination={{
             clickable: true,

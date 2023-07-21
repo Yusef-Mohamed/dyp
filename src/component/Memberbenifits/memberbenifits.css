@@ -95,7 +95,6 @@
 .card-swap {
   width: 400px;
   min-height: 500px;
-  background: linear-gradient(to top, rgb(23, 161, 196), #007bff);
   color: white;
   padding: 20px;
   border: 1px solid #ccc;
@@ -129,4 +128,12 @@
   margin: auto;
   padding: 20px;
   border-bottom: 1px solid #ccc;
+}
+
+.swiper-slide .card-swap {
+  background: linear-gradient(to top, rgb(15, 114, 138), #000000);
+}
+
+.swiper-slide-active .card-swap {
+  background: linear-gradient(to top, rgb(23, 161, 196), #007bff);
 }/*# sourceMappingURL=memberbenifits.css.map */
