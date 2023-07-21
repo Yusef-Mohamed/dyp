@@ -84,3 +84,65 @@
     }
   }
 }
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  height: 100%;
+
+  font-size: 18px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-swap {
+  width: 400px;
+  transform: 1s;
+  min-height: 500px;
+  color: white;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  h1: ;
+  -webkit-transform: 1s;
+  -moz-transform: 1s;
+  -ms-transform: 1s;
+  -o-transform: 1s;
+   {
+    font-weight: bold;
+    text-align: center;
+    margin: 20px;
+  }
+  h2 {
+    text-align: center;
+    width: fit-content;
+    margin: auto;
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+  }
+  p {
+    text-align: center;
+    margin: 20px;
+  }
+  h4 {
+    text-align: center;
+    width: fit-content;
+    margin: auto;
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+  }
+}
+.swiper-slide .card-swap {
+  background: linear-gradient(to top, rgb(15, 114, 138), #000000);
+}
+.swiper-slide-active .card-swap {
+  background: linear-gradient(to top, rgb(23, 161, 196), #007bff);
+}
