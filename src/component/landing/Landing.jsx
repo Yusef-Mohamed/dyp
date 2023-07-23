@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import "./landing.css";
+import { Link } from "react-router-dom";
 const Landing = () => {
   const vid = useRef();
   const [loading, setLoading] = useState(true);
@@ -46,7 +47,7 @@ const Landing = () => {
         >
           <h1 className="heading">Live smarter </h1>
           <p className="supheading">Enhance your lifestyle.</p>
-          <button>Get Started</button>
+          <Link to={"/login"}>Get Started</Link>
         </div>
       </div>
     </div>
