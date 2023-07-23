@@ -1,0 +1,64 @@
+.lives {
+  width: 100%;
+  padding: 50px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.lives .live {
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 12px;
+  width: 70%;
+  margin: 0 auto;
+  text-transform: capitalize;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.lives .live .head {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.lives .live .head span {
+  background-color: var(--my-color);
+  padding: 10px;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.2s;
+}
+.lives .live .head span:hover {
+  background-color: rgb(17, 94, 196);
+}
+.lives .live .second {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: rgb(29, 23, 23);
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+.lives .live .start-live {
+  background-color: var(--my-color);
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.lives .live .start-live:hover {
+  background-color: rgb(7, 14, 71);
+}
+.lives .live .prevent-life {
+  background-color: gray;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}/*# sourceMappingURL=lives.css.map */

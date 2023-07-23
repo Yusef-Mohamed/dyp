@@ -1,0 +1,64 @@
+.lives{
+    width: 100%;
+    padding: 50px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    .live{
+        background-color: white;
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 1px 1px 12px;
+        width: 70%;
+        margin: 0 auto;
+        text-transform: capitalize;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        .head{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            span{
+                background-color: var(--my-color);
+                padding: 10px;
+                color: white;
+cursor: pointer;
+border-radius: 5px;
+transition: 0.2s;
+&:hover{
+    background-color: rgb(17, 94, 196);
+}
+            }
+        }
+        .second{
+            display: flex;
+            justify-content: space-evenly;
+            background-color: rgb(29, 23, 23);
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .start-live{
+            background-color: var(--my-color);
+            padding: 10px;
+            border-radius: 10px;
+            text-align: center;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+            &:hover{
+                background-color: rgb(7, 14, 71);
+            }
+        }
+        .prevent-life{
+            background-color: gray;
+            padding: 10px;
+            border-radius: 10px;
+            text-align: center;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+    }
+}

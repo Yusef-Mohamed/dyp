@@ -1,6 +1,7 @@
 .login-home,
 .courses {
   display: flex;
+  background-color: rgb(217, 221, 224);
 }
 .login-home .side,
 .courses .side {
@@ -8,6 +9,7 @@
   background-color: rgb(64, 64, 65);
   padding: 20px 0;
   height: 100vh;
+  overflow-x: hidden;
 }
 .login-home .side img,
 .courses .side img {
@@ -27,8 +29,8 @@
   flex-direction: column;
   gap: 15px;
 }
-.login-home .side .list div,
-.courses .side .list div {
+.login-home .side .list .momo,
+.courses .side .list .momo {
   text-decoration: none;
   color: white;
   min-width: 200px;
@@ -41,10 +43,18 @@
   gap: 10px;
   cursor: pointer;
 }
-.login-home .side .list div:hover,
-.courses .side .list div:hover {
+.login-home .side .list .momo:hover,
+.courses .side .list .momo:hover {
   background-color: white;
   color: black;
+}
+.login-home .side .list h2,
+.courses .side .list h2 {
+  background-color: white;
+  font-size: 25px;
+  padding: 5px 0;
+  text-align: center;
+  border-radius: 10px;
 }
 .login-home .container,
 .courses .container {
@@ -64,6 +74,7 @@
   align-items: center;
   text-transform: capitalize;
   box-shadow: 1px 1px 10px;
+  background-color: white;
 }
 .login-home .container .top-nav svg,
 .courses .container .top-nav svg {

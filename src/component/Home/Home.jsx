@@ -11,13 +11,13 @@ import Cares from "../Cares/Cares";
 import { useNavigate } from "react-router-dom";
 
 const Home = () => {
-  const history =useNavigate()
+ 
 
-useEffect(()=>{
-  window.onpopstate = () => {
-    history("/")
-  };
-},[])
+  
+
+ 
+
+ 
   return (
     <div className="home">
       <Landing />
