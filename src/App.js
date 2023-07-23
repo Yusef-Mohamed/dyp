@@ -22,6 +22,7 @@ import Memberbenifits from "./component/Memberbenifits/Memberbenifits";
 import Leadership from "./component/Leadership/Leadership";
 import LoginHome from "./component/loginHome/LoginHome";
 import Courses from "./component/courses/Courses";
+import {BiLike} from 'react-icons/bi';
 
 export const AppContext = createContext();
 
@@ -29,6 +30,7 @@ function App() {
   const [loader, setLoader] = useState(false);
   const [route, setRoute] = useState("https://api.wealthmakers-fx.com/api/v1");
   const [showMessage, setShowMessage] = useState(false);
+  const [num, setNum] = useState(0);
   const [message, setMessage] = useState("");
   const [login, setLogin] = useState(false);
   const [token, setToken] = useState("");
@@ -37,6 +39,7 @@ function App() {
   const [userEmail, setUserEmail] = useState("");
   const [currentStep, setCurrentStep] = useState("home");
   const [categoryId, setCategoryId] = useState("");
+  const [done,setDone]=useState(false)
   useEffect(() => {
     let timeout;
     if (showMessage) {
@@ -46,6 +49,15 @@ function App() {
     }
     return () => clearTimeout(timeout);
   }, [showMessage]);
+  useEffect(() => {
+    let timeout;
+    if (done) {
+      timeout = setTimeout(() => {
+        setDone(false);
+      }, 1000);
+    }
+    return () => clearTimeout(timeout);
+  }, [done]);
   const messageError = (msg) => {
     setMessage(msg);
     setShowMessage(true);
@@ -81,10 +93,16 @@ function App() {
         currentStep ,
         setCurrentStep,
         categoryId,
-        setCategoryId
+        setCategoryId,
+        num,
+        setNum,
+        done,
+        setDone
       }}
     >
       <div className="App">
+        {done ? <div    data-aos="fade-left"
+          data-aos-duration="500" className="done"><BiLike /></div> : null}
         {showMessage ? <div className="message">{message}</div> : null}
         {loader ? (
           <div className="loader-cont">

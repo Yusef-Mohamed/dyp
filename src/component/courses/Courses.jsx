@@ -5,7 +5,7 @@ import ImageWithPopup from '../ImageWithPopup/ImageWithPopup'
 
 const Courses = () => {
     const {categoryId,setCategoryId,token}=useContext(AppContext)
-    const {route,setRoute}=useContext(AppContext)
+    const {route,setRoute,messageError ,setCurrentStep}=useContext(AppContext)
     const [courses,setCourses]=useState([])
     const [lessons,setLessons]=useState([])
     const [chosen,setChosen]=useState(false)
@@ -22,10 +22,16 @@ const Courses = () => {
         })
         .then(res=>res.json())
         .then(data=>{
+          
             if(data.data){
              setLessons(data.data)  
+             setLoadin(false)
             }
-            setLoadin(false)
+            else{
+              setCurrentStep("packages")
+              messageError("Subscribe to a bundle of courses first")
+              sessionStorage.setItem("step","packages")
+            }
         })
     }
 

@@ -5,6 +5,7 @@ import './lives.css'
 const Lives = () => {
     const {route ,token ,setOnload ,messageError}=useContext(AppContext)
     const [lives, setLives] = useState([]);
+    const [noLives,setNoLves]=useState(false)
 
 
     const followLive =(course ,id)=>{
@@ -35,8 +36,14 @@ const Lives = () => {
           })
           .then((res) => res.json())
           .then((data) => {
-          
-            setLives(data.data);
+console.log(data)   
+if(data.msg == "no lives for you"){
+ setNoLves(true)
+return <div>no lives</div>
+} else{
+        setLives(data.data);
+    
+}      
            
            
           });
@@ -46,6 +53,7 @@ const Lives = () => {
     },[])
   return (
 <div className="lives">
+{noLives ? <div>there is no lives </div> : null}
     {lives.map((live)=>{
         return(
             <div className="live" key={live._id}>

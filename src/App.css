@@ -37,6 +37,18 @@ a {
   font-size: 20px;
   border-radius: 10px;
 }
+.App .done{
+  position: fixed;
+  transition: 0.2s;
+  background-color: rgb(47, 192, 47);
+  padding: 20px;
+  top: 50%;
+  left: 50%;
+  color: white;
+  border-radius: 50%;
+  z-index: 200;
+  font-size: 60px;
+}
 
 .loader-cont {
   position: fixed;

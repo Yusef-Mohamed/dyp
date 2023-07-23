@@ -5,6 +5,7 @@ import {FaUniversity } from 'react-icons/fa';
 import {AiFillHome } from 'react-icons/ai';
 import {SiGoogleanalytics } from 'react-icons/si';
 import {MdLiveTv } from 'react-icons/md';
+import {FaStore } from 'react-icons/fa';
 import {GiPlainDagger} from 'react-icons/gi';
 import { AppContext } from '../../App'
 import { useContext } from 'react';
@@ -29,6 +30,8 @@ const Side = () => {
     <div className='momo' onClick={()=>clickOnSide("lives")}><MdLiveTv/> Lives</div>
     <div className='momo' onClick={()=>clickOnSide("packages")}><GiPlainDagger/> Choose Package</div>
     <h2>store</h2>
+    <div className='momo' onClick={()=>clickOnSide("store")}><FaStore/> Store</div>
+
 
    
 

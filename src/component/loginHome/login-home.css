@@ -90,6 +90,21 @@
 .courses .container .top-nav .user button {
   text-transform: capitalize;
 }
+.login-home .container .top-nav .cart-icon,
+.courses .container .top-nav .cart-icon {
+  position: relative;
+}
+.login-home .container .top-nav .cart-icon .num,
+.courses .container .top-nav .cart-icon .num {
+  position: absolute;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 5px;
+  left: -2px;
+  top: -2px;
+  font-size: 15px;
+}
 .login-home .container .top-nav span,
 .courses .container .top-nav span {
   transition: 0.2s;

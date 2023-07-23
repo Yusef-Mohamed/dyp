@@ -43,15 +43,21 @@ const handleSign = async(e)=>{
             setLoader(false)
             
             sessionStorage.setItem("token",response.token)
+            sessionStorage.setItem("about",response.data.about)
             sessionStorage.setItem("userName",response.data.name)
             // sessionStorage.setItem("userId",response.user.id)
             sessionStorage.setItem("login",true)
             sessionStorage.setItem("active",response.data.acive)
-            // sessionStorage.setItem("email",response.user.email)
+            sessionStorage.setItem("email",response.data.email)
+            sessionStorage.setItem("phone",response.data.phone)
+            sessionStorage.setItem("role",response.data.role)
             setLogin(true)
         
-         
+        
          history("/loginHome")
+         if(response.data.profileImg){
+          sessionStorage.setItem("profile",response.data.profileImg)
+         }
         } else {
             setLoader(false)
           
