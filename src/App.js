@@ -21,6 +21,7 @@ import Memberbenifits from "./component/Memberbenifits/Memberbenifits";
 import Leadership from "./component/Leadership/Leadership";
 import LoginHome from "./component/loginHome/LoginHome";
 import Courses from "./component/courses/Courses";
+import Products from "./component/products/Products";
 
 export const AppContext = createContext();
 
@@ -75,10 +76,10 @@ function App() {
         setLoader,
         route,
         setRoute,
-        currentStep ,
+        currentStep,
         setCurrentStep,
         categoryId,
-        setCategoryId
+        setCategoryId,
       }}
     >
       <div className="App">
@@ -104,8 +105,7 @@ function App() {
           </div>
         ) : null}
 
-{login ? null : <Nav />}
-        
+        {login ? null : <Nav />}
 
         <Routes>
           <Route path="/" element={<Home />} />
@@ -124,12 +124,15 @@ function App() {
           <Route path="/aboutus" element={<AboutUs />} />
           <Route path="/memberbenifits" element={<Memberbenifits />} />
           <Route path="/leadership" element={<Leadership />} />
+          <Route path="/products" element={<Products />} />
           <Route path="/loginHome" element={<LoginHome />} />
-          <Route path="/course/64afdcabb76f30db60b23568" element={<Courses />} />
+          <Route
+            path="/course/64afdcabb76f30db60b23568"
+            element={<Courses />}
+          />
         </Routes>
       </div>
       {login ? null : <Footer />}
-      
     </AppContext.Provider>
   );
 }

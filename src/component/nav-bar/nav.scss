@@ -16,7 +16,6 @@ body {
     z-index: 1000;
     border-radius: 0% 0% 51% 49% / 10% 10% 24% 32%;
     //  height: 100px;
- 
   }
 
   .mop-nav {
@@ -28,7 +27,6 @@ body {
       padding: 7px 0;
       justify-content: space-between;
       align-items: center;
-     
 
       a {
         margin: auto;
@@ -109,7 +107,7 @@ body {
     display: flex;
     align-items: center;
     position: relative;
-    justify-content: space-between;
+    // justify-content: space-between;
     min-width: 95%;
     @include media(mopile) {
       background-color: rgba(255, 255, 255, 0.863);
@@ -128,15 +126,16 @@ body {
       width: 50px;
     }
     .list {
-      width: 50%;
+      width: fit-content;
       display: flex;
+      margin: 0 0 0 auto;
       gap: 40px;
       justify-content: center;
       text-transform: capitalize;
       // font-weight: 800;
       align-items: center;
-    
-      a{
+
+      a {
         text-decoration: none;
         transition: 0.2s;
         font-weight: 500;
@@ -146,11 +145,9 @@ body {
         flex-direction: column;
         width: 80%;
         font-weight: 800;
-        
-      
       }
     }
-    
+
     .login {
       position: relative;
       font-size: 0.8em;
@@ -200,7 +197,6 @@ body {
 .nav-active {
   @include media(mopile) {
     left: 13% !important;
- 
   }
 }
 

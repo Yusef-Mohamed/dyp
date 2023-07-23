@@ -14,7 +14,7 @@ function Education() {
             "https://igeniusglobal.com/static/media/newIgeniusHomeOverview.207333d6451a3aa9df30.png"
           }
           class={"w-100"}
-          youtube={"https://youtu.be/SvKDtzJ157M"}
+          youtube={"https://www.youtube.com/watch?v=PIOjvTJb_G0"}
         />
       </div>
       <div
