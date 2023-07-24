@@ -53,9 +53,12 @@ const Nav = () => {
           <Link onClick={showMenu} to="/memberbenifits">
             member benifits
           </Link>
+          <Link onClick={showMenu} to="/products">
+            Products
+          </Link>
           <Link onClick={showMenu} to={"/leadership"}>
-                Leadership
-              </Link>
+            Leadership
+          </Link>
 
           <DropdownButton id="dropdown-basic-button" title="who we are">
             <Dropdown.Item>
@@ -70,10 +73,7 @@ const Nav = () => {
                 ContactUs
               </Link>
             </Dropdown.Item>
-            <Dropdown.Item>
-              {" "}
-             
-            </Dropdown.Item>
+            <Dropdown.Item> </Dropdown.Item>
             <Dropdown.Item>
               {" "}
               <Link onClick={showMenu} to={"/aboutus"}>

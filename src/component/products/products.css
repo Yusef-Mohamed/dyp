@@ -1,0 +1,27 @@
+.products .swiper-slide img {
+  opacity: 0.5;
+  height: 400px;
+}
+
+.products .swiper-slide img {
+  height: 250px;
+}
+
+@media (min-width: 576px) {
+  .products .swiper-slide img {
+    height: 300px;
+  }
+}
+@media (min-width: 768px) {
+  .products .swiper-slide img {
+    height: 350px;
+  }
+}
+@media (min-width: 992px) {
+  .products .swiper-slide img {
+    height: 400px;
+  }
+}
+.products .swiper-slide-active img {
+  opacity: 1;
+}/*# sourceMappingURL=products.css.map */

@@ -97,7 +97,6 @@ body {
   display: flex;
   align-items: center;
   position: relative;
-  justify-content: space-between;
   min-width: 95%;
 }
 @media (max-width: 767px) {
@@ -119,8 +118,10 @@ body {
   width: 50px;
 }
 .nav .container .list {
-  width: 50%;
+  width: -moz-fit-content;
+  width: fit-content;
   display: flex;
+  margin: 0 0 0 auto;
   gap: 40px;
   justify-content: center;
   text-transform: capitalize;

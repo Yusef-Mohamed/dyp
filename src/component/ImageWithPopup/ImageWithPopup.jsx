@@ -27,6 +27,15 @@ function ImageWithPopup(props) {
           <div>
             <span onClick={() => setIsPop(false)}>X</span>
             <ReactPlayer url={props.youtube} />
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/Qofi4qwhG8M&apikey=AIzaSyB03NB5yW6Dkri9ABeLtiGBesoIRVTP41I"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
           </div>
         </div>
       )}
