@@ -1,6 +1,9 @@
 .App {
   overflow-x: hidden;
 }
+body {
+  top: 0 !important;
+}
 .container {
   width: 90%;
   margin: auto;
@@ -244,23 +247,25 @@ a {
   }
 }
 .skiptranslate {
-  display: none;
+  height: 0;
+  display: none !important;
   color: white;
 }
 .nav .skiptranslate:first-child {
-  display: flex;
+  display: flex !important;
   width: fit-content;
   color: white;
+  height: 100%;
 }
-.nav .skiptranslate:first-child > {
-  display: none;
-}
+
 .skiptranslate span {
+  height: 0;
   display: none;
 }
 .skiptranslate iframe {
 }
 .goog-te-combo {
+  height: 0;
   display: none;
 }
 .goog-te-combo:first-child {
@@ -277,5 +282,6 @@ a {
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
+  height: 100%;
   color: white;
 }
