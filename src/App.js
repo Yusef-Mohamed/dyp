@@ -22,7 +22,7 @@ import Memberbenifits from "./component/Memberbenifits/Memberbenifits";
 import Leadership from "./component/Leadership/Leadership";
 import LoginHome from "./component/loginHome/LoginHome";
 import Courses from "./component/courses/Courses";
-import translate from 'google-translate-api';
+
 
 import {BiLike} from 'react-icons/bi';
 

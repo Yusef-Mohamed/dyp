@@ -5,6 +5,72 @@
   flex-direction: column;
   gap: 20px;
 }
+.profile .my-prods {
+  background-color: white;
+  width: 100%;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 7px;
+  flex-direction: column;
+  box-shadow: 1px 1px 10px;
+  text-align: center;
+  text-transform: capitalize;
+}
+.profile .my-prods .paid-products {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.profile .my-prods .paid-products .pr {
+  width: 25%;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: rgb(255, 254, 254);
+  box-shadow: 1px 1px 5px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding-bottom: 10px;
+}
+.profile .my-prods .paid-products .pr .title {
+  text-transform: capitalize;
+}
+.profile .my-prods .paid-products .pr img {
+  max-width: 100%;
+  min-width: 100%;
+  max-height: 120px;
+  min-height: 120px;
+}
+.profile .my-prods .paid-products .pr .cssbuttons-io-button {
+  display: flex;
+  align-items: center;
+  font-family: inherit;
+  font-weight: 500;
+  width: 75%;
+  font-size: 14px;
+  padding: 9px;
+  color: white;
+  background: #ad5389;
+  background: linear-gradient(0deg, rgb(77, 54, 208) 0%, rgb(132, 116, 254) 100%);
+  border: none;
+  box-shadow: 0 0.7em 1.5em -0.5em rgba(77, 54, 208, 0.7450980392);
+  letter-spacing: 0.05em;
+  border-radius: 20em;
+  margin: 0 auto;
+}
+.profile .my-prods .paid-products .pr .cssbuttons-io-button svg {
+  margin-right: 8px;
+}
+.profile .my-prods .paid-products .pr .cssbuttons-io-button:hover {
+  box-shadow: 0 0.5em 1.5em -0.5em rgba(77, 54, 208, 0.7450980392);
+}
+.profile .my-prods .paid-products .pr .cssbuttons-io-button:active {
+  box-shadow: 0 0.3em 1em -0.5em rgba(77, 54, 208, 0.7450980392);
+}
 .profile .top, .profile .packs {
   background-color: white;
   padding: 15px;
