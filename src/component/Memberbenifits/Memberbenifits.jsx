@@ -78,9 +78,9 @@ function Memberbenifits() {
           {data?.map((packagee) => (
             <SwiperSlide>
               <div className="card-swap">
-                <h1>{packagee.price}$</h1>
+                <h1>{packagee.title}</h1>
+                <h2>{packagee.price}$</h2>
 
-                <h2>{packagee.title}</h2>
                 <p>{packagee.description}</p>
                 {packagee?.courses?.length != 0 ? (
                   <>

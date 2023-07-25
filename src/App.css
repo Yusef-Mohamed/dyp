@@ -1,10 +1,12 @@
-.App{
+.App {
   overflow-x: hidden;
+}
+body {
+  top: 0 !important;
 }
 .container {
   width: 90%;
   margin: auto;
- 
 }
 ::-webkit-scrollbar {
   height: 12px;
@@ -25,7 +27,7 @@ a {
   text-decoration: none;
   color: inherit;
 }
-.App .message{
+.App .message {
   position: fixed;
   top: 40%;
   left: 50%;
@@ -255,4 +257,43 @@ a {
   100% {
     clip-path: inset(0 0 0 100%);
   }
+}
+.skiptranslate {
+  height: 0;
+  display: none !important;
+  color: white;
+}
+.nav .skiptranslate:first-child {
+  display: flex !important;
+  width: fit-content;
+  color: white;
+  height: 100%;
+}
+
+.skiptranslate span {
+  height: 0;
+  display: none;
+}
+.skiptranslate iframe {
+}
+.goog-te-combo {
+  height: 0;
+  display: none;
+}
+.goog-te-combo:first-child {
+  display: block;
+  padding: 10px 15px;
+  background-color: #17a1c4;
+  font-weight: 700;
+  font-size: 20px;
+  margin: 0;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  height: 100%;
+  color: white;
 }
