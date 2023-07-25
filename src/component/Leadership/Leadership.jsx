@@ -15,6 +15,15 @@ function Leadership() {
   });
   return (
     <div>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/w_gBUMIeeBE"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
       <div style={{ backgroundColor: "#ededed" }} className="p-5">
         <p className="container p-3 text-center">
           <b>Our mission </b> is to help people live brilliant lives.

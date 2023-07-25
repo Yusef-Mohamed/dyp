@@ -5,10 +5,10 @@ import Dropdown from "react-bootstrap/Dropdown";
 import DropdownButton from "react-bootstrap/DropdownButton";
 import { AppContext } from "../../App";
 import logo from "../../assets/logs.png";
+import GoogleTranslate from "../../GoogleTranslate";
 const Nav = () => {
   const { login, setLogin } = useContext(AppContext);
   const { messageError } = useContext(AppContext);
-
   const showMenu = () => {
     document.querySelector(".nav .container").classList.toggle("nav-active");
   };
@@ -85,6 +85,7 @@ const Nav = () => {
           <Link className="login" onClick={showMenu} to="/login">
             Login
           </Link>
+          <GoogleTranslate />
         </div>
       </div>
     </div>

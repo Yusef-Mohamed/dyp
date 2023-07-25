@@ -23,6 +23,7 @@ import Leadership from "./component/Leadership/Leadership";
 import LoginHome from "./component/loginHome/LoginHome";
 import Courses from "./component/courses/Courses";
 import Products from "./component/products/Products";
+import GoogleTranslate from "./GoogleTranslate";
 
 export const AppContext = createContext();
 
@@ -58,8 +59,6 @@ function App() {
     setLogin(sessionStorage.getItem("login"));
     // setUserEmail(sessionStorage.getItem("email"));
   }, [login]);
-
-
 
   return (
     <AppContext.Provider
