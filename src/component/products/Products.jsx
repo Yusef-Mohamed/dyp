@@ -13,6 +13,11 @@ function Products() {
     },
     {
       img: "https://igeniusglobal.com/static/media/smartFinance-phone.ad6b723e7fe49807f60e.png",
+      desc: "It is an integrated system and strategy based on understanding golden zones and anticipating future market movements. It is considered one of the most powerful strategies due to its precision in setting targets.",
+      heading: "SK System",
+    },
+    {
+      img: "https://igeniusglobal.com/static/media/smartFinance-phone.ad6b723e7fe49807f60e.png",
       desc: "With the Study Live platform, you will have direct access to a select group of financial market experts, receiving real-time guidance that will assist you in making well-informed and intelligent investment decisions. You will benefit from their in-depth analyses and valuable advice.",
       heading: "Study Live platform",
     },
@@ -34,7 +39,10 @@ function Products() {
   ];
   return (
     <div>
-      <div className="container products" style={{ padding: " 40px 0" }}>
+      <div
+        className="container products"
+        style={{ padding: " 40px 0", height: "330px" }}
+      >
         <Swiper
           autoplay={{
             pauseOnMouseEnter: true,
@@ -46,8 +54,9 @@ function Products() {
               slidesPerView: 2,
               spaceBetween: 20,
             },
-            768: {
+            700: {
               slidesPerView: 3,
+              spaceBetween: 20,
             },
           }}
           effect={"coverflow"}
@@ -68,15 +77,33 @@ function Products() {
           }}
           className="mySwiper"
         >
-          {products.map((e) => (
-            <SwiperSlide>
+          <SwiperSlide>
+            <div className="card-swap2">
               <img
-                src="https://igeniusglobal.com/static/media/crypto%20core.4a596e30482d63913f44.png"
+                src="https://1000logos.net/wp-content/uploads/2016/11/Facebook-logo.png"
                 alt=""
+                className="imagess"
               />
-              <div className="layout" />
-            </SwiperSlide>
-          ))}
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="card-swap2">
+              <img
+                src="https://1000logos.net/wp-content/uploads/2016/11/Facebook-logo.png"
+                alt=""
+                className="imagess"
+              />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="card-swap2">
+              <img
+                src="https://1000logos.net/wp-content/uploads/2016/11/Facebook-logo.png"
+                alt=""
+                className="imagess"
+              />
+            </div>
+          </SwiperSlide>
         </Swiper>
       </div>
       <div style={{ backgroundColor: "#ededed" }} className="p-5">
