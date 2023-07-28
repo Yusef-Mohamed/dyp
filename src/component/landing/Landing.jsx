@@ -31,7 +31,8 @@ const Landing = () => {
           muted
           loop
           src={url}
-          style={{ maxWidth: "100%", height: "100%" }}
+          className="container"
+          style={{ maxWidth: "100%", margin: "0 auto", height: "100%" }}
         ></video>
       </div>
       <div
