@@ -2,15 +2,14 @@
   padding: 0;
   width: 100%;
   position: relative;
-  background: rgb(84, 95, 96);
-  background: linear-gradient(0deg, rgb(84, 95, 96) 0%, rgb(0, 0, 0) 94%);
+  background: white;
 }
 .landing .contain {
   width: 100%;
   position: absolute;
   height: 100%;
 }
-.landing .container {
+.landing .container-landing {
   gap: 30px;
   margin: 0 auto;
   z-index: 100;
@@ -21,11 +20,11 @@
   text-transform: capitalize;
   align-items: center;
 }
-.landing .container h1 {
+.landing .container-landing h1 {
   color: #0fb4ff;
   font-weight: 800;
 }
-.landing .container p {
+.landing .container-landing p {
   color: #0fb4ff;
   text-align: center;
 }
@@ -36,7 +35,6 @@
   width: 100%;
   top: 0;
   right: 0;
-  background-color: rgba(0, 0, 0, 0.249);
 }
 
 .landing .heading {

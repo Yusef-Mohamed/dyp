@@ -1,7 +1,8 @@
-import React, { useCallback, useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./landing.css";
 import { Link } from "react-router-dom";
 const Landing = () => {
+  const conntainer = useRef();
   const vid = useRef();
   const [loading, setLoading] = useState(true);
   const [url, setUrl] = useState("");
@@ -24,23 +25,42 @@ const Landing = () => {
   }, []);
   return (
     <div className={`landing ${loading ? "loading" : ""}`}>
-      <div>
+      <div style={{ width: "100%", overflow: "hidden" }} ref={conntainer}>
         <video
           ref={vid}
           autoPlay
+          className="maaaain"
           muted
           loop
           src={url}
-          style={{ maxWidth: "100%", height: "100%" }}
+          style={{ width: "100%" }}
         ></video>
       </div>
       <div
         className="holder"
         onMouseEnter={(e) => vid.current.pause()}
-        onMouseLeave={(e) => vid.current.play()}
+        onMouseLeave={(e) => {
+          vid.current.play();
+          document.querySelector(".maaaain").style.transformOrigin = `center`;
+          document.querySelector(".maaaain").style.transform = "scale(1)";
+        }}
+        onMouseMove={(e) => {
+          if ("ontouchstart" in window || navigator.maxTouchPoints) {
+            document.querySelector(".maaaain").style.transformOrigin = `center`;
+            document.querySelector(".maaaain").style.transform = "scale(1)";
+          } else {
+            let react = conntainer.current.getBoundingClientRect();
+            const x = e.clientX - react.left;
+            const y = e.clientY - react.top;
+            document.querySelector(
+              ".maaaain"
+            ).style.transformOrigin = `${x}px ${y}px`;
+            document.querySelector(".maaaain").style.transform = "scale(2)";
+          }
+        }}
       >
         <div
-          className="container"
+          className="container-landing"
           data-aos="fade-up"
           style={{ zIndex: "10" }}
           data-aos-duration="1000"
