@@ -3,18 +3,13 @@
   padding: 0;
   width: 100%;
   position: relative;
-  background: rgb(84, 95, 96);
-  background: linear-gradient(
-    0deg,
-    rgba(84, 95, 96, 1) 0%,
-    rgba(0, 0, 0, 1) 94%
-  );
+  background: white;
   .contain {
     width: 100%;
     position: absolute;
     height: 100%;
   }
-  .container {
+  .container-landing {
     gap: 30px;
     margin: 0 auto;
     z-index: 100;
@@ -40,7 +35,6 @@
   width: 100%;
   top: 0;
   right: 0;
-  background-color: rgba(0, 0, 0, 0.249);
 }
 .landing .heading {
   font-size: 30px;
