@@ -81,7 +81,22 @@
         display: flex;
         justify-content: space-between;
         border-radius: 7px;
+        align-items: center;
         box-shadow: 1px 1px 10px;
+        .links{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            text-align: center;
+            a{
+                text-transform: capitalize;
+                background-color: var(--my-color);
+                padding: 5px 10px;
+                color: white;
+                border-radius: 5px;
+                text-decoration: none ;
+            }
+        }
         .img{
             width: 25%;
           

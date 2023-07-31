@@ -51,8 +51,9 @@ const handleSign = async(e)=>{
             sessionStorage.setItem("email",response.data.email)
             sessionStorage.setItem("phone",response.data.phone)
             sessionStorage.setItem("role",response.data.role)
+            sessionStorage.setItem("id",response.data._id)
             setLogin(true)
-        
+       
         
          history("/loginHome")
          if(response.data.profileImg){

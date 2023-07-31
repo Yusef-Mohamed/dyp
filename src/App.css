@@ -1,5 +1,7 @@
 .App {
   overflow-x: hidden;
+  background-color: #edf2f7;
+  min-height: 100vh;
 }
 body {
   top: 0 !important;

@@ -1,11 +1,18 @@
 import React, { useContext, useEffect ,useState} from 'react'
 import { AppContext } from '../../App'
 import './lives.css'
+import 'react-calendar/dist/Calendar.css';
 
+import Calendar  from 'react-calendar';
 const Lives = () => {
     const {route ,token ,setOnload ,messageError}=useContext(AppContext)
     const [lives, setLives] = useState([]);
     const [noLives,setNoLves]=useState(false)
+    const [date ,setDate ]=useState(new Date ())
+
+    const onChange =(date)=>{
+      setDate(date)
+    }
 
 
     const followLive =(course ,id)=>{
@@ -36,7 +43,7 @@ const Lives = () => {
           })
           .then((res) => res.json())
           .then((data) => {
-console.log(data)   
+console.log(data)
 if(data.msg == "no lives for you"){
  setNoLves(true)
 return <div>no lives</div>
@@ -54,8 +61,12 @@ return <div>no lives</div>
   return (
 <div className="lives">
 {noLives ? <div>there is no lives </div> : null}
+{noLives ? null:  <div>
+      <Calendar onChange={onChange} value={date} />
+    </div>}
     {lives.map((live)=>{
         return(
+
             <div className="live" key={live._id}>
                 <div className="head">
                     <div className="creator">instructor : {live.creator.name}</div>

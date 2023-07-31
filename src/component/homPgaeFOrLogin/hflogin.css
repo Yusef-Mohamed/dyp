@@ -63,6 +63,32 @@
   border: none;
   box-shadow: 1px 1px 5px;
 }
+.home-for-login .second .left .post label .file-input-wrapper {
+  position: relative;
+  display: inline-block;
+  padding: 0;
+}
+.home-for-login .second .left .post label #file-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+.home-for-login .second .left .post label .custom-file-button {
+  display: inline-block;
+  padding: 5px;
+  font-size: 11px;
+  text-align: center;
+  text-transform: capitalize;
+  margin: auto;
+  color: #fff;
+  background-color: #007bff;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
 .home-for-login .second .left .post label button {
   background-color: var(--my-color);
   color: white;
@@ -85,19 +111,25 @@
   text-align: center;
   padding: 5px 0 !important;
 }
-.home-for-login .second .right a {
+.home-for-login .second .right .add {
   width: 85%;
   margin: 10px auto !important;
-  padding: 15px;
+  padding: 5px;
   border: 1px solid;
   border-radius: 10px;
   margin: auto;
 }
-.home-for-login .second .right a img {
+.home-for-login .second .right .add .tit {
+  text-align: center;
+  text-transform: capitalize;
+  padding: 5px 0;
+}
+.home-for-login .second .right .add img {
   min-height: 220px;
   max-height: 220px;
   min-width: 100%;
   max-width: 100%;
+  border-radius: 5px;
 }
 
 .comment {

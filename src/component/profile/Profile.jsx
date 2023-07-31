@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import './profile.css'
 import profile from "../../assets/profile.png"
 import { AppContext } from '../../App'
+import { Link } from 'react-router-dom'
 
 const Profile = () => {
     const [packs,setPacks]=useState([])
@@ -19,7 +20,11 @@ fetch(`${route}/education/packages/myPackages`,{
     }
 })
 .then(res=>res.json())
-.then(data=>setPacks(data.packages))
+.then(data=>{
+    console.log(data)
+    setPacks(data.packages)})
+
+    
 fetch(`${route}/store/products/MyProducts`,{
     headers:{
         Authorization : `Bearer ${sessionStorage.getItem("token")}`
@@ -35,6 +40,11 @@ fetch(`${route}/store/products/MyProducts`,{
           
             {sessionStorage.getItem("profile") ? <img src={sessionStorage.getItem("profile")} /> : <img src={profile} />}
         </div>
+        <div className="links">
+        <Link to="edit">edit profile</Link>
+        <Link to="edit">change password</Link>
+
+        </div>
         <div className="info">
             <h3>{sessionStorage.getItem("userName")}</h3>
             <div> {sessionStorage.getItem("role")}</div>
@@ -44,14 +54,14 @@ fetch(`${route}/store/products/MyProducts`,{
     </div>
         <h3>My Packages</h3>
     <div className="packs">
-{packs.map((pack)=>{
+{/* {packs.map((pack)=>{
     return(
         <div className="pack" key={pack._id}>
             <img src={pack.image} alt="" />
             <div>{pack.title}</div>
         </div>
     )
-})}
+})} */}
     </div>
     <div className="my-prods">
         <h3>My Products</h3>

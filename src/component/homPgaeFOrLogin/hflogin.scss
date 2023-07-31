@@ -59,6 +59,35 @@
                     border: none;
                     box-shadow: 1px 1px 5px;
                 }
+                .file-input-wrapper {
+                    position: relative;
+                    display: inline-block;
+               
+                    padding: 0;
+                  }
+                  
+                  #file-input {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    opacity: 0;
+                    cursor: pointer;
+                  }
+                  
+                  .custom-file-button {
+                    display: inline-block;
+                    padding:5px;
+                    font-size: 11px;
+                    text-align: center;
+                    text-transform: capitalize;
+                    margin: auto;
+                    color: #fff;
+                    background-color: #007bff;
+                    border-radius: 0.25rem;
+                    cursor: pointer;
+                  }
                 button{
                     background-color: var(--my-color);
                     color: white;
@@ -84,19 +113,25 @@ border-radius: 15px;
 text-align: center;
 padding: 5px 0 !important;
         }
-        a{
+        .add{
             width: 85%;
           
             margin: 10px auto !important;
-            padding: 15px;
+            padding: 5px;
             border: 1px solid;
             border-radius: 10px;
             margin: auto;
+            .tit{
+                text-align: center;
+                text-transform: capitalize;
+                padding: 5px 0;
+            }
             img{
                 min-height: 220px;
                 max-height: 220px;
                 min-width: 100%;
                 max-width: 100%;
+                border-radius: 5px;
                 
             }
         }

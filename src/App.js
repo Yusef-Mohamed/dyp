@@ -28,6 +28,7 @@ import {BiLike} from 'react-icons/bi';
 
 import Products from "./component/products/Products";
 import GoogleTranslate from "./GoogleTranslate";
+import Edit from "./component/edit-profile/Edit";
 
 
 export const AppContext = createContext();
@@ -151,6 +152,7 @@ function App() {
           <Route path="/leadership" element={<Leadership />} />
           <Route path="/products" element={<Products />} />
           <Route path="/loginHome" element={<LoginHome />} />
+          <Route path="/loginHome/edit" element={<Edit />} />
           <Route
             path="/course/64afdcabb76f30db60b23568"
             element={<Courses />}

@@ -45,10 +45,15 @@ const Analytic = () => {
     const [comments,setComments]=useState([])
     const [commentContentt,setCommentContent]=useState("")
     const [modalShow, setModalShow] = React.useState(false);
+
+    const [postId,setPostId]=useState("")
+
+    const handleCommentContent =(e ,id)=>{
+      setPostId(id)
+      setCommentContent(e.target.value)
+    }
   
-  const handleCommentContent =(e)=>{
-    setCommentContent(e.target.value)
-  }
+ 
   
   const getComments =(id)=>{
     fetch(`${route}/analytic/posts/${id}/postComments`,{
@@ -122,7 +127,10 @@ const Analytic = () => {
         Comments
       </Button>
               <label htmlFor="">
-                <input type="text" placeholder='Add Comment' value={commentContentt} onChange={handleCommentContent} />  <button onClick={()=>createComment(post._id)}>share</button></label>
+              <input type="text" placeholder='Add Comment' value={ postId === post._id ? commentContentt : ""} 
+                onChange={ (e)=> handleCommentContent(e,post._id )} />  
+                
+                 <button onClick={()=>createComment(post._id)}>share</button></label>
             </div>
           )
         })}
