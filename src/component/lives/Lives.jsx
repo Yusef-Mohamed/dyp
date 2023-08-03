@@ -2,6 +2,8 @@ import React, { useContext, useEffect ,useState} from 'react'
 import { AppContext } from '../../App'
 import './lives.css'
 import 'react-calendar/dist/Calendar.css';
+import Carousel from 'react-bootstrap/Carousel';
+import logo from "../../assets/logs.png";
 
 import Calendar  from 'react-calendar';
 const Lives = () => {
@@ -12,6 +14,10 @@ const Lives = () => {
 
     const onChange =(date)=>{
       setDate(date)
+      console.log(date)
+      fetch(`${route}/education/lives/searchByDate/:${date}`)
+      .then(res=>res.json())
+      .then(data=>console.log(data))
     }
 
 
@@ -60,6 +66,32 @@ return <div>no lives</div>
     },[])
   return (
 <div className="lives">
+<Carousel>
+      <Carousel.Item interval={1000}>
+        <img
+          className="d-block w-100"
+          src={logo}
+          alt="First slide"
+        />
+       
+      </Carousel.Item>
+      <Carousel.Item interval={700}>
+        <img
+          className="d-block w-100"
+          src={logo}
+          alt="Second slide"
+        />
+
+      </Carousel.Item>
+      <Carousel.Item interval={700}>
+        <img
+          className="d-block w-100"
+          src={logo}
+          alt="Third slide"
+        />
+   
+      </Carousel.Item>
+    </Carousel>
 {noLives ? <div>there is no lives </div> : null}
 {noLives ? null:  <div>
       <Calendar onChange={onChange} value={date} />

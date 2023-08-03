@@ -6,6 +6,15 @@
   flex-wrap: wrap;
   gap: 30px;
 }
+.edu-categ .carousel {
+  width: 98% !important;
+  border-radius: 10px;
+  margin: 20px auto;
+}
+.edu-categ .carousel img {
+  width: 100% !important;
+  height: 150px !important;
+}
 .edu-categ .category {
   width: 30%;
   height: 200px;

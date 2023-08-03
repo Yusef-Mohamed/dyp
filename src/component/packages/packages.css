@@ -5,6 +5,15 @@
   flex-direction: column;
   gap: 25px;
 }
+.packages .carousel {
+  width: 90% !important;
+  border-radius: 10px;
+  margin: 20px auto;
+}
+.packages .carousel img {
+  width: 100% !important;
+  height: 150px !important;
+}
 .packages .card {
   width: 70%;
   height: 254px;

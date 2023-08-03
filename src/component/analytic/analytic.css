@@ -5,6 +5,15 @@
   gap: 20px;
   padding: 50px 0;
 }
+.analytec .carousel {
+  width: 90% !important;
+  border-radius: 10px;
+  margin: 20px auto;
+}
+.analytec .carousel img {
+  width: 100% !important;
+  height: 150px !important;
+}
 .analytec .post {
   width: 90%;
   margin: auto;

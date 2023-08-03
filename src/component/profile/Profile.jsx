@@ -8,6 +8,7 @@ const Profile = () => {
     const [packs,setPacks]=useState([])
     const [paid,setPaid]=useState([])
     const {route}=useContext(AppContext)
+    const [sub,setSub]=useState(true)
 
     const downloadBook= (url)=>{
         window.location.href = url;
@@ -21,17 +22,27 @@ fetch(`${route}/education/packages/myPackages`,{
 })
 .then(res=>res.json())
 .then(data=>{
-    console.log(data)
+    
+    if(data.message =="you are not subscribed to any package"){
+        setSub(false)
+    }
     setPacks(data.packages)})
 
-    
+      
 fetch(`${route}/store/products/MyProducts`,{
     headers:{
         Authorization : `Bearer ${sessionStorage.getItem("token")}`
     }
 })
 .then(res=>res.json())
-.then(data=>setPaid(data.data))
+.then(data=>
+    {
+        if(data.status == "fail"){
+            setSub(false)
+        }
+        setPaid(data.data)
+  
+})
     },[])
   return (
 <div className="profile">
@@ -42,7 +53,7 @@ fetch(`${route}/store/products/MyProducts`,{
         </div>
         <div className="links">
         <Link to="edit">edit profile</Link>
-        <Link to="edit">change password</Link>
+        <Link to="password">change password</Link>
 
         </div>
         <div className="info">
@@ -53,17 +64,17 @@ fetch(`${route}/store/products/MyProducts`,{
         </div>
     </div>
         <h3>My Packages</h3>
-    <div className="packs">
-{/* {packs.map((pack)=>{
+{sub ?  <div className="packs">
+{packs.map((pack)=>{
     return(
         <div className="pack" key={pack._id}>
             <img src={pack.image} alt="" />
             <div>{pack.title}</div>
         </div>
     )
-})} */}
-    </div>
-    <div className="my-prods">
+})}
+    </div> : null}
+  {sub ?   <div className="my-prods">
         <h3>My Products</h3>
         <div className="paid-products">
         {paid.map((pro ,index)=>{
@@ -81,7 +92,7 @@ fetch(`${route}/store/products/MyProducts`,{
     )
 })}
         </div>
-    </div>
+    </div> : null}
 </div>
   )
 }

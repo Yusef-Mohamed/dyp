@@ -8,12 +8,16 @@ const SignIn = () => {
     const [name,setName]=useState("")
     const [email,setEmail]=useState("")
     const [password,setPassword]=useState("")
+    const [country,setCountry]=useState("")
     const [confirmPassword,setConfirmPassword]=useState("")
     const {route,setRoute}=useContext(AppContext)
     const {loader,setLoader}=useContext(AppContext)
     const {messageError}=useContext(AppContext)
 const handleName =(e)=>{
     setName(e.target.value)
+}
+const handleCountry =(e)=>{
+    setCountry(e.target.value)
 }
 const handleConfirmPassword =(e)=>{
     setConfirmPassword(e.target.value)
@@ -32,6 +36,7 @@ const handleSign = async(e)=>{
     const formData = new FormData();
     formData.append('name', name);
     formData.append('email', email);
+    formData.append('country', country);
     formData.append('password', password);
     formData.append('passwordConfirm', confirmPassword);
 
@@ -44,6 +49,7 @@ const handleSign = async(e)=>{
           body: JSON.stringify({
             name : name ,
             email :email ,
+            country : country ,
             password : password ,
             passwordConfirm : confirmPassword
           })
@@ -74,6 +80,7 @@ const handleSign = async(e)=>{
     <span class="signup">Sign Up</span>
     <input type="text" placeholder="Name" value={name} onChange={handleName} class="form--input" /> 
     <input type="email" value={email} onChange={handleEmail} placeholder="Email address" class="form--input" /> 
+    <input type="text" value={country} onChange={handleCountry} placeholder="Egypt" class="form--input" /> 
     <input type="password" value={password} onChange={handlePassword} placeholder="Password" class="form--input" />
     <input type="text" value={confirmPassword} onChange={handleConfirmPassword} placeholder="Confirm Password" class="form--input" /> 
  

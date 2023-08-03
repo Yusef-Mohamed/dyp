@@ -5,6 +5,15 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 30px;
+    .carousel{
+        width: 98% !important;
+        border-radius: 10px;
+        margin: 20px auto;
+        img{
+             width: 100% !important;
+             height: 150px !important;
+        }
+    }
     .category{
         width: 30%;
         height: 200px;

@@ -5,6 +5,15 @@
     flex-direction: column;
     gap: 15px;
     overflow-y: scroll;
+    .carousel{
+      width: 90% !important;
+      border-radius: 10px;
+      margin: 20px auto;
+      img{
+           width: 100% !important;
+           height: 150px !important;
+      }
+  }
     .cats{
        
         width: 100%;

@@ -4,6 +4,8 @@ import { AppContext } from '../../App';
 import Button from 'react-bootstrap/Button';
 import './analytic.css'
 import Modal from 'react-bootstrap/Modal';
+import Carousel from 'react-bootstrap/Carousel';
+import logo from "../../assets/logs.png";
 
 function MyVerticallyCenteredModal(props) {
 
@@ -21,15 +23,18 @@ function MyVerticallyCenteredModal(props) {
         </Modal.Header>
         <Modal.Body>
       
-       {props.comments.map((comment)=>{
-        return(
-          <div className="comment" key={comment._id}>
-            <div className="user">{comment.user.name} :</div>
-            <div className="cont">{comment.content}</div>
-            
-          </div>
-        )
-       })}
+        {props.comments.map((comment)=>{
+      return(
+       <div className="comment" key={comment._id}>
+         {/* <div className="user">{comment.user.name} </div>  */}
+        <div className="cont">{comment.content}</div>
+
+        {comment.image ? <img src={comment.image} /> : null}
+        
+      </div>
+    
+      )
+     })} 
         </Modal.Body>
         <Modal.Footer>
           <Button onClick={props.onHide}>Close</Button>
@@ -117,6 +122,32 @@ const Analytic = () => {
         onHide={() => setModalShow(false)}
         comments={comments}
       />
+          <Carousel>
+      <Carousel.Item interval={1000}>
+        <img
+          className="d-block w-100"
+          src={logo}
+          alt="First slide"
+        />
+       
+      </Carousel.Item>
+      <Carousel.Item interval={700}>
+        <img
+          className="d-block w-100"
+          src={logo}
+          alt="Second slide"
+        />
+
+      </Carousel.Item>
+      <Carousel.Item interval={700}>
+        <img
+          className="d-block w-100"
+          src={logo}
+          alt="Third slide"
+        />
+   
+      </Carousel.Item>
+    </Carousel>
 {posts.map((post)=>{
           return(
             <div className="post" key={post._id}>

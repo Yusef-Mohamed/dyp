@@ -3,6 +3,8 @@ import './store.css'
 import { useEffect ,useState} from 'react'
 import { AppContext } from '../../App'
 import Loader from '../loader/Loader'
+import Carousel from 'react-bootstrap/Carousel';
+import logo from "../../assets/logs.png";
 const Store = () => {
 const {route ,token ,setNum ,setDone}=useContext(AppContext)
 const [products,setProducts]=useState([])
@@ -87,6 +89,32 @@ const all =()=>{
     },[])
   return (
     <div className="store">
+            <Carousel>
+      <Carousel.Item interval={1000}>
+        <img
+          className="d-block w-100"
+          src={logo}
+          alt="First slide"
+        />
+       
+      </Carousel.Item>
+      <Carousel.Item interval={700}>
+        <img
+          className="d-block w-100"
+          src={logo}
+          alt="Second slide"
+        />
+
+      </Carousel.Item>
+      <Carousel.Item interval={700}>
+        <img
+          className="d-block w-100"
+          src={logo}
+          alt="Third slide"
+        />
+   
+      </Carousel.Item>
+    </Carousel>
         <div className="cats">
        
         

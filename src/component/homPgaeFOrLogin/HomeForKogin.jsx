@@ -21,17 +21,25 @@ function MyVerticallyCenteredModal(props) {
           Comments
         </Modal.Title>
       </Modal.Header>
-      <Modal.Body>
-    
-     {props.comments.map((comment)=>{
+      <Modal.Body>       
+        
+         {props.comments.map((comment)=>{
       return(
-        <div className="comment" key={comment._id}>
-          <div className="user">{comment.user.name} :</div>
-          <div className="cont">{comment.content}</div>
-          
-        </div>
+       <div className="comment" key={comment._id}>
+         {/* <div className="user">{comment.user.name} </div>  */}
+        <div className="cont">{comment.content}</div>
+
+        {comment.image ? <img src={comment.image} /> : null}
+        
+      </div>
+    
       )
-     })}
+     })} 
+ 
+
+     
+    
+ 
       </Modal.Body>
       <Modal.Footer>
         <Button onClick={props.onHide}>Close</Button>
@@ -67,13 +75,14 @@ const handleImageChange = (event) => {
 const getComments =(id)=>{
   fetch(`${route}/analytic/posts/${id}/postComments`,{
     headers:{
-      
       "Authorization" : `Bearer ${token}`
     }
   })
   .then(res=>res.json())
-  .then(data=>{setComments(data.data)
-  console.log(data.data)
+  .then(data=>{
+    setComments(data.data)
+    console.log(data.data)
+ 
   })
 
   setModalShow(true)
@@ -81,7 +90,9 @@ const getComments =(id)=>{
 }
 const createComment =(id)=>{
   setLoader(true)
+  console.log(id)
   const formData = new FormData();
+  formData.append("post", id);
     formData.append("content", commentContentt);
     if(profileImg){
       formData.append("image", profileImg, profileImg.name);
@@ -89,14 +100,14 @@ const createComment =(id)=>{
   fetch(`${route}/analytic/postComments`,{
     method:"POST" ,
     headers:{
-      'Content-Type': 'application/json' ,
+     
       "Authorization" : `Bearer ${token}`
     },
     body:formData
   })
   .then(res=>res.json())
   .then(data=>{
-    console.log(data)
+
   if(data.data){
     setCommentContent("")
     setLoader(false)
@@ -130,11 +141,7 @@ fetch(`${route}/advertisements`,{
   },[])
   return (
   <div className="home-for-login">
-       <MyVerticallyCenteredModal
-        show={modalShow}
-        onHide={() => setModalShow(false)}
-        comments={comments}
-      />
+  
     <Carousel>
       <Carousel.Item interval={1000}>
         <img
@@ -161,6 +168,12 @@ fetch(`${route}/advertisements`,{
    
       </Carousel.Item>
     </Carousel>
+
+    <MyVerticallyCenteredModal
+        show={modalShow}
+        onHide={() => setModalShow(false)}
+        comments={comments}
+      />
     <div className="second">
       <div className="left">
         {posts.map((post)=>{

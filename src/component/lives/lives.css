@@ -5,6 +5,15 @@
   flex-direction: column;
   gap: 12px;
 }
+.lives .carousel {
+  width: 90% !important;
+  border-radius: 10px;
+  margin: 20px auto;
+}
+.lives .carousel img {
+  width: 100% !important;
+  height: 150px !important;
+}
 .lives .react-calendar {
   border-radius: 10px;
   width: 90% !important;

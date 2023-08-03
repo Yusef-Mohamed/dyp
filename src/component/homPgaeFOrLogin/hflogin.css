@@ -135,6 +135,16 @@
 .comment {
   background-color: antiquewhite;
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 7px;
   text-transform: capitalize;
+  margin-top: 10px;
+  width: 100%;
+}
+.comment img {
+  max-width: 350px;
+  min-width: 350px;
+  min-height: 350px;
+  max-height: 350px;
+  margin: 15px 25%;
+  border-radius: 10px;
 }/*# sourceMappingURL=hflogin.css.map */

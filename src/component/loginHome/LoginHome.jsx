@@ -23,7 +23,7 @@ import Cart from '../cart/Cart'
 const LoginHome = () => {
 const {currentStep,setCurrentStep}=useContext(AppContext)
 const {userName, setUserName ,route , num,setNum}=useContext(AppContext)
-const {login, setLogin}=useContext(AppContext)
+const {login, setLogin ,token}=useContext(AppContext)
 
 const history =useNavigate()
 
@@ -57,6 +57,12 @@ const history =useNavigate()
         sessionStorage.clear()
         setLogin(false)
         sessionStorage.setItem("step","home")
+        fetch(`${route}/auth/logout`,{
+          headers : {
+            Authorization : `Bearer ${token}`
+          }
+        })
+     
 
       }
       

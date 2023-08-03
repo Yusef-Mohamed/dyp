@@ -77,6 +77,12 @@ function EditUser() {
         if (data.data) {
             sessionStorage.clear()
           nav("/login");
+          fetch(`${route}/auth/logout`,{
+            headers : {
+              Authorization : `Bearer ${token}`
+            }
+          })
+       
         }
         setLoader(false);
       })

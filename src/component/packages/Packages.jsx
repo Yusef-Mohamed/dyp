@@ -1,7 +1,8 @@
 import React, { useState,useEffect, useContext } from 'react'
 import './packages.css'
 import { AppContext } from '../../App'
-
+import Carousel from 'react-bootstrap/Carousel';
+import logo from "../../assets/logs.png";
 const Packages = () => {
     const [packs,setPacks]=useState([])
     const [copon,setCopon]=useState("")
@@ -9,7 +10,7 @@ const Packages = () => {
 
 
     const buyPack =(id)=>{
-      
+      setLoader(true)
       fetch(`${route}/education/orders/checkout-session/${id}`, {
         method: "PUT",
         headers: {
@@ -17,12 +18,20 @@ const Packages = () => {
           Authorization: `Bearer ${token}`,
         },
         body : JSON.stringify({
-          coupon : "Dwd"
+          coupon : copon
         })
     
       })
       .then(res=>res.json())
-      .then(data=>console.log(data))
+      .then(data=>{
+        if(data.status=='success'){
+          window.location.href=data.session.url
+          setLoader(false)
+        }
+     
+
+        console.log(data)
+      })
     }
     useEffect(()=>{
         fetch(`${route}/education/packages`, {
@@ -46,6 +55,32 @@ const Packages = () => {
     },[])
   return (
    <div className="packages">
+       <Carousel>
+      <Carousel.Item interval={1000}>
+        <img
+          className="d-block w-100"
+          src={logo}
+          alt="First slide"
+        />
+       
+      </Carousel.Item>
+      <Carousel.Item interval={700}>
+        <img
+          className="d-block w-100"
+          src={logo}
+          alt="Second slide"
+        />
+
+      </Carousel.Item>
+      <Carousel.Item interval={700}>
+        <img
+          className="d-block w-100"
+          src={logo}
+          alt="Third slide"
+        />
+   
+      </Carousel.Item>
+    </Carousel>
     {packs.map((pack)=>{
         return(
             <div className="pack card" key={pack._id}>
