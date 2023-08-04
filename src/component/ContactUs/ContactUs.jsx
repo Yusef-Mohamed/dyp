@@ -33,21 +33,8 @@ function ContactUs() {
               alt=""
             />
             <div>
-              <h5>Headquarters</h5>
-              <p>459 North 300 West Suite 15B Kaysville, UT 84037</p>
-            </div>
-          </div>
-          <div className="col-md-6 contactItem">
-            <img
-              src="https://igeniusglobal.com/static/media/contact-location-icon.80ba69616027e5cb5a19b969f96fa20f.svg"
-              alt=""
-            />
-            <div>
-              <h5>Europe Headquarters</h5>
-              <p>
-                23 Rue Royale 690001 Lyon 844672105 R.C.S. Lyon Established
-                12/17/18
-              </p>
+              <h5>Deutschland</h5>
+              <p>Konstanzenstraße .64 90439 Nürnberg Deutschland</p>
             </div>
           </div>
         </div>

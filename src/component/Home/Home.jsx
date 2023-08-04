@@ -11,7 +11,6 @@ const Home = () => {
       <Landing />
       <div style={{ position: "relative", zIndex: "2" }}>
         <Products />
-        <Details />
         <SubStory />
       </div>
     </div>

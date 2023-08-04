@@ -5,8 +5,11 @@ import { AppContext } from "../../App";
 import Loader from "../loader/Loader";
 import Carousel from "react-bootstrap/Carousel";
 import logo from "../../assets/logs.png";
+import one from "../../assets/panars/1-15.webp";
+import two from "../../assets/panars/1-16.webp";
+import three from "../../assets/panars/1-17.webp";
 const Store = () => {
-  const { route, token, setNum, setDone } = useContext(AppContext);
+  const { route, token, setNum } = useContext(AppContext);
   const [products, setProducts] = useState([]);
   const [cats, setCats] = useState([]);
   const [load, setLoad] = useState(false);
@@ -26,6 +29,7 @@ const Store = () => {
   };
 
   const addToCart = (id) => {
+    console.log(0);
     fetch(`${route}/store/cart`, {
       method: "POST",
       headers: {
@@ -39,7 +43,7 @@ const Store = () => {
       .then((res) => res.json())
       .then((data) => {
         setNum(data.numberOfCartItems);
-        setDone(true);
+        console.log(data);
       });
   };
 
@@ -82,14 +86,14 @@ const Store = () => {
   return (
     <div className="store">
       <Carousel>
-        <Carousel.Item interval={1000}>
-          <img className="d-block w-100" src={logo} alt="First slide" />
+        <Carousel.Item interval={3000}>
+          <img className="d-block w-100" src={one} alt="First slide" />
         </Carousel.Item>
-        <Carousel.Item interval={700}>
-          <img className="d-block w-100" src={logo} alt="Second slide" />
+        <Carousel.Item interval={3000}>
+          <img className="d-block w-100" src={two} alt="Second slide" />
         </Carousel.Item>
-        <Carousel.Item interval={700}>
-          <img className="d-block w-100" src={logo} alt="Third slide" />
+        <Carousel.Item interval={3000}>
+          <img className="d-block w-100" src={three} alt="Third slide" />
         </Carousel.Item>
       </Carousel>
       <div className="cats">

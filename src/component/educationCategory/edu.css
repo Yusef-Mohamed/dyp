@@ -13,7 +13,6 @@
 }
 .edu-categ .carousel img {
   width: 100% !important;
-  height: 150px !important;
 }
 .edu-categ .category {
   width: 30%;
@@ -26,6 +25,11 @@
 .edu-categ .category img {
   width: 100%;
   height: 100%;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
 }
 .edu-categ .category span {
   position: absolute;
@@ -41,4 +45,10 @@
   width: 100%;
   transition: 0.2s;
   background-color: rgba(0, 0, 0, 0.541);
+  padding: 10px;
+  border-radius: 0%;
+  -webkit-border-radius: 30%;
+  -moz-border-radius: 30%;
+  -ms-border-radius: 30%;
+  -o-border-radius: 30%;
 }/*# sourceMappingURL=edu.css.map */

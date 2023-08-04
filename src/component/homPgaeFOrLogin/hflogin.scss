@@ -7,7 +7,6 @@
     margin: 20px auto;
     img {
       width: 100% !important;
-      height: 150px !important;
     }
   }
   .second {
@@ -110,7 +109,8 @@
 }
 .reacts {
   display: flex;
-  justify-content: center;
+  justify-content: end;
+  margin-right: 10px;
   align-items: center;
   gap: 10px;
 }

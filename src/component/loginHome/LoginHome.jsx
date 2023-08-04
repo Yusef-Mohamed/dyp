@@ -122,7 +122,12 @@ const LoginHome = () => {
             <span onClick={() => clickOnHome("profile")}>
               <FaUserAlt />
             </span>
-            <DropdownButton id="dropdown-basic-button" title={userName}>
+            <DropdownButton
+              id="dropdown-basic-button"
+              variant="none"
+              className="logoutDrop"
+              title={userName}
+            >
               <Dropdown.Item>
                 <Link onClick={logOut} to="/">
                   Log Out

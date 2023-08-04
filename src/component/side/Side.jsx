@@ -90,8 +90,7 @@ const Side = () => {
           <FaStore /> Store
         </div>
         <span onClick={() => clickOnHome("cart")} className="momo  mobile-only">
-          <div className="num">{num}</div>
-          <FiShoppingCart /> Cart
+          {num} <FiShoppingCart /> Cart
         </span>
         <span
           className="user mobile-only momo"
@@ -100,7 +99,12 @@ const Side = () => {
           <FaUserAlt /> Profile
         </span>
         <div className="user mobile-only momo">
-          <DropdownButton id="dropdown-basic-button" title={userName}>
+          <DropdownButton
+            id="dropdown-basic-button"
+            variant="none"
+            className="logoutDrop"
+            title={userName}
+          >
             <Dropdown.Item>
               <Link onClick={logOut} to="/">
                 Log Out

@@ -3,7 +3,7 @@ import { Link, Route, Routes } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { createContext } from "react";
 import { useNavigate } from "react-router-dom";
-import React, { useContext } from "react";
+import React from "react";
 import Nav from "./component/nav-bar/Nav";
 import Home from "./component/Home/Home";
 import Footer from "./component/Footer/Footer";
@@ -11,11 +11,7 @@ import Login from "./component/login/Login";
 import Signin from "./component/sign-in/SignIn";
 import ContactUs from "./component/ContactUs/ContactUs";
 import Polises from "./component/Polises/Polises";
-import Privacy from "./component/Polises/Privacy";
-import Compliance from "./component/Polises/Compliance";
-import Purchaseterms from "./component/Polises/Purchaseterms";
-import Distributoragreement from "./component/Polises/Distributoragreement";
-import Privacypolicy from "./component/Polises/Privacypolicy";
+
 import Activate from "./component/activation/Activate";
 import AboutUs from "./component/AboutUS/AboutUs";
 import Memberbenifits from "./component/Memberbenifits/Memberbenifits";
@@ -26,7 +22,6 @@ import Courses from "./component/courses/Courses";
 import { BiLike } from "react-icons/bi";
 
 import Products from "./component/products/Products";
-import GoogleTranslate from "./GoogleTranslate";
 import Edit from "./component/edit-profile/Edit";
 import Password from "./component/password/Password";
 
@@ -140,14 +135,7 @@ function App() {
           <Route path="/sign-in" element={<Signin />} />
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/polises" element={<Polises />} />
-          <Route path="/polises/compliance" element={<Compliance />} />
-          <Route path="/polises/purchaseterms" element={<Purchaseterms />} />
           <Route path="/activate" element={<Activate />} />
-          <Route
-            path="/polises/distributoragreement"
-            element={<Distributoragreement />}
-          />
-          <Route path="/polises/privacypolicy" element={<Privacypolicy />} />
           <Route path="/aboutus" element={<AboutUs />} />
           <Route path="/memberbenifits" element={<Memberbenifits />} />
           <Route path="/leadership" element={<Leadership />} />

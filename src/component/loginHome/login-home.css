@@ -5,11 +5,13 @@
 }
 .login-home .side,
 .courses .side {
-  background-color: rgb(64, 64, 65);
+  background-color: var(--gray);
   width: 250px;
   padding: 20px 20px;
   height: 100vh;
   overflow-x: hidden;
+  position: relative;
+  z-index: 100;
 }
 .login-home .side img,
 .courses .side img {
@@ -42,12 +44,12 @@
 }
 .login-home .side .list .momo:hover,
 .courses .side .list .momo:hover {
-  background-color: white;
+  background-color: #ffcc00;
   color: black;
 }
 .login-home .side .list h2,
 .courses .side .list h2 {
-  background-color: white;
+  background-color: #ffcc00;
   font-size: 25px;
   padding: 5px 0;
   text-align: center;
@@ -176,4 +178,14 @@
   .mobile-only {
     display: none !important;
   }
+}
+.logoutDrop {
+  background-color: #ffcc00 !important;
+  border-radius: 10px;
+  box-shadow: 0 0 0 0 !important;
+  outline: none;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }/*# sourceMappingURL=login-home.css.map */

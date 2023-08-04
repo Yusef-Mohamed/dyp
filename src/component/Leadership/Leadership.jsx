@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Leadership.css";
 import LeaderCard from "./LeaderCard";
+import img from "../../assets/panars/Leadership.webp";
 function Leadership() {
   const [instractors, setInstractors] = useState([]);
   useEffect(() => {
@@ -14,12 +15,9 @@ function Leadership() {
       .then((res) => setInstractors(res?.data));
   });
   return (
-    <div>
-      <div className="p-5 bg-grayy">
-        <p className="container p-3 text-center">
-          <b>Our mission </b> is to help people live brilliant lives.
-        </p>
-      </div>
+    <div style={{ overflow: "hidden" }}>
+      <img src={img} className="secBanar" alt="" />
+
       <div className="leaderContainer container">
         {instractors?.map((instractor) => (
           <LeaderCard
@@ -30,13 +28,6 @@ function Leadership() {
             }}
           />
         ))}
-      </div>
-      <div className="p-5 bg-grayy">
-        <p className="container p-3 text-center">
-          We are committed to continually provide our members with smart leading
-          edge opportunities, resources, tools, and education to help amplify
-          quality of life.
-        </p>
       </div>
     </div>
   );

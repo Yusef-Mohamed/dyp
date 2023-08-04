@@ -1,6 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/logo.png";
+import { FaFacebookF, FaTiktok } from "react-icons/fa";
+import {
+  AiFillInstagram,
+  AiFillYoutube,
+  AiOutlineTwitter,
+} from "react-icons/ai";
 function Footer() {
   return (
     <div
@@ -26,40 +32,45 @@ function Footer() {
           >
             <img className="w-50 " src={logo} alt="" />
             <div className="flex">
-              <a href="https://www.facebook.com" className="p-3">
-                <img
-                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAfCAMAAADDR10IAAAAOVBMVEUAAABEs9xFstxGsd1Fst1Ir99Ar99Est1Fr99Gst5Est1Fs95Fsd1Es91Gs9xFst1Fst1FstxFst0mIgS5AAAAEnRSTlMAQMCA8CAQcDCwr6CQf1Df0GAvjsd9AAAAmUlEQVQoz+WQSRLDIAwEJRmMF8DJ/P+xEZADS+HKITf3aYoG1SBqWMNxQTFMA2zwZRmcAyRaDcsoGXAljXK99GgmI16kbC4EGWS57pFxndwRdTbgF8V2UsCplFDmL9KLiCnSiHJslUTGpkJjW4CZc0PLikH7kiosDE3lGzv1Y9e8YQ0HHN0U2mp5tl85b5fwYJmYyLPInX7kA/glCht1BWfMAAAAAElFTkSuQmCC"
-                  alt=""
-                  style={{ height: "25px" }}
-                />
+              <a
+                href="https://www.facebook.com/profile.php?id=100095054437735"
+                target="_blank"
+                rel="noreferrer"
+                className="p-3"
+              >
+                <FaFacebookF size={30} color="#ffcc00" />
               </a>
-              <a href="https://www.facebook.com" className="p-3">
-                <img
-                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAcCAMAAABBJv+bAAAAQlBMVEUAAABFstxAr99Fst1FstxFr99Es9xFst5Fsd1Fst1Fsd1Fs95Fs9xFst1Fst1Ir99Est1Fst1Fsd1Fst1Fsd1Fst00Bd7QAAAAFXRSTlMAwBCAYDBAsJDg8KBQ39AgcO/Pn29Lm6iIAAAA80lEQVQoz52R2ZKDIBBFbQEBF9xy/v9XJxhZJqGmatIP9pVT3pbb3RfV/8FWu4OopxoWeT6NmIo6GCWA1QIRTyzFbcLraC8AROnhSHwg3NJNmjF6YyeO298y5/9bLq1RvYXH9ZWQxyjc1eIEPcI5Dx2+wkNpqxsBkCaONatJRGVsX+cbWzMe4b7L1MSBV+do5k5ILnMDa1xKammONlmdn3sjJGnGT+7Yuorb9W2y77vCPbuq33fMmxm2XOpA19Cc4PPJvJektJOFGvYOSvJjZDbDVS34NDdtUpQe+s4MDwu4/ne6OpDLbxmWMteurdpM96/6AZLcDOKJ0pHLAAAAAElFTkSuQmCC"
-                  alt=""
-                  style={{ height: "25px" }}
-                />
+              <a
+                href="https://www.instagram.com/wealth_makers_official/?igshid=Y2I2MzMwZWM3ZA"
+                target="_blank"
+                rel="noreferrer"
+                className="p-3"
+              >
+                <AiFillInstagram size={30} color="#ffcc00" />
               </a>
-              <a href="https://www.facebook.com" className="p-3">
-                <img
-                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAA7dJREFUWEe1V11y2jAQ1sq0r80NCiF9bnqCmJnA9CUQThBygtITlJ4g5AQlJ+AnLx3ITNwTJH1uCOYEJc/Y3q5kC2RHNpikniFMpLX222+/XS3ADM/n/qzoFYIzQLTDbYi+Tdapay5jSB9w6Rxn3Di4MlmCvigc+5b/Y0eHm9AtGLLOpFG+1A1XAKr92SGzglva3Es5aR5GtM0DRxlWvUm9fK72JYAw8uBu5RzZE210MeCDSbN0v41Lk43dn+29Lfg2ImsTq2tQyC6JCVqjVfGnOnqgyFd5/r30ue00S4tdHZveIx8t8kHpDR+EoHJz8sGBKPpZuMqelgEvvpbz2vDhLOBQ9Dx+Kc6sDacdBPZN+gK4mpzstyC2qFHz0uiPR9M20XsRBXZPlH8SKXnDA5d4fyfWSQsARI2j8qNo2cZ5dTRb5dTy2fxns+Tq79VGjwNk2FBrwlmU7pi/GABllAYgSpeg8JQ+8WpBdg8Mu6rej6//2EAiltFqzOqMi4AJwBSTKDNEJChNK1MlL2fpW02Rc0k5Y0W9knQAgOz7GgAJkPJkPDypYCFWAHAYoixREpZg5OMKOLFBYq6YxKyfFQfA8NekfmAno3/WI0i9Sw/aycNjlIcVtap1/Uxph1w0PLYVgOr1Y48iPdNLJ00jspvywFEqt3xeSoozP4DR9K/M+5Y9IiYyxr7e1MvdnRmIoWUwHNf3Ra4zn1hjM6Q1FwNJ43Gj3NkEIKx1VVnPdbUzgDRRmUv2lQAk7gnZTjcxULt+OEWEfppoczEQ0SlqXdb4Nq1av1kBsDk+ORjsLMIQQOwaXTCfV9JmBMq9uG5bkcM5tfZikrHcDEQgHG2gWFDn64LHhwKIaLcFyzsCBmLosJVDU/RiLwNAeD2acix7ukUNRm+3mWLAc+qqPZOJ6S5wyfC9MM66DaO7vENd7kuG7znppCUmnTSb2PzB8Dx2HZtaZ/IgObJbwSldveumBNwFFgySgjOB0Ft7eB3rvZ4QpVGXyXiOzepwekcsHopXRMCCAVKtGhbRIQCVHOflMtUFSC/KKgnHpOF0oW4wqvb/wkKkoVsVPU1B8qKSAGIDJP1PZdZRk2yuEFOMo1nhQjkX0dPofyhmivUvo5gW5EkLQinudjn18ABdBEtUzMaHxGXLd5Dt0Y8SW3MsR38WcFs1s1jdUyq6G8pso/MNBnPqpKd6J33WeORUU8A2C6jMovn9pV4F5cRm1/N5LznKGTufcihyF9LP5XeeB0GkDN2CV3CTY5l+zj/m2H3itGIcfgAAAABJRU5ErkJggg=="
-                  alt=""
-                  style={{ height: "25px" }}
-                />
+              <a
+                href="https://twitter.com/Wealth_Makers_"
+                target="_blank"
+                rel="noreferrer"
+                className="p-3"
+              >
+                <AiOutlineTwitter size={30} color="#ffcc00" />
               </a>
-              <a href="https://www.facebook.com" className="p-3">
-                <img
-                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAbCAMAAAAj8t3SAAAAOVBMVEUAAABFstxEs9xFst1Ir99Fs95Fst1Fr99Ar99FstxGst5Est1Gs9xFst1Fsd1Gst1Fst1Fsd1Fst0FGmtkAAAAEnRSTlMAwECAIKDwMBBgsHBQ4JCP0M8YFEifAAAA4ElEQVQoz4WSSXbEIAxEhRCzh07d/7BB9AsJtlv5Oxd/IUtFijTvOlj46knwid7kEwZBhhNhEtU6VPfMnGhBetSCPhIJgI0+kgAIFaCSQQUKecDPJHOmlfd7UPOHgNhopehQDuCZ6Kp2XiQG3F3qYbpKPaRFUsLvaCrcpO1QK3pTYhKnmrcl8nqoakrbPobPljSUndfBX0C6/F0s/+/J59sy658S6EeV21nqemBp/Hjgpgc0GAVIo6AfES3dGDaenB5ryWcEwnAn0U0iJqI+OxjM3pTDvR4Fd2x0JfNkWeg3RYMYPUj/Te0AAAAASUVORK5CYII="
-                  alt=""
-                  style={{ height: "25px" }}
-                />
+              <a
+                href="https://www.youtube.com/channel/UCKlzTSsJBGg48ElLpUDT9rA"
+                target="_blank"
+                rel="noreferrer"
+                className="p-3"
+              >
+                <AiFillYoutube size={30} color="#ffcc00" />
               </a>
-              <a href="https://www.facebook.com" className="p-3">
-                <img
-                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAiCAMAAAB/VplGAAAAPFBMVEUAAABFstxFst1Es9tFst1Fs9xAr99Fst1Fst5Fr99FstxFs95Est1Fsd1Ir99Fst1Fst1Fst9Fst1Fst1ey84bAAAAE3RSTlMAwIBA8FAQ4LAwYKBwzyCQ0D+fc0HnZgAAAWNJREFUOMt1kdu2wyAIRMULXqJJ0/n/fz2CWrPWaechGjYCo2aLK/lYzA/lBtXF3+jpMZW+4YSP3uEfDXjq/eOwX/y+n5Sx9KpuZj5wnVOV05iOK5GHW0evKNmpiCXBQg6UbSkeY9qNLewqTHnezH0PrFZIY6tMaDqQndihDUxSi5NMTRHJFMUGGNjjFN9eajSE3hUrvNIC/GmJepJZmIazjCiHq4XoEKw3cqEOHyRFM+FyhXLHEpDlUl+yAFzh1Z/idWz6JwRzTJ5An6ZKpETkxWlgsyeUbxPeHjgiaxKbkPklyIMFH/u6tEbyhaO2LxK2Zg41BwQQBRPcxhXHwAFRHtVwFAzFSkaJA8S5z/HuKRufcntX/8kePlnbgLKxbNZzEkRe45KkenXU0N725tNZG9YLuoETQk9RRVqUJ85lWHDlIgzRVW4HhGDJj+edOmdkK6aqVbbY2aTNeic2P+TC3v8B6Vgal//hgFsAAAAASUVORK5CYII="
-                  alt=""
-                  style={{ height: "25px" }}
-                />
+              <a
+                href="https://www.tiktok.com/@wealth_makers_official"
+                target="_blank"
+                rel="noreferrer"
+                className="p-3"
+              >
+                <FaTiktok size={30} color="#ffcc00" />
               </a>
             </div>
           </div>
