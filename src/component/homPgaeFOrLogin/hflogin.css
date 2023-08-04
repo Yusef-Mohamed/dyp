@@ -1,5 +1,6 @@
 .home-for-login {
   padding: 50px 0;
+  margin: 20px 0;
 }
 .home-for-login .carousel {
   width: 90% !important;
@@ -20,81 +21,6 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-}
-.home-for-login .second .left .post {
-  width: 90%;
-  margin: auto;
-  padding: 15px;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  background-color: rgb(255, 255, 255);
-}
-.home-for-login .second .left .post button {
-  width: 100px;
-}
-.home-for-login .second .left .post .shared {
-  background-color: var(--my-color);
-  padding: 5px 20px;
-  color: white;
-  text-transform: capitalize;
-  border-radius: 10px;
-}
-.home-for-login .second .left .post img {
-  max-width: 80%;
-  min-width: 80%;
-  min-height: 300px;
-  max-height: 300px;
-  margin: 0 auto;
-  border-radius: 10px;
-}
-.home-for-login .second .left .post label {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  align-items: center;
-}
-.home-for-login .second .left .post label input {
-  width: 60%;
-  padding: 0 10px;
-  border-radius: 5px;
-  border: none;
-  box-shadow: 1px 1px 5px;
-}
-.home-for-login .second .left .post label .file-input-wrapper {
-  position: relative;
-  display: inline-block;
-  padding: 0;
-}
-.home-for-login .second .left .post label #file-input {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  cursor: pointer;
-}
-.home-for-login .second .left .post label .custom-file-button {
-  display: inline-block;
-  padding: 5px;
-  font-size: 11px;
-  text-align: center;
-  text-transform: capitalize;
-  margin: auto;
-  color: #fff;
-  background-color: #007bff;
-  border-radius: 0.25rem;
-  cursor: pointer;
-}
-.home-for-login .second .left .post label button {
-  background-color: var(--my-color);
-  color: white;
-  text-transform: capitalize;
-  border: none;
-  cursor: pointer;
 }
 .home-for-login .second .right {
   width: 25%;
@@ -132,19 +58,207 @@
   border-radius: 5px;
 }
 
-.comment {
-  background-color: antiquewhite;
-  padding: 10px;
-  border-radius: 7px;
-  text-transform: capitalize;
-  margin-top: 10px;
-  width: 100%;
+.date {
+  color: var(--gray);
+  margin: 5px;
 }
-.comment img {
-  max-width: 350px;
-  min-width: 350px;
-  min-height: 350px;
-  max-height: 350px;
-  margin: 15px 25%;
+
+.comment {
+  padding: 10px 0;
+  border-top: 1px solid var(--gray);
+  margin: 10px;
+}
+.comment .content {
+  background-color: #d9dde0;
+  color: black;
+  padding: 20px;
   border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.comment .imgg {
+  height: 200px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  margin: 10px 0 !important;
+}
+
+.commentControl {
+  width: -moz-fit-content;
+  width: fit-content;
+  width: 100px;
+  padding: 10px 0;
+  background-color: var(--gold);
+  text-align: center;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 20px 20px 20px auto;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.comments-emo {
+  color: var(--gray);
+  margin: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.reacts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.reacts div {
+  padding: 8px 30px;
+  border: 1px solid gray;
+  border-radius: 100px;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  -ms-border-radius: 100px;
+  -o-border-radius: 100px;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+
+.reacts div:nth-child(1):hover {
+  border: none;
+  background-color: #129ef7;
+}
+
+.reacts div:nth-child(2):hover {
+  border: none;
+  background-color: #ec2549;
+}
+
+.reacts div:nth-child(3):hover {
+  border: none;
+  background-color: var(--gold);
+}
+
+.reacts div:nth-child(1).active {
+  border: none;
+  background-color: #129ef7;
+}
+
+.reacts div:nth-child(2).active {
+  border: none;
+  background-color: #ec2549;
+}
+
+.reacts div:nth-child(3).active {
+  border: none;
+  background-color: var(--gold);
+}
+
+.post {
+  width: 90%;
+  margin: auto;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: rgb(255, 255, 255);
+}
+.post .post-head {
+  padding: 20px;
+}
+.post button {
+  width: 100px;
+}
+.post .details {
+  width: -moz-fit-content;
+  width: fit-content;
+  color: black;
+  text-transform: capitalize;
+  border-radius: 10px;
+}
+.post .mainImg {
+  width: 100%;
+  margin: 0 auto;
+}
+.post form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  align-items: center;
+  padding: 0 10px;
+}
+.post form input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+.post form .file-input-wrapper {
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
+  padding: 0;
+}
+.post form #file-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+.post form .custom-file-button {
+  display: block;
+  padding: 5px;
+  font-size: 11px;
+  text-align: center;
+  text-transform: capitalize;
+  margin: auto;
+  color: #fff;
+  background-color: var(--gold);
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+.post form button {
+  display: block;
+  background-color: var(--gold);
+  color: white;
+  text-transform: capitalize;
+  border: none;
+  cursor: pointer;
+}
+
+.analytec .post {
+  width: 70%;
+  margin: auto;
+}
+
+@media (max-width: 700px) {
+  .second {
+    flex-direction: column-reverse;
+  }
+  .left {
+    width: 100% !important;
+  }
+  .right {
+    width: 90% !important;
+    margin: auto;
+  }
 }/*# sourceMappingURL=hflogin.css.map */

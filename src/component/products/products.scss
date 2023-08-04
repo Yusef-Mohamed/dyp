@@ -23,8 +23,5 @@
   -o-border-radius: 10px;
 }
 .swiper-slide .card-swap2 {
-  background: linear-gradient(to top, rgb(15, 114, 138), #000000);
-}
-.swiper-slide-active .card-swap2 {
-  background: linear-gradient(to top, rgb(23, 161, 196), #007bff);
+  background-color: var(--gray);
 }

@@ -5,9 +5,9 @@
 }
 .login-home .side,
 .courses .side {
-  width: 20%;
   background-color: rgb(64, 64, 65);
-  padding: 20px 0;
+  width: 250px;
+  padding: 20px 20px;
   height: 100vh;
   overflow-x: hidden;
 }
@@ -22,8 +22,6 @@
 }
 .login-home .side .list,
 .courses .side .list {
-  width: 90%;
-  margin-left: 32px;
   text-transform: capitalize;
   display: flex;
   flex-direction: column;
@@ -56,15 +54,16 @@
   text-align: center;
   border-radius: 10px;
 }
-.login-home .container,
-.courses .container {
+.login-home .containerr,
+.courses .containerr {
   padding: 20px;
+  width: 100%;
   height: 100vh;
   overflow-y: scroll;
   padding: 0;
 }
-.login-home .container .top-nav,
-.courses .container .top-nav {
+.login-home .containerr .top-nav,
+.courses .containerr .top-nav {
   display: flex;
   justify-content: flex-end;
   gap: 25px;
@@ -76,26 +75,26 @@
   box-shadow: 1px 1px 10px;
   background-color: white;
 }
-.login-home .container .top-nav svg,
-.courses .container .top-nav svg {
+.login-home .containerr .top-nav svg,
+.courses .containerr .top-nav svg {
   font-size: 30px;
 }
-.login-home .container .top-nav .user,
-.courses .container .top-nav .user {
+.login-home .containerr .top-nav .user,
+.courses .containerr .top-nav .user {
   display: flex;
   align-items: center;
   gap: 15px;
 }
-.login-home .container .top-nav .user button,
-.courses .container .top-nav .user button {
+.login-home .containerr .top-nav .user button,
+.courses .containerr .top-nav .user button {
   text-transform: capitalize;
 }
-.login-home .container .top-nav .cart-icon,
-.courses .container .top-nav .cart-icon {
+.login-home .containerr .top-nav .cart-icon,
+.courses .containerr .top-nav .cart-icon {
   position: relative;
 }
-.login-home .container .top-nav .cart-icon .num,
-.courses .container .top-nav .cart-icon .num {
+.login-home .containerr .top-nav .cart-icon .num,
+.courses .containerr .top-nav .cart-icon .num {
   position: absolute;
   background-color: red;
   color: white;
@@ -105,14 +104,66 @@
   top: -2px;
   font-size: 15px;
 }
-.login-home .container .top-nav span,
-.courses .container .top-nav span {
+.login-home .containerr .top-nav span,
+.courses .containerr .top-nav span {
   transition: 0.2s;
   padding: 15px;
   border-radius: 50%;
   cursor: pointer;
 }
-.login-home .container .top-nav span:hover,
-.courses .container .top-nav span:hover {
+.login-home .containerr .top-nav span:hover,
+.courses .containerr .top-nav span:hover {
   background-color: rgb(129, 127, 124);
+}
+
+.closing {
+  display: none;
+}
+
+@media (max-width: 992px) {
+  .sideControler {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 50;
+    right: 0;
+    top: 0;
+    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+  }
+  .sideControler.open {
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+  }
+  .closing {
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    right: 50px;
+    top: 50px;
+    color: black;
+    background-color: var(--gold);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+  }
 }/*# sourceMappingURL=login-home.css.map */

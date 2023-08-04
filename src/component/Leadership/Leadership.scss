@@ -32,7 +32,14 @@
   .leaderCard img {
     width: 25vw;
     height: 25vw;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border: 15px solid var(--gold);
   }
+
   .leaderCard p {
     text-align: left;
   }

@@ -9,7 +9,7 @@
   width: 30%;
   flex-direction: column;
   align-items: center;
-  box-shadow: 5px 5px 15px -1px rgba(0, 0, 0, 0.75);
+  box-shadow: 5px 5px 15px -1px rgba(0, 0, 0, 0.3);
   margin: 100px auto;
 }
 @media (max-width: 767px) {
@@ -37,7 +37,7 @@
   outline: none;
 }
 .sign .form--input:focus {
-  border: 1px solid #639;
+  border: 1px solid var(--gold);
   outline: none;
 }
 .sign .form--marketing {
@@ -51,22 +51,30 @@
 .sign .form--marketing > label {
   color: grey;
 }
-.sign .checkbox, .sign input[type=checkbox] {
-  accent-color: #639;
+.sign .checkbox,
+.sign input[type=checkbox] {
+  accent-color: var(--gold);
 }
 .sign .form--submit {
   width: 50%;
   padding: 0.625em;
   border-radius: 5px;
   color: white;
-  background-color: #639;
-  border: 1px dashed #639;
+  background-color: var(--gold);
+  border: 1px dashed var(--gold);
   cursor: pointer;
 }
 .sign .form--submit:hover {
-  color: #639;
+  color: var(--gold);
   background-color: white;
-  border: 1px dashed #639;
+  border: 1px dashed var(--gold);
   cursor: pointer;
   transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+.sign select {
+  padding: 0.25rem !important;
 }/*# sourceMappingURL=sign.css.map */

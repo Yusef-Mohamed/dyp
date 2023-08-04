@@ -15,7 +15,7 @@ function Leadership() {
   });
   return (
     <div>
-      <div style={{ backgroundColor: "#ededed" }} className="p-5">
+      <div className="p-5 bg-grayy">
         <p className="container p-3 text-center">
           <b>Our mission </b> is to help people live brilliant lives.
         </p>
@@ -31,7 +31,7 @@ function Leadership() {
           />
         ))}
       </div>
-      <div style={{ backgroundColor: "#ededed" }} className="p-5">
+      <div className="p-5 bg-grayy">
         <p className="container p-3 text-center">
           We are committed to continually provide our members with smart leading
           edge opportunities, resources, tools, and education to help amplify

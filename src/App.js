@@ -23,14 +23,12 @@ import Leadership from "./component/Leadership/Leadership";
 import LoginHome from "./component/loginHome/LoginHome";
 import Courses from "./component/courses/Courses";
 
-
-import {BiLike} from 'react-icons/bi';
+import { BiLike } from "react-icons/bi";
 
 import Products from "./component/products/Products";
 import GoogleTranslate from "./GoogleTranslate";
 import Edit from "./component/edit-profile/Edit";
 import Password from "./component/password/Password";
-
 
 export const AppContext = createContext();
 
@@ -47,7 +45,7 @@ function App() {
   const [userEmail, setUserEmail] = useState("");
   const [currentStep, setCurrentStep] = useState("home");
   const [categoryId, setCategoryId] = useState("");
-  const [done,setDone]=useState(false)
+  const [done, setDone] = useState(false);
   useEffect(() => {
     let timeout;
     if (showMessage) {
@@ -103,13 +101,15 @@ function App() {
         num,
         setNum,
         done,
-        setDone
-
+        setDone,
       }}
     >
       <div className="App">
-        {done ? <div    data-aos="fade-left"
-          data-aos-duration="500" className="done"><BiLike /></div> : null}
+        {done ? (
+          <div data-aos="fade-left" data-aos-duration="500" className="done">
+            <BiLike />
+          </div>
+        ) : null}
         {showMessage ? <div className="message">{message}</div> : null}
         {loader ? (
           <div className="loader-cont">
@@ -154,7 +154,7 @@ function App() {
           <Route path="/products" element={<Products />} />
           <Route path="/loginHome" element={<LoginHome />} />
           <Route path="/loginHome/edit" element={<Edit />} />
-          <Route path="/loginHome/password" element={<Password/>} />
+          <Route path="/loginHome/password" element={<Password />} />
           <Route
             path="/course/64afdcabb76f30db60b23568"
             element={<Courses />}

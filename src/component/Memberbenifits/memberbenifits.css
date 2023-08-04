@@ -131,9 +131,9 @@
 }
 
 .swiper-slide .card-swap {
-  background: linear-gradient(to top, rgb(15, 114, 138), #000000);
+  background: linear-gradient(to top, var(--gold), black);
 }
 
 .swiper-slide-active .card-swap {
-  background: linear-gradient(to top, rgb(23, 161, 196), #007bff);
-}/*# sourceMappingURL=memberbenifits.css.map */
+  background: linear-gradient(to top, rgb(204, 204, 36), var(--gold));
+} /*# sourceMappingURL=memberbenifits.css.map */

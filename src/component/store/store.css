@@ -20,7 +20,7 @@
 }
 .store .cats .wrapper {
   --font-color-dark: #323232;
-  --font-color-light: #FFF;
+  --font-color-light: #fff;
   --bg-color: #fff;
   --main-color: #323232;
   position: relative;
@@ -69,11 +69,17 @@
 .store .cats .span {
   color: var(--font-color-dark);
 }
-.store .cats .input:checked + .btn {
+.store .cats .input + .btn {
   background-color: var(--main-color);
 }
-.store .cats .input:checked + .btn .span {
+.store .cats .input + .btn .span {
   color: var(--font-color-light);
+}
+.store .cats .input:checked + .btn {
+  background-color: var(--gold);
+}
+.store .cats .input:checked + .btn .span {
+  color: black;
 }
 .store .products {
   display: flex;

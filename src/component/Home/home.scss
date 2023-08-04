@@ -9,7 +9,8 @@
 .border-bottom {
   width: 250px;
   height: 5px;
-  background-color: #44b2dd66;
+  background-color: var(--gold);
+  border:  none; !important
   margin: 25px 0;
 }
 
