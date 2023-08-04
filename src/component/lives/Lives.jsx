@@ -82,41 +82,48 @@ const Lives = () => {
           <Calendar onChange={onChange} value={date} />
         </div>
       )}
-      {lives?.map((live) => {
-        return (
-          <div className="live" key={live._id}>
-            <div className="head">
-              <div className="creator">instructor : {live.creator.name}</div>
-              {live.course ? (
-                <div className="course">course Name : {live.course.title}</div>
-              ) : (
-                <div className="course">3</div>
-              )}
+      {lives?.length ? (
+        lives?.map((live) => {
+          return (
+            <div className="live" key={live._id}>
+              <div className="head">
+                <div className="creator">instructor : {live.creator.name}</div>
+                {live.course ? (
+                  <div className="course">
+                    course Name : {live.course.title}
+                  </div>
+                ) : (
+                  <div className="course">3</div>
+                )}
 
-              <span onClick={() => followLive(live.course._id, live._id)}>
-                follow this
-              </span>
-            </div>
-            <div className="second">
-              <div className="title">title : {live.title}</div>
-              <div className="date">
-                started at : {live.day} / {live.month} , at {live.hour}
+                <span onClick={() => followLive(live.course._id, live._id)}>
+                  follow this
+                </span>
               </div>
-              <div className="durate">duration : {live.duration} hour</div>
-            </div>
-            {live.link ? (
-              <a href={live.link} target="_blank" className="start-live">
-                start live
-              </a>
-            ) : (
-              <div className="prevent-life">
-                live will start at {live.day}/{live.month}
+              <div className="second">
+                <div className="title">title : {live.title}</div>
+                <div className="date">
+                  started at : {live.day} / {live.month} , at {live.hour}
+                </div>
+                <div className="durate">duration : {live.duration} hour</div>
               </div>
-            )}
-          </div>
-        );
-      })}
-      {lives?.length === 0 && <div>there is no lives </div>}
+              {live.link ? (
+                <a href={live.link} target="_blank" className="start-live">
+                  start live
+                </a>
+              ) : (
+                <div className="prevent-life">
+                  live will start at {live.day}/{live.month}
+                </div>
+              )}
+            </div>
+          );
+        })
+      ) : (
+        <div style={{ textAlign: "center", margin: "40px", fontSize: "40px" }}>
+          there is no lives{" "}
+        </div>
+      )}
     </div>
   );
 };

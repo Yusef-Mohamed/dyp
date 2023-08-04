@@ -150,4 +150,16 @@
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
   }
+  .pc-only {
+    display: none !important;
+  }
+  .mobile-only {
+    display: block !important ;
+  }
+}
+
+@media (min-width: 992px) {
+  .mobile-only {
+    display: none !important;
+  }
 }
