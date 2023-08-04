@@ -14,8 +14,7 @@ const Lives = () => {
 
     const onChange =(date)=>{
       setDate(date)
-      console.log(date)
-      fetch(`${route}/education/lives/searchByDate/:${date}`)
+      fetch(`${route}/education/lives/searchByDate/${date}`)
       .then(res=>res.json())
       .then(data=>console.log(data))
     }
