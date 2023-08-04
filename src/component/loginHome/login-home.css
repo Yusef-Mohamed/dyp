@@ -100,7 +100,7 @@
   color: white;
   border-radius: 50%;
   padding: 2px 5px;
-  left: -2px;
+  left: 22px;
   top: -2px;
   font-size: 15px;
 }
@@ -110,10 +110,17 @@
   padding: 15px;
   border-radius: 50%;
   cursor: pointer;
+  overflow: hidden;
 }
 .login-home .containerr .top-nav span:hover,
 .courses .containerr .top-nav span:hover {
   background-color: rgb(129, 127, 124);
+}
+.login-home .containerr .top-nav span img,
+.courses .containerr .top-nav span img {
+  max-width: 35px;
+  min-width: 35px;
+  border-radius: 20px;
 }
 
 .closing {
@@ -165,5 +172,16 @@
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
+  }
+  .pc-only {
+    display: none !important;
+  }
+  .mobile-only {
+    display: block !important;
+  }
+}
+@media (min-width: 992px) {
+  .mobile-only {
+    display: none !important;
   }
 }/*# sourceMappingURL=login-home.css.map */

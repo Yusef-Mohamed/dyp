@@ -116,7 +116,7 @@ const PostCard = ({ post }) => {
       <div className="post-head">
         <div className="details">
           <div>
-            <div>{post.user.name}</div>
+            <div className="puplisher">{post.user.name}</div>
             <div className="date">
               <TimeAgo datetime={post.createdAt} />
             </div>
@@ -193,6 +193,7 @@ const PostCard = ({ post }) => {
             <>
               {comments.slice(0, 2).map((comment) => (
                 <div className="comment">
+                  {/* <div className="content">{comment.user.name && comment.user.name}</div> */}
                   <div className="content">{comment.content}</div>
                   {comment.image && (
                     <img className="imgg" src={comment.image} alt="" />

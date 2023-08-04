@@ -4,7 +4,7 @@ import "./login-home.css";
 import { useState } from "react";
 import { AppContext } from "../../App";
 import { AiFillHome } from "react-icons/ai";
-import { FaUserAlt } from "react-icons/fa";
+import { FaBars, FaUserAlt } from "react-icons/fa";
 import { FiShoppingCart } from "react-icons/fi";
 import { Link, Route, useNavigate } from "react-router-dom";
 
@@ -20,6 +20,7 @@ import Store from "../store/Store";
 import Profile from "../profile/Profile";
 import Cart from "../cart/Cart";
 import Footer from "../Footer/Footer";
+
 
 const LoginHome = () => {
   const { currentStep, setCurrentStep } = useContext(AppContext);
@@ -106,22 +107,27 @@ const LoginHome = () => {
       <div className="containerr">
         <div className="top-nav">
           <span
+            className="mobile-only"
             onClick={() =>
               document.querySelector(".sideControler").classList.add("open")
             }
           >
-            open
+            <FaBars size={32} />
           </span>
-          <span onClick={() => clickOnHome("cart")} className="cart-icon">
+          <span
+            onClick={() => clickOnHome("cart")}
+            className="cart-icon pc-only"
+          >
             <div className="num">{num}</div>
             <FiShoppingCart />
           </span>
-          <span onClick={() => clickOnHome("home")}>
+          <span onClick={() => clickOnHome("home")} className=" pc-only">
             <AiFillHome />
           </span>
-          <div className="user">
+          <div className="user pc-only">
             <span onClick={() => clickOnHome("profile")}>
-              <FaUserAlt />
+              {sessionStorage.getItem("profile") ? <img className="pr-image" src={sessionStorage.getItem("profile")} /> : <FaUserAlt />}
+              
             </span>
             <DropdownButton id="dropdown-basic-button" title={userName}>
               <Dropdown.Item>
