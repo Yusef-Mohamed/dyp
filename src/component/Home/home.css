@@ -9,7 +9,7 @@
 .border-bottom {
   width: 250px;
   height: 5px;
-  background-color: rgba(68, 178, 221, 0.4);
+  background-color: var(--gold);
   margin: 25px 0;
 }
 

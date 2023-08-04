@@ -25,7 +25,7 @@ function Memberbenifits() {
   }, []);
   return (
     <div className="memberbenifits">
-      <div style={{ backgroundColor: "#ededed" }} className="p-5">
+      <div className="p-5 bg-grayy">
         <p className="container p-5 text-center">
           <b> iGenius helps people</b> solve their problems in new and brilliant
           ways.

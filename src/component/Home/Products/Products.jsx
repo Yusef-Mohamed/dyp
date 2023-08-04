@@ -2,13 +2,7 @@ import React from "react";
 
 function Products() {
   return (
-    <div
-      className="py-5"
-      style={{
-        background:
-          "linear-gradient(rgb(242, 242, 242) 50%, rgb(255, 255, 255) 100%)",
-      }}
-    >
+    <div className="py-5">
       <div className="content-container row align-items-center py-5">
         <div
           className="col-md-5 p-0"

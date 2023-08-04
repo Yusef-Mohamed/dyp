@@ -122,7 +122,7 @@ body {
   width: fit-content;
   display: flex;
   margin: 0 0 0 auto;
-  gap: 40px;
+  gap: 20px;
   justify-content: center;
   text-transform: capitalize;
   align-items: center;
@@ -131,26 +131,34 @@ body {
   text-decoration: none;
   transition: 0.2s;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 14px;
+}
+.nav .container .list a:hover {
+  color: var(--gold);
 }
 @media (max-width: 767px) {
   .nav .container .list {
     flex-direction: column;
     width: 80%;
+    margin: auto;
     font-weight: 800;
   }
 }
 .nav .container .login {
   position: relative;
-  font-size: 0.8em;
-  padding: 8px 16px;
-  background-color: var(--my-color);
+  font-size: 14px;
+  height: 100%;
+  padding: 0.375rem 0.75rem;
+  background-color: var(--gold);
   text-decoration: none;
   border: none;
   border-radius: 0.5em;
-  color: #dedede;
-  box-shadow: 0.5em 0.5em 0.5em rgba(0, 0, 0, 0.3);
+  color: black;
   z-index: 30;
+  -webkit-border-radius: 0.5em;
+  -moz-border-radius: 0.5em;
+  -ms-border-radius: 0.5em;
+  -o-border-radius: 0.5em;
 }
 .nav .container .login::before {
   position: absolute;
@@ -177,6 +185,15 @@ body {
   .nav-active {
     left: 13% !important;
   }
+}
+
+.navDrop {
+  background-color: var(--gold) !important;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
 
 .whoWeAre {

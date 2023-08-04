@@ -2,7 +2,6 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectCoverflow } from "swiper";
 import "./products.css";
-import ImageWithPopup from "../ImageWithPopup/ImageWithPopup";
 
 function Products() {
   const products = [
@@ -106,7 +105,7 @@ function Products() {
           </SwiperSlide>
         </Swiper>
       </div>
-      <div style={{ backgroundColor: "#ededed" }} className="p-5">
+      <div className="p-5 bg-grayy">
         <p className="container p-5 text-center">
           <b> iGenius helps people</b> solve their problems in new and brilliant
           ways.

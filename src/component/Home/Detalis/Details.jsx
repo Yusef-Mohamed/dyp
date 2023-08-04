@@ -54,11 +54,13 @@ function Details() {
             >
               Countries
             </h2>
-            <h3
-              style={{ fontSize: "30px" }}
-              className="text-center countt"
-              data-value={123}
-            ></h3>
+            <div>
+              <h3
+                style={{ fontSize: "30px" }}
+                className="text-center countt"
+                data-value={123}
+              ></h3>
+            </div>
           </div>
           <div className="col-6 p-0">
             <h2

@@ -60,22 +60,24 @@ const Nav = () => {
             Leadership
           </Link>
 
-          <DropdownButton id="dropdown-basic-button" title="who we are">
+          <DropdownButton
+            variant="none"
+            className="navDrop"
+            id="dropdown-basic-button"
+            title="who we are"
+          >
             <Dropdown.Item>
-              {" "}
               <Link onClick={showMenu} to={"/polises"}>
                 Polises
               </Link>
             </Dropdown.Item>
             <Dropdown.Item>
-              {" "}
               <Link onClick={showMenu} to={"/contact"}>
                 ContactUs
               </Link>
             </Dropdown.Item>
             <Dropdown.Item> </Dropdown.Item>
             <Dropdown.Item>
-              {" "}
               <Link onClick={showMenu} to={"/aboutus"}>
                 AboutUs
               </Link>

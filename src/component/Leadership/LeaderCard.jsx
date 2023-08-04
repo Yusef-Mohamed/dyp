@@ -8,7 +8,6 @@ function LeaderCard(props) {
         alt=""
         data-aos="flip-left"
         data-aos-duration="1000"
-        style={{ borderRadius: "50%" }}
       />
       <div>
         <h4>{props.data.name}</h4>

@@ -1,6 +1,22 @@
+:root {
+  --gold: #ffcc00;
+  --gray: #b6b6b6;
+}
+.bg-grayy {
+  background-color: var(--gray);
+}
+.hoverGold {
+  transition: 0s;
+  -webkit-transition: 0s;
+  -moz-transition: 0s;
+  -ms-transition: 0s;
+  -o-transition: 0s;
+}
+.hoverGold:hover {
+  color: var(--gold);
+}
 .App {
   overflow-x: hidden;
-  background-color: #edf2f7;
   min-height: 100vh;
 }
 body {
@@ -42,7 +58,7 @@ a {
   font-size: 20px;
   border-radius: 10px;
 }
-.App .done{
+.App .done {
   position: fixed;
   transition: 0.2s;
   background-color: rgb(47, 192, 47);
@@ -265,6 +281,8 @@ a {
   height: 0;
   display: none !important;
   color: white;
+  max-width: 90px;
+  margin-bottom: 5px;
 }
 .nav .skiptranslate:first-child {
   display: flex !important;
@@ -285,10 +303,10 @@ a {
 }
 .goog-te-combo:first-child {
   display: block;
-  padding: 10px 15px;
-  background-color: #17a1c4;
+  padding: 0.2rem 0.75rem;
+  background-color: var(--gold);
   font-weight: 700;
-  font-size: 20px;
+  font-size: 14px;
   margin: 0;
   border: none;
   border-radius: 10px;
@@ -298,5 +316,5 @@ a {
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
   height: 100%;
-  color: white;
+  color: black;
 }

@@ -55,7 +55,7 @@ const Landing = () => {
             document.querySelector(
               ".maaaain"
             ).style.transformOrigin = `${x}px ${y}px`;
-            document.querySelector(".maaaain").style.transform = "scale(2)";
+            document.querySelector(".maaaain").style.transform = "scale(1.5)";
           }
         }}
       >
@@ -65,8 +65,8 @@ const Landing = () => {
           style={{ zIndex: "10" }}
           data-aos-duration="1000"
         >
-          <h1 className="heading">Live smarter </h1>
-          <p className="supheading">Enhance your lifestyle.</p>
+          <h1 className="heading">Feel Special</h1>
+          <p className="supheading">From Zero to Hero</p>
           <Link to={"/login"}>Get Started</Link>
         </div>
       </div>
