@@ -14,7 +14,7 @@ function ContactUs() {
             />
             <div>
               <h5>Email</h5>
-              <p>support@igeniusglobal.com</p>
+              <a href="email">wealthmakers.helpcenter@gmail.com</a>
             </div>
           </div>
           <div className="col-md-6 contactItem">
@@ -23,8 +23,14 @@ function ContactUs() {
               alt=""
             />
             <div>
-              <h5>Phone</h5>
-              <p>1-801-939-3580</p>
+              <h5>WhatsApp</h5>
+              <a
+                href="https://wa.me/message/IOYQFZS6IDWHC1"
+                target="_blank"
+                rel="noreferrer"
+              >
+                +49 1520 4845414
+              </a>
             </div>
           </div>
           <div className="col-md-6 contactItem">

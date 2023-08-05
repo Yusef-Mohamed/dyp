@@ -1,7 +1,7 @@
 .contactUs,
 .polises {
   min-height: calc(100vh - 70px);
-  background: url("../../assets/contactus.jpg");
+  background: url("../../assets/contact.webp");
   background-size: cover;
   position: relative;
   display: flex;

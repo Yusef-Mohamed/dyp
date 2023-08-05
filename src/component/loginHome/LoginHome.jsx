@@ -106,21 +106,21 @@ const LoginHome = () => {
               document.querySelector(".sideControler").classList.add("open")
             }
           >
-            <FaBars size={32} />
+            <FaBars size={32} color="#ffcc00" />
           </span>
           <span
             onClick={() => clickOnHome("cart")}
             className="cart-icon pc-only"
           >
             <div className="num">{num}</div>
-            <FiShoppingCart />
+            <FiShoppingCart color="#ffcc00" />
           </span>
           <span onClick={() => clickOnHome("home")} className=" pc-only">
-            <AiFillHome />
+            <AiFillHome color="#ffcc00" />
           </span>
           <div className="user pc-only">
             <span onClick={() => clickOnHome("profile")}>
-              <FaUserAlt />
+              <FaUserAlt color="#ffcc00" />
             </span>
             <DropdownButton
               id="dropdown-basic-button"

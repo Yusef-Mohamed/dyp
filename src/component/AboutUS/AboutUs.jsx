@@ -1,9 +1,11 @@
 import React from "react";
 import "./aboutus.css";
+import img from "../../assets/about us.webp";
 function AboutUs() {
   return (
     <div className="bg-white">
-      <div className="aboutImg">1</div>
+      <img src={img} className="secBanar" alt="" />
+
       <div className="container my-5">
         <h1 className="text-center my-5">About Us</h1>
         <p style={{ lineHeight: "1.8" }}>

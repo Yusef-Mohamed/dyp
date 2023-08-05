@@ -1,6 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
 import Carousel from "react-bootstrap/Carousel";
-import logo from "../../assets/logs.png";
 import "./hflogin.css";
 import { AppContext } from "../../App";
 import Button from "react-bootstrap/Button";
