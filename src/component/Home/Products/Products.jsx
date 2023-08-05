@@ -1,5 +1,10 @@
 import React from "react";
-
+import oneLogo from "../../../assets/products/logos/1.webp";
+import analysisLogo from "../../../assets/products/logos/analysis.webp";
+import liveLogo from "../../../assets/products/logos/live.webp";
+import schoolLogo from "../../../assets/products/logos/school.webp";
+import skLogo from "../../../assets/products/logos/sk.webp";
+import telegramLogo from "../../../assets/products/logos/telegram.webp";
 function Products() {
   return (
     <div className="py-5">
@@ -20,88 +25,46 @@ function Products() {
         <div
           className="col-md-7 p-0"
           style={{
-            gridTemplateColumns: "repeat(5, 1fr)",
+            gridTemplateColumns: "repeat(3, 1fr)",
             display: "grid",
             gap: "20px",
           }}
         >
           <img
-            src="https://igeniusglobal.com/static/media/newUniversityC.4ba4f543d7839f570e17.png"
+            src={oneLogo}
+            alt=""
+            className="w-100"
+            data-aos="fade-down"
+            data-aos-duration="1000"
+          />
+          <img src={skLogo} alt="" className="w-100" data-aos="fade-down" />
+          <img
+            src={schoolLogo}
             alt=""
             className="w-100"
             data-aos="fade-down"
             data-aos-duration="1000"
           />
           <img
-            src="https://igeniusglobal.com/static/media/newUniversityC.4ba4f543d7839f570e17.png"
-            alt=""
-            className="w-100"
-            data-aos="fade-down"
-            data-aos-duration="1000"
-            data-aos-delay="300"
-          />
-          <img
-            src="https://igeniusglobal.com/static/media/newUniversityC.4ba4f543d7839f570e17.png"
-            alt=""
-            className="w-100"
-            data-aos="fade-down"
-            data-aos-duration="1000"
-            data-aos-delay="600"
-          />
-          <img
-            src="https://igeniusglobal.com/static/media/newUniversityC.4ba4f543d7839f570e17.png"
-            alt=""
-            className="w-100"
-            data-aos="fade-down"
-            data-aos-duration="1000"
-            data-aos-delay="900"
-          />
-          <img
-            src="https://igeniusglobal.com/static/media/newUniversityC.4ba4f543d7839f570e17.png"
-            alt=""
-            className="w-100"
-            data-aos="fade-down"
-            data-aos-duration="1000"
-            data-aos-delay="1200"
-          />
-          <img
-            src="https://igeniusglobal.com/static/media/newUniversityC.4ba4f543d7839f570e17.png"
+            src={analysisLogo}
             alt=""
             className="w-100"
             data-aos="fade-down"
             data-aos-duration="1000"
           />
           <img
-            src="https://igeniusglobal.com/static/media/newUniversityC.4ba4f543d7839f570e17.png"
+            src={liveLogo}
             alt=""
             className="w-100"
             data-aos="fade-down"
             data-aos-duration="1000"
-            data-aos-delay="300"
           />
           <img
-            src="https://igeniusglobal.com/static/media/newUniversityC.4ba4f543d7839f570e17.png"
+            src={telegramLogo}
             alt=""
             className="w-100"
             data-aos="fade-down"
             data-aos-duration="1000"
-            data-aos-delay="600"
-          />
-          <img
-            src="https://igeniusglobal.com/static/media/newUniversityC.4ba4f543d7839f570e17.png"
-            alt=""
-            className="w-100"
-            data-aos="fade-down"
-            data-aos-duration="1000"
-            data-aos-delay="900"
-          />
-          <img
-            src="https://igeniusglobal.com/static/media/newUniversityC.4ba4f543d7839f570e17.png"
-            alt=""
-            className="w-100"
-            data-aos="fade-down"
-            data-aos-duration="1000"
-            data-aos-delay="1200"
           />
         </div>
       </div>

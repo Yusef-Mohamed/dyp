@@ -2,36 +2,59 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectCoverflow } from "swiper";
 import "./products.css";
-
+import one from "../../assets/products/photos/1.webp";
+import analysis from "../../assets/products/photos/analysis.webp";
+import live from "../../assets/products/photos/live.webp";
+import school from "../../assets/products/photos/school.webp";
+import sk from "../../assets/products/photos/sk.webp";
+import telegram from "../../assets/products/photos/telegram.webp";
+import oneLogo from "../../assets/products/logos/1.webp";
+import analysisLogo from "../../assets/products/logos/analysis.webp";
+import liveLogo from "../../assets/products/logos/live.webp";
+import schoolLogo from "../../assets/products/logos/school.webp";
+import skLogo from "../../assets/products/logos/sk.webp";
+import telegramLogo from "../../assets/products/logos/telegram.webp";
 function Products() {
   const products = [
     {
-      img: "https://igeniusglobal.com/static/media/smartFinance-phone.ad6b723e7fe49807f60e.png",
+      img: one,
+      logo: oneLogo,
+      id: "one",
       desc: "The 1% platform is the perfect place for ambitious entrepreneurs seeking to enhance their knowledge and expand their professional networks in the field of entrepreneurship. Through this platform, we provide a comprehensive educational environment and specialized resources that assist entrepreneurs in their journey of growth and development. Starting from ideation and content creation, all the way to growth strategies and marketing, we offer opportunities for you to communicate and collaborate with like-minded individuals who share the same ambition and entrepreneurial mindset.",
       heading: "The 1% platform",
     },
     {
-      img: "https://igeniusglobal.com/static/media/smartFinance-phone.ad6b723e7fe49807f60e.png",
+      img: sk,
+      logo: skLogo,
+      id: "sk",
       desc: "It is an integrated system and strategy based on understanding golden zones and anticipating future market movements. It is considered one of the most powerful strategies due to its precision in setting targets.",
       heading: "SK System",
     },
     {
-      img: "https://igeniusglobal.com/static/media/smartFinance-phone.ad6b723e7fe49807f60e.png",
+      img: live,
+      logo: liveLogo,
+      id: "live",
       desc: "With the Study Live platform, you will have direct access to a select group of financial market experts, receiving real-time guidance that will assist you in making well-informed and intelligent investment decisions. You will benefit from their in-depth analyses and valuable advice.",
       heading: "Study Live platform",
     },
     {
-      img: "https://igeniusglobal.com/static/media/smartFinance-phone.ad6b723e7fe49807f60e.png",
+      img: school,
+      logo: schoolLogo,
+      id: "shcool",
       desc: "The 'School' platform is the place where you can find all the recorded educational lessons you need, starting from the basics and progressing to advanced and professional levels. We provide one of the largest libraries of educational trading materials online, allowing you easy and flexible access to a comprehensive range of learning resources.You'll find video clips and instructional lessons covering various analyses and systems. The recorded content allows you to benefit from repeated learning, following your own pace and schedule.",
       heading: "School platform,",
     },
     {
-      img: "https://igeniusglobal.com/static/media/smartFinance-phone.ad6b723e7fe49807f60e.png",
+      img: telegram,
+      logo: telegramLogo,
+      id: "telegram",
       desc: "W.M BOT is a Telegram bot that provides access to all the leading trading signals channels offered by our institution. These channels are known for their precise targets and impressive results.W.M BOT is designed to offer convenience and efficiency in your trading experience. By using W.M BOT, you'll have direct access to exclusive signal channels carefully prepared and renowned for their accuracy and proven track record. Whether you're a beginner or an experienced trader, it offers valuable insights and recommendations to assist you in making informed trades.Through W.M BOT, you'll receive timely and reliable notifications about market trends, potential trading opportunities, and expert analyses. We understand the importance of accuracy in trading, and our bot aims to provide you with the best possible guidance.",
       heading: "W.M Telegram BOT ",
     },
     {
-      img: "https://igeniusglobal.com/static/media/smartFinance-phone.ad6b723e7fe49807f60e.png",
+      img: analysis,
+      logo: analysisLogo,
+      id: "analysis",
       desc: "Analysis Page is an innovative platform that enables experts to share their market analysis through images, allowing trainees to interact and comment on these analyses in various ways. This platform serves as a unique space for exchanging knowledge and expertise in the field of trading.Through Analysis Page, experts share analytical images that illustrate their forecasts and insights regarding market movements and various financial assets. Trainees can browse through these images, read accompanying analyses, and benefit from the experience and professional thinking of the experts.What sets Analysis Page apart is the ability for direct interaction with these images. Trainees can provide written comments, pose questions, seek clarification, and exchange opinions with both experts and other trainees. Additionally, trainees can also share their own personal analyses through images, allowing them to express their own views and perspectives on the market and its movements.Through this interactive and educational environment, trainees can gain valuable knowledge and experience from experts and like-minded individuals. Everyone is encouraged to participate and engage, contributing to the expansion of knowledge, the development of trading skills, and strengthening our collaborative teamwork.",
       heading: "Analysis Page",
     },
@@ -60,7 +83,6 @@ function Products() {
           }}
           effect={"coverflow"}
           loop={true}
-          grabCursor={true}
           centeredSlides={true}
           coverflowEffect={{
             rotate: 0,
@@ -76,33 +98,20 @@ function Products() {
           }}
           className="mySwiper"
         >
-          <SwiperSlide>
-            <div className="card-swap2">
-              <img
-                src="https://1000logos.net/wp-content/uploads/2016/11/Facebook-logo.png"
-                alt=""
-                className="imagess"
-              />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="card-swap2">
-              <img
-                src="https://1000logos.net/wp-content/uploads/2016/11/Facebook-logo.png"
-                alt=""
-                className="imagess"
-              />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="card-swap2">
-              <img
-                src="https://1000logos.net/wp-content/uploads/2016/11/Facebook-logo.png"
-                alt=""
-                className="imagess"
-              />
-            </div>
-          </SwiperSlide>
+          {products.map((product) => (
+            <SwiperSlide
+              onClick={() => {
+                document
+                  .querySelector(`#${product.id}`)
+                  .scrollIntoView({ behavior: "smooth" });
+              }}
+              style={{ cursor: "pointer" }}
+            >
+              <div className="card-swap2">
+                <img src={product.logo} alt="" className="imagess" />
+              </div>
+            </SwiperSlide>
+          ))}
         </Swiper>
       </div>
       <div className="p-5 bg-grayy">
@@ -114,6 +123,7 @@ function Products() {
       <div>
         {products.map((product, index) => (
           <div
+            id={product.id}
             className={`content-container row align-items-center ${
               index % 2 ? "flex-row-reverse" : ""
             } `}

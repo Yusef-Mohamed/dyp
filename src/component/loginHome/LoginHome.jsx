@@ -88,12 +88,7 @@ const LoginHome = () => {
   }, []);
   return (
     <div className="login-home">
-      <div
-        className="sideControler"
-        onClick={() =>
-          document.querySelector(".sideControler").classList.remove("open")
-        }
-      >
+      <div className="sideControler">
         <div
           className="closing"
           onClick={() =>

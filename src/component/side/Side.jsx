@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
-import logo from "../../assets/logs.png";
+import logo from "../../assets/logo.png";
+
 import { Link, useNavigate } from "react-router-dom";
 import { FaUniversity, FaUserAlt } from "react-icons/fa";
 import { AiFillHome } from "react-icons/ai";
