@@ -107,24 +107,32 @@ const LoginHome = () => {
               document.querySelector(".sideControler").classList.add("open")
             }
           >
-            <FaBars size={32} />
+            <FaBars size={32} color="#ffcc00" />
           </span>
           <span
             onClick={() => clickOnHome("cart")}
             className="cart-icon pc-only"
           >
             <div className="num">{num}</div>
-            <FiShoppingCart />
+            <FiShoppingCart color="#ffcc00" />
           </span>
           <span onClick={() => clickOnHome("home")} className=" pc-only">
-            <AiFillHome />
+            <AiFillHome color="#ffcc00" />
           </span>
           <div className="user pc-only">
             <span onClick={() => clickOnHome("profile")}>
+
               {sessionStorage.getItem("profile") ? <img className="pr-image" src={sessionStorage.getItem("profile")} /> : <FaUserAlt />}
-              
+
+              <FaUserAlt color="#ffcc00" />
+
             </span>
-            <DropdownButton id="dropdown-basic-button" title={userName}>
+            <DropdownButton
+              id="dropdown-basic-button"
+              variant="none"
+              className="logoutDrop"
+              title={userName}
+            >
               <Dropdown.Item>
                 <Link onClick={logOut} to="/">
                   Log Out

@@ -9,7 +9,6 @@
 }
 .home-for-login .carousel img {
   width: 100% !important;
-  height: 150px !important;
 }
 .home-for-login .second {
   display: flex;
@@ -114,7 +113,8 @@
 
 .reacts {
   display: flex;
-  justify-content: center;
+  justify-content: end;
+  margin-right: 10px;
   align-items: center;
   gap: 10px;
 }

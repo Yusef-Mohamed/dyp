@@ -2,17 +2,19 @@ import React, { useEffect } from "react";
 import logo from "../../assets/logo.png";
 
 import { Link, useNavigate } from "react-router-dom";
-import { FaUniversity, FaUserAlt } from "react-icons/fa";
-import { AiFillHome } from "react-icons/ai";
-import { SiGoogleanalytics } from "react-icons/si";
-import { MdLiveTv } from "react-icons/md";
-import { FaStore } from "react-icons/fa";
-import { GiPlainDagger } from "react-icons/gi";
-import { AppContext } from "../../App";
+import { FaUserAlt } from "react-icons/fa";
+
 import { useContext } from "react";
 import Dropdown from "react-bootstrap/Dropdown";
 import DropdownButton from "react-bootstrap/DropdownButton";
 import { FiShoppingCart } from "react-icons/fi";
+import home from "../../assets/sidebarlogos/home.png";
+import analytic from "../../assets/sidebarlogos/analytic.png";
+import courses from "../../assets/sidebarlogos/courses.png";
+import live from "../../assets/sidebarlogos/live.png";
+import store from "../../assets/sidebarlogos/store.png";
+import packagee from "../../assets/sidebarlogos/package.png";
+import { AppContext } from "../../App";
 const Side = () => {
   const {
     currentStep,
@@ -67,31 +69,32 @@ const Side = () => {
 
   return (
     <div className="side">
-      <img src={logo} alt="" />
+      <img src={logo} alt="" className="logo" />
       <div className="list">
         <div className="momo" onClick={() => clickOnSide("home")}>
-          <AiFillHome /> Home
+          <img src={home} alt="home" /> <span>Home</span>
         </div>
         <h2>education</h2>
         <div className="momo" onClick={() => clickOnSide("education")}>
-          <FaUniversity /> Courses
+          <img src={courses} alt="courses" /> <span>Courses</span>
         </div>
         <div className="momo" onClick={() => clickOnSide("analytic")}>
-          <SiGoogleanalytics /> Analytic
+          <img src={analytic} alt="analytic" /> <span>Analytic</span>
         </div>
         <div className="momo" onClick={() => clickOnSide("lives")}>
-          <MdLiveTv /> Lives
+          <img src={live} alt="lives" /> <span>Lives</span>
         </div>
         <div className="momo" onClick={() => clickOnSide("packages")}>
-          <GiPlainDagger /> Choose Package
+          <img src={packagee} alt="Package" style={{ width: "25px" }} />{" "}
+          <span>Choose Package</span>
         </div>
         <h2>store</h2>
         <div className="momo" onClick={() => clickOnSide("store")}>
-          <FaStore /> Store
+          <img src={store} alt="Store" style={{ width: "25px" }} />{" "}
+          <span>Store</span>
         </div>
         <span onClick={() => clickOnHome("cart")} className="momo  mobile-only">
-          <div className="num">{num}</div>
-          <FiShoppingCart /> Cart
+          {num} <FiShoppingCart /> Cart
         </span>
         <span
           className="user mobile-only momo"
@@ -100,7 +103,12 @@ const Side = () => {
           <FaUserAlt /> Profile
         </span>
         <div className="user mobile-only momo">
-          <DropdownButton id="dropdown-basic-button" title={userName}>
+          <DropdownButton
+            id="dropdown-basic-button"
+            variant="none"
+            className="logoutDrop"
+            title={userName}
+          >
             <Dropdown.Item>
               <Link onClick={logOut} to="/">
                 Log Out

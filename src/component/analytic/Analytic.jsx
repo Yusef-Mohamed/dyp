@@ -7,7 +7,9 @@ import Modal from "react-bootstrap/Modal";
 import Carousel from "react-bootstrap/Carousel";
 import logo from "../../assets/logs.png";
 import PostCard from "../homPgaeFOrLogin/PostCard";
-
+import one from "../../assets/panars/1-15.webp";
+import two from "../../assets/panars/1-16.webp";
+import three from "../../assets/panars/1-17.webp";
 function MyVerticallyCenteredModal(props) {
   return (
     <Modal
@@ -114,14 +116,14 @@ const Analytic = () => {
         comments={comments}
       />
       <Carousel>
-        <Carousel.Item interval={1000}>
-          <img className="d-block w-100" src={logo} alt="First slide" />
+        <Carousel.Item interval={3000}>
+          <img className="d-block w-100" src={one} alt="First slide" />
         </Carousel.Item>
-        <Carousel.Item interval={700}>
-          <img className="d-block w-100" src={logo} alt="Second slide" />
+        <Carousel.Item interval={3000}>
+          <img className="d-block w-100" src={two} alt="Second slide" />
         </Carousel.Item>
-        <Carousel.Item interval={700}>
-          <img className="d-block w-100" src={logo} alt="Third slide" />
+        <Carousel.Item interval={3000}>
+          <img className="d-block w-100" src={three} alt="Third slide" />
         </Carousel.Item>
       </Carousel>
       {posts.map((post) => {

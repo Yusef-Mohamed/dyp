@@ -5,6 +5,9 @@
 .bg-grayy {
   background-color: var(--gray);
 }
+.color-gold {
+  color: var(--gold);
+}
 .hoverGold {
   transition: 0s;
   -webkit-transition: 0s;
@@ -317,4 +320,7 @@ a {
   -o-border-radius: 10px;
   height: 100%;
   color: black;
+}
+.secBanar {
+  max-width: 100%;
 }

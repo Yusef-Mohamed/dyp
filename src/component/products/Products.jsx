@@ -14,6 +14,7 @@ import liveLogo from "../../assets/products/logos/live.webp";
 import schoolLogo from "../../assets/products/logos/school.webp";
 import skLogo from "../../assets/products/logos/sk.webp";
 import telegramLogo from "../../assets/products/logos/telegram.webp";
+import img from "../../assets/Products.webp";
 function Products() {
   const products = [
     {
@@ -114,12 +115,8 @@ function Products() {
           ))}
         </Swiper>
       </div>
-      <div className="p-5 bg-grayy">
-        <p className="container p-5 text-center">
-          <b> iGenius helps people</b> solve their problems in new and brilliant
-          ways.
-        </p>
-      </div>
+      <img src={img} className="secBanar" style={{ width: "100%" }} alt="" />
+
       <div>
         {products.map((product, index) => (
           <div

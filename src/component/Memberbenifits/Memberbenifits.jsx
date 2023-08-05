@@ -6,6 +6,7 @@ import "swiper/css/pagination";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectCoverflow } from "swiper";
+import img from "../../assets/panars/Member Benifits.webp";
 
 function Memberbenifits() {
   const [data, setData] = useState([]);
@@ -25,19 +26,11 @@ function Memberbenifits() {
   }, []);
   return (
     <div className="memberbenifits">
-      <div className="p-5 bg-grayy">
-        <p className="container p-5 text-center">
-          <b> iGenius helps people</b> solve their problems in new and brilliant
-          ways.
-        </p>
-      </div>
+      <img src={img} className="secBanar" alt="" />
+
       <div className="container py-5">
         <div className="text-center">
           <h1 className="heading">Benefits</h1>
-          <p style={{ fontSize: "20px" }} className="my-5">
-            iGenius has a membership for anyone interested in improving their
-            relationship with money.
-          </p>
         </div>
       </div>
       <div className="container">
