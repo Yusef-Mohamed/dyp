@@ -2,13 +2,8 @@ import React, { useEffect } from "react";
 import logo from "../../assets/logo.png";
 
 import { Link, useNavigate } from "react-router-dom";
-import { FaUniversity, FaUserAlt } from "react-icons/fa";
-import { AiFillHome } from "react-icons/ai";
-import { SiGoogleanalytics } from "react-icons/si";
-import { MdLiveTv } from "react-icons/md";
-import { FaStore } from "react-icons/fa";
-import { GiPlainDagger } from "react-icons/gi";
-import { AppContext } from "../../App";
+import { FaUserAlt } from "react-icons/fa";
+
 import { useContext } from "react";
 import Dropdown from "react-bootstrap/Dropdown";
 import DropdownButton from "react-bootstrap/DropdownButton";
@@ -19,6 +14,7 @@ import courses from "../../assets/sidebarlogos/courses.png";
 import live from "../../assets/sidebarlogos/live.png";
 import store from "../../assets/sidebarlogos/store.png";
 import packagee from "../../assets/sidebarlogos/package.png";
+import { AppContext } from "../../App";
 const Side = () => {
   const {
     currentStep,
