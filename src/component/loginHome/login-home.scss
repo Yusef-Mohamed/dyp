@@ -10,7 +10,7 @@
     overflow-x: hidden;
     position: relative;
     z-index: 100;
-    img {
+    .logo {
       margin: 20px auto;
       position: relative;
       left: 50%;
@@ -37,6 +37,9 @@
         &:hover {
           background-color: #ffcc00;
           color: black;
+        }
+        img {
+          width: 35px;
         }
       }
       h2 {

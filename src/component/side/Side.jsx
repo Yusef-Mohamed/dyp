@@ -13,6 +13,12 @@ import { useContext } from "react";
 import Dropdown from "react-bootstrap/Dropdown";
 import DropdownButton from "react-bootstrap/DropdownButton";
 import { FiShoppingCart } from "react-icons/fi";
+import home from "../../assets/sidebarlogos/home.png";
+import analytic from "../../assets/sidebarlogos/analytic.png";
+import courses from "../../assets/sidebarlogos/courses.png";
+import live from "../../assets/sidebarlogos/live.png";
+import store from "../../assets/sidebarlogos/store.png";
+import packagee from "../../assets/sidebarlogos/package.png";
 const Side = () => {
   const {
     currentStep,
@@ -67,27 +73,29 @@ const Side = () => {
 
   return (
     <div className="side">
-      <img src={logo} alt="" />
+      <img src={logo} alt="" className="logo" />
       <div className="list">
         <div className="momo" onClick={() => clickOnSide("home")}>
-          <AiFillHome /> Home
+          <img src={home} alt="home" /> <span>Home</span>
         </div>
         <h2>education</h2>
         <div className="momo" onClick={() => clickOnSide("education")}>
-          <FaUniversity /> Courses
+          <img src={courses} alt="courses" /> <span>Courses</span>
         </div>
         <div className="momo" onClick={() => clickOnSide("analytic")}>
-          <SiGoogleanalytics /> Analytic
+          <img src={analytic} alt="analytic" /> <span>Analytic</span>
         </div>
         <div className="momo" onClick={() => clickOnSide("lives")}>
-          <MdLiveTv /> Lives
+          <img src={live} alt="lives" /> <span>Lives</span>
         </div>
         <div className="momo" onClick={() => clickOnSide("packages")}>
-          <GiPlainDagger /> Choose Package
+          <img src={packagee} alt="Package" style={{ width: "25px" }} />{" "}
+          <span>Choose Package</span>
         </div>
         <h2>store</h2>
         <div className="momo" onClick={() => clickOnSide("store")}>
-          <FaStore /> Store
+          <img src={store} alt="Store" style={{ width: "25px" }} />{" "}
+          <span>Store</span>
         </div>
         <span onClick={() => clickOnHome("cart")} className="momo  mobile-only">
           {num} <FiShoppingCart /> Cart

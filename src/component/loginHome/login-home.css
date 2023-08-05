@@ -13,8 +13,8 @@
   position: relative;
   z-index: 100;
 }
-.login-home .side img,
-.courses .side img {
+.login-home .side .logo,
+.courses .side .logo {
   margin: 20px auto;
   position: relative;
   left: 50%;
@@ -46,6 +46,10 @@
 .courses .side .list .momo:hover {
   background-color: #ffcc00;
   color: black;
+}
+.login-home .side .list .momo img,
+.courses .side .list .momo img {
+  width: 35px;
 }
 .login-home .side .list h2,
 .courses .side .list h2 {

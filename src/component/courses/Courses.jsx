@@ -111,7 +111,7 @@ const Courses = () => {
             })}
           </div>
         ) : (
-          <div className="chosen">select a course</div>
+          ""
         )}
         {chosen ? <h3>live</h3> : null}
         {chosen ? (
@@ -134,7 +134,7 @@ const Courses = () => {
             })}
           </div>
         ) : (
-          <div className="chosen">select a course</div>
+          ""
         )}
       </div>
     </div>

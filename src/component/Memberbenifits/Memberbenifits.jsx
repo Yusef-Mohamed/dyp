@@ -31,10 +31,6 @@ function Memberbenifits() {
       <div className="container py-5">
         <div className="text-center">
           <h1 className="heading">Benefits</h1>
-          <p style={{ fontSize: "20px" }} className="my-5">
-            iGenius has a membership for anyone interested in improving their
-            relationship with money.
-          </p>
         </div>
       </div>
       <div className="container">

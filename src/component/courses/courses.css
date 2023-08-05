@@ -15,17 +15,21 @@
   border-bottom: 1px solid rgb(99, 95, 95);
   padding-bottom: 15px;
 }
+.courses .course:hover {
+  background-color: var(--gold);
+}
 .courses .course {
-  background-color: rgb(202, 194, 194);
+  background-color: var(--gray);
+  transition: 0.3s;
   padding: 10px;
   cursor: pointer;
   font-weight: 800;
   text-transform: capitalize;
   transition: 0.2s;
-}
-.courses .course:hover {
-  background-color: black;
-  color: white;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
 }
 .courses .course .course-active {
   background-color: black;
