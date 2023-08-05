@@ -31,7 +31,7 @@ function Footer() {
             }}
           >
             <img className="w-50 " src={logo} alt="" />
-            <div className="flex">
+            <div style={{ width: "fit-content" }}>
               <a
                 href="https://www.facebook.com/profile.php?id=100095054437735"
                 target="_blank"
