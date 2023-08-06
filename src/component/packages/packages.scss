@@ -1,11 +1,10 @@
 .packages {
-  padding: 50px 10px;
+  padding: 50px 0;
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 25px;
   .carousel {
-    width: 90% !important;
     border-radius: 10px;
     margin: 20px auto;
     img {
@@ -14,8 +13,8 @@
   }
 
   .card {
+    padding: 10px;
     width: 70%;
-    height: 254px;
     background: lightgray;
     display: flex;
     align-items: center;

@@ -1,12 +1,12 @@
 import React, { useContext, useEffect } from "react";
 import Side from "../side/Side";
 import "./login-home.css";
-import { useState } from "react";
 import { AppContext } from "../../App";
 import { AiFillHome } from "react-icons/ai";
 import { FaBars, FaUserAlt } from "react-icons/fa";
 import { FiShoppingCart } from "react-icons/fi";
-import { Link, Route, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import logo from "../../assets/logo.png";
 
 import Dropdown from "react-bootstrap/Dropdown";
 import DropdownButton from "react-bootstrap/DropdownButton";
@@ -100,6 +100,12 @@ const LoginHome = () => {
       </div>
       <div className="containerr">
         <div className="top-nav">
+          <img
+            src={logo}
+            style={{ height: "50px", marginRight: "auto" }}
+            alt=""
+            className="mobile-only"
+          />
           <span
             className="mobile-only"
             onClick={() =>

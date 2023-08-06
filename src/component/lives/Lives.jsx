@@ -95,7 +95,7 @@ const Lives = () => {
                     course Name : {live.course.title}
                   </div>
                 ) : (
-                  <div className="course">3</div>
+                  <div className="course">public</div>
                 )}
 
                 <span onClick={() => followLive(live.course._id, live._id)}>

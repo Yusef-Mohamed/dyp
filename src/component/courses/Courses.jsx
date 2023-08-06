@@ -91,18 +91,23 @@ const Courses = () => {
         ) : null}
         {chosen ? <h3>recorded</h3> : null}
         {chosen ? (
-          <div className="recorded">
+          <div className="row">
             {lessons.map((lesson, index) => {
               if (lesson.type === "recorded") {
                 return (
-                  <div className="lesson" key={index}>
-                    {/* <img src={lesson.image} /> */}
-                    <ImageWithPopup
-                      src={lesson.image}
-                      class={"w-100"}
-                      youtube={lesson.videoUrl}
-                    />
-                    <div className="title">{lesson.title}</div>
+                  <div
+                    className="col-12 col-sm-6 col-md-4 col-lg-3 w-100"
+                    key={index}
+                  >
+                    <div className="lesson w-100">
+                      {/* <img src={lesson.image} /> */}
+                      <ImageWithPopup
+                        src={lesson.image}
+                        class={"w-100"}
+                        youtube={lesson.videoUrl}
+                      />
+                      <div className="title">{lesson.title}</div>
+                    </div>
                   </div>
                 );
               } else {
@@ -115,17 +120,22 @@ const Courses = () => {
         )}
         {chosen ? <h3>live</h3> : null}
         {chosen ? (
-          <div className="recorded">
+          <div className="row">
             {lessons.map((lesson, index) => {
               if (lesson.type != "recorded") {
                 return (
-                  <div className="lesson" key={index}>
-                    <ImageWithPopup
-                      src={lesson.image}
-                      class={"w-100"}
-                      youtube={lesson.videoUrl}
-                    />
-                    <div className="title">{lesson.title}</div>
+                  <div
+                    className="col-12 col-sm-6 col-md-4 col-lg-3 w-100"
+                    key={index}
+                  >
+                    <div className="lesson w-100">
+                      <ImageWithPopup
+                        src={lesson.image}
+                        class={"w-100"}
+                        youtube={lesson.videoUrl}
+                      />
+                      <div className="title">{lesson.title}</div>
+                    </div>
                   </div>
                 );
               } else {

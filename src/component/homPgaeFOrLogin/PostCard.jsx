@@ -171,7 +171,7 @@ const PostCard = ({ post }) => {
           </div>
           <button onClick={() => createComment(post._id)}>share</button>
         </form>
-        <div>
+        <div className="commentBox">
           {showAll ? (
             <>
               {comments.map((comment) => (

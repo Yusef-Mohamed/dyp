@@ -16,7 +16,7 @@
   text-align: center;
 }
 .leaderCard:nth-child(2n) {
-  flex-direction: row-reverse;
+  flex-direction: column;
 }
 .leaderCard img {
   width: 50vw;

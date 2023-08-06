@@ -4,18 +4,14 @@ body {
   overflow-x: hidden;
 }
 .nav {
-  // position: fixed;
   width: 100%;
   top: 0;
-  // z-index: 100;
   background-color: white;
   @include media(mopile) {
     background-color: white;
-    position: fixed;
     top: 0;
     z-index: 1000;
     border-radius: 0% 0% 51% 49% / 10% 10% 24% 32%;
-    //  height: 100px;
   }
 
   .mop-nav {
@@ -32,7 +28,6 @@ body {
         margin: auto;
       }
       img {
-        width: 50px;
         height: 50px;
         margin: 0 auto;
       }
@@ -56,7 +51,7 @@ body {
         height: 3px;
         width: 35px;
         border-radius: calc(4px / 2);
-        background: #7b52b9;
+        background: var(--gold);
         color: inherit;
         opacity: 1;
         transition: none 0.35s cubic-bezier(0.5, -0.35, 0.35, 1.5) 0s;
@@ -109,15 +104,16 @@ body {
     position: relative;
     // justify-content: space-between;
     min-width: 95%;
+    z-index: 10000;
     @include media(mopile) {
-      background-color: rgba(255, 255, 255, 0.863);
+      background-color: rgba(255, 255, 255);
       border-radius: 20px;
       max-width: 75%;
       min-width: 30%;
       padding: 20px;
       position: fixed;
       top: 140px;
-      left: -400px;
+      left: -1000px;
       transition: 0.3s;
       flex-direction: column;
       gap: 30px;
@@ -149,6 +145,7 @@ body {
         width: 80%;
         margin: auto;
         font-weight: 800;
+        z-index: 1000;
       }
     }
 

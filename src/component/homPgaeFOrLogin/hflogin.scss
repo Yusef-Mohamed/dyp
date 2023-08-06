@@ -2,7 +2,6 @@
   padding: 50px 0;
   margin: 20px 0;
   .carousel {
-    width: 90% !important;
     border-radius: 10px;
     margin: 20px auto;
     img {
@@ -66,6 +65,7 @@
   padding: 10px 0;
   border-top: 1px solid var(--gray);
   .content {
+    white-space: pre-wrap;
     background-color: #d9dde0;
     color: black;
     padding: 20px;
@@ -250,4 +250,8 @@
     width: 90% !important;
     margin: auto;
   }
+}
+.commentBox {
+  max-height: 300px;
+  overflow-y: auto;
 }

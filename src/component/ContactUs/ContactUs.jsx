@@ -14,7 +14,12 @@ function ContactUs() {
             />
             <div>
               <h5>Email</h5>
-              <a href="email">wealthmakers.helpcenter@gmail.com</a>
+              <a
+                href="mailto:wealthmakers.helpcenter@gmail.com"
+                style={{ whiteSpace: "wrap" }}
+              >
+                wealthmakers.helpcenter@gmail.com
+              </a>
             </div>
           </div>
           <div className="col-md-6 contactItem">

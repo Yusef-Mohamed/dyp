@@ -5,7 +5,6 @@
   flex-direction: column;
   gap: 12px;
   .carousel {
-    width: 90% !important;
     border-radius: 10px;
     margin: 20px auto;
     img {
@@ -22,7 +21,7 @@
     padding: 10px;
     border-radius: 10px;
     box-shadow: 1px 1px 12px;
-    width: 70%;
+    width: 90%;
     margin: 0 auto;
     text-transform: capitalize;
     display: flex;
@@ -30,18 +29,17 @@
     gap: 20px;
     .head {
       display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
       justify-content: space-evenly;
       align-items: center;
       span {
-        background-color: var(--my-color);
+        background-color: var(--gold);
         padding: 10px;
         color: white;
         cursor: pointer;
         border-radius: 5px;
         transition: 0.2s;
-        &:hover {
-          background-color: rgb(17, 94, 196);
-        }
       }
     }
     .second {
@@ -65,8 +63,9 @@
       }
     }
     .prevent-life {
-      background-color: gray;
+      background-color: var(--gray);
       padding: 10px;
+      color: black;
       border-radius: 10px;
       text-align: center;
       color: white;
