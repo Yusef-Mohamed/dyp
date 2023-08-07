@@ -24,6 +24,7 @@ import { BiLike } from "react-icons/bi";
 import Products from "./component/products/Products";
 import Edit from "./component/edit-profile/Edit";
 import Password from "./component/password/Password";
+import ProductPage from "./component/productPage/ProductPage";
 
 export const AppContext = createContext();
 
@@ -141,6 +142,7 @@ function App() {
           <Route path="/leadership" element={<Leadership />} />
           <Route path="/products" element={<Products />} />
           <Route path="/loginHome" element={<LoginHome />} />
+          <Route path="/loginHome/product/:id" element={<ProductPage />} />
           <Route path="/loginHome/edit" element={<Edit />} />
           <Route path="/loginHome/password" element={<Password />} />
           <Route

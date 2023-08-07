@@ -31,6 +31,7 @@ const Side = () => {
   const clickOnHome = (step) => {
     setCurrentStep(step);
     sessionStorage.setItem("step", step);
+    history("/loginHome");
   };
   useEffect(() => {
     window.onpopstate = () => {
@@ -55,6 +56,7 @@ const Side = () => {
   const clickOnSide = (step) => {
     setCurrentStep(step);
     sessionStorage.setItem("step", step);
+    history("/loginHome");
   };
   const logOut = () => {
     sessionStorage.clear();
