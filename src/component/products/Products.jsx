@@ -110,6 +110,7 @@ function Products() {
             >
               <div className="card-swap2">
                 <img src={product.logo} alt="" className="imagess" />
+                <div>{product.heading}</div>
               </div>
             </SwiperSlide>
           ))}

@@ -156,3 +156,26 @@
     }
   }
 }
+.btnCard {
+  display: block;
+  background-color: black;
+  color: var(--gold);
+  width: 75%;
+  margin: 10px auto;
+  padding: 10px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  text-align: center;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+.btnCard:hover {
+  background-color: var(--gold);
+  color: black;
+}

@@ -7,6 +7,7 @@ import "swiper/css/pagination";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectCoverflow } from "swiper";
 import img from "../../assets/panars/Member Benifits.webp";
+import { Link } from "react-router-dom";
 
 function Memberbenifits() {
   const [data, setData] = useState([]);
@@ -30,7 +31,9 @@ function Memberbenifits() {
 
       <div className="container py-5">
         <div className="text-center">
-          <h1 className="heading">Benefits</h1>
+          <h1 className="heading" style={{ textAlign: "left" }}>
+            Benefits
+          </h1>
         </div>
       </div>
       <div className="container">
@@ -87,6 +90,12 @@ function Memberbenifits() {
                 ) : (
                   ""
                 )}
+                <Link to="/login" className="btnCard">
+                  buy backage
+                </Link>
+                <Link to="/sign-in" className="btnCard">
+                  سجل الان واحصل علي ميزات مجانية
+                </Link>
               </div>
             </SwiperSlide>
           ))}

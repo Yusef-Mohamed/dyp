@@ -44,8 +44,7 @@
 }
 .login-home .side .list .momo:hover,
 .courses .side .list .momo:hover {
-  background-color: #ffcc00;
-  color: black;
+  font-size: 20px;
 }
 .login-home .side .list .momo img,
 .courses .side .list .momo img {
