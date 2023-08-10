@@ -3,4 +3,21 @@
   width: 100%;
   height: 300px;
   background-size: cover;
+}
+
+.about {
+  direction: rtl;
+  text-align: right;
+}
+.about .section {
+  margin: 20px;
+}
+.about .title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.about .content {
+  font-size: 18px;
+  line-height: 1.6;
 }/*# sourceMappingURL=aboutus.css.map */

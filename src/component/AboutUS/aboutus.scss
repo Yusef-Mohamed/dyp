@@ -4,3 +4,19 @@
   height: 300px;
   background-size: cover;
 }
+.about {
+  direction: rtl;
+  text-align: right;
+  .section {
+    margin: 20px;
+  }
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  .content {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+}

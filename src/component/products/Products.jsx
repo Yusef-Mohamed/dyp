@@ -2,12 +2,12 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectCoverflow } from "swiper";
 import "./products.css";
-import one from "../../assets/products/photos/1.webp";
-import analysis from "../../assets/products/photos/analysis.webp";
-import live from "../../assets/products/photos/live.webp";
-import school from "../../assets/products/photos/school.webp";
-import sk from "../../assets/products/photos/sk.webp";
-import telegram from "../../assets/products/photos/telegram.webp";
+import one from "../../assets/products/photos/1.png";
+import analysis from "../../assets/products/photos/analysis.png";
+import live from "../../assets/products/photos/live.png";
+import school from "../../assets/products/photos/school.png";
+import sk from "../../assets/products/photos/sk.png";
+import telegram from "../../assets/products/photos/telegram.png";
 import oneLogo from "../../assets/products/logos/1.webp";
 import analysisLogo from "../../assets/products/logos/analysis.webp";
 import liveLogo from "../../assets/products/logos/live.webp";
@@ -21,42 +21,42 @@ function Products() {
       img: one,
       logo: oneLogo,
       id: "one",
-      desc: "The 1% platform is the perfect place for ambitious entrepreneurs seeking to enhance their knowledge and expand their professional networks in the field of entrepreneurship. Through this platform, we provide a comprehensive educational environment and specialized resources that assist entrepreneurs in their journey of growth and development. Starting from ideation and content creation, all the way to growth strategies and marketing, we offer opportunities for you to communicate and collaborate with like-minded individuals who share the same ambition and entrepreneurial mindset.",
-      heading: "The 1% platform",
+      desc: "هو المكان المثالي لرواد الأعمال الطموحين الذين يسعون لتعزيز معرفتهم وتوسيع شبكاتهم الريادية في مجال التدوال و الاستثمار.  نقدم  من خلال هذه المنصة بيئة تعليمية وموارد متخصصة تساعد رواد الأعمال على النمو والتطور في رحلتهم.  بدءًا من تطوير الأفكار وإنشاء المحتوى وصولاً إلى استراتيجيات النمو والتسويق. و ستتاح لك الفرصة للتواصل والتعاون مع أشخاص مماثلين لديهم نفس الطموح والتفكير الريادي.",
+      heading: "منصة %1",
     },
     {
       img: sk,
       logo: skLogo,
       id: "sk",
-      desc: "It is an integrated system and strategy based on understanding golden zones and anticipating future market movements. It is considered one of the most powerful strategies due to its precision in setting targets.",
+      desc: "هو نظام واستراتيجية متكاملة يعتمد على فهم المناطق الذهبية وتوقع تحركات السوق المستقبلية. تعتبر من أقوى الاستراتيجيات نظرا لدقتها في تحديد الأهداف",
       heading: "SK System",
     },
     {
       img: live,
       logo: liveLogo,
       id: "live",
-      desc: "With the Study Live platform, you will have direct access to a select group of financial market experts, receiving real-time guidance that will assist you in making well-informed and intelligent investment decisions. You will benefit from their in-depth analyses and valuable advice.",
-      heading: "Study Live platform",
+      desc: "مع هذه المنصة ستكون على اتصال مباشر مع نخبة من خبراء السوق المالي وتتلقى توجيهات حية تساعدك على اتخاذ قرارات استثمارية مدروسة وذكية . ستتمكن من الاستفادة من تحليلاتهم العميقة ونصائحهم القيمة بشكل مباشر.",
+      heading: "Study Live منصة",
     },
     {
       img: school,
       logo: schoolLogo,
       id: "shcool",
-      desc: "The 'School' platform is the place where you can find all the recorded educational lessons you need, starting from the basics and progressing to advanced and professional levels. We provide one of the largest libraries of educational trading materials online, allowing you easy and flexible access to a comprehensive range of learning resources.You'll find video clips and instructional lessons covering various analyses and systems. The recorded content allows you to benefit from repeated learning, following your own pace and schedule.",
-      heading: "School platform,",
+      desc: "هي المكان الذي تجد فيه جميع الدروس التعليمية المسجلة التي تحتاج إليها، بدءًا من الأساسيات وصولًا إلى المستوى المتقدم والاحترافي. نحن نوفر لك واحدة من أكبر مكتبات التدوال التعليمية عبر الإنترنت، حيث يمكنك الوصول إلى مجموعة شاملة من المواد التعليمية بسهولة ومرونة. ستجد فيها مقاطع فيديو مسجلة ودروسًا تعليمية تغطي مختلف التحاليل و الانظمة كما أن المحتوى المسجل يتيح لك الاستفادة منه بالتكرار وفقًا لوتيرتك الخاصة.",
+      heading: `"School"  منصة `,
     },
     {
       img: telegram,
       logo: telegramLogo,
       id: "telegram",
-      desc: "W.M BOT is a Telegram bot that provides access to all the leading trading signals channels offered by our institution. These channels are known for their precise targets and impressive results.W.M BOT is designed to offer convenience and efficiency in your trading experience. By using W.M BOT, you'll have direct access to exclusive signal channels carefully prepared and renowned for their accuracy and proven track record. Whether you're a beginner or an experienced trader, it offers valuable insights and recommendations to assist you in making informed trades.Through W.M BOT, you'll receive timely and reliable notifications about market trends, potential trading opportunities, and expert analyses. We understand the importance of accuracy in trading, and our bot aims to provide you with the best possible guidance.",
-      heading: "W.M Telegram BOT ",
+      desc: "هو  بوت تليجرام يوفر وصولًا إلى جميع قنوات التوصيات الرائدة التي تقدمها مؤسستنا الرائعة. تتميز هذه القنوات بدقة أهدافها ونتائجها المثيرة. فسواء كنت مبتدئًا أو متداولا ذو خبرة، ستوفر قنوات التوصيات هذه والتي تشتهر بدقتها وسجلها المثبت، رؤى قيمة وتوصيات لمساعدتك في تداولات مستنيرة. ستتلقى منها إشعارات في الوقت المناسب عن اتجاهات السوق والفرص التداولية المحتملة والتحليلات الخبيرة.  و لاننا ندرك أهمية الدقة عند التداول صُممت هذه الميزة خصيصاً لتوفير الراحة والكفاءة في تجربتك معنا.",
+      heading: "W.M BOT",
     },
     {
       img: analysis,
       logo: analysisLogo,
       id: "analysis",
-      desc: "Analysis Page is an innovative platform that enables experts to share their market analysis through images, allowing trainees to interact and comment on these analyses in various ways. This platform serves as a unique space for exchanging knowledge and expertise in the field of trading.Through Analysis Page, experts share analytical images that illustrate their forecasts and insights regarding market movements and various financial assets. Trainees can browse through these images, read accompanying analyses, and benefit from the experience and professional thinking of the experts.What sets Analysis Page apart is the ability for direct interaction with these images. Trainees can provide written comments, pose questions, seek clarification, and exchange opinions with both experts and other trainees. Additionally, trainees can also share their own personal analyses through images, allowing them to express their own views and perspectives on the market and its movements.Through this interactive and educational environment, trainees can gain valuable knowledge and experience from experts and like-minded individuals. Everyone is encouraged to participate and engage, contributing to the expansion of knowledge, the development of trading skills, and strengthening our collaborative teamwork.",
+      desc: " هي منصة مبتكرة يقوم الخبراء من خلالها بمشاركة صور تحليلية توضح توقعاتهم ورؤاهم حول حركة السوق. يمكن للمتدربين تصفح هذه الصور وقراءة التحليلات المرافقة، والاستفادة من الخبرة والتفكير الاحترافي للخبراء كما تتيح للمتدربين التفاعل المباشر والتعليق على الصور بطرق مختلفة.  بالإضافة إلى ذلك، يمكن للمتدربين أيضًا مشاركة تحليلاتهم الشخصية عبر الصور، مما يسمح لهم بالتعبير عن آرائهم ورؤاهم الخاصة ايظاً بذلك تعد هذه المنصة مكانًا فريدًا لتبادل المعرفة والخبرات في مجال التداول. ومن خلال هذه البيئة التفاعلية والتعليمية، فتتيح للمتدربين اكتساب المعرفة والخبرات القيمة من الخبراء والأفراد ذوي الاهتمام المشترك.",
       heading: "Analysis Page",
     },
   ];
