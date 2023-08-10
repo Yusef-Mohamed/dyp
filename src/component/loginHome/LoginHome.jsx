@@ -20,6 +20,7 @@ import Store from "../store/Store";
 import Profile from "../profile/Profile";
 import Cart from "../cart/Cart";
 import Footer from "../Footer/Footer";
+import FreeStore from "../store/FreeStore";
 
 const LoginHome = () => {
   const { currentStep, setCurrentStep } = useContext(AppContext);
@@ -44,6 +45,8 @@ const LoginHome = () => {
         return <Packages />;
       case "store":
         return <Store />;
+      case "freestore":
+        return <FreeStore />;
       case "profile":
         return <Profile />;
       case "cart":
