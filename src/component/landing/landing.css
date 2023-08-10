@@ -134,13 +134,4 @@
   .landing a {
     padding: 16px 20px;
   }
-}
-.landing {
-  margin-top: 50px;
-}
-
-@media (min-width: 768px) {
-  .landing {
-    margin-top: 0;
-  }
 }/*# sourceMappingURL=landing.css.map */

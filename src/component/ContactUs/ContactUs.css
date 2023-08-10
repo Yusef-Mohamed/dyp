@@ -42,4 +42,15 @@
 
 .contactUs .contact h5 {
   color: rgb(68, 178, 221);
+}
+
+@media (max-width: 992px) {
+  .contactUs .contact .contactItem {
+    padding: 50px 30px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 40px;
+  }
 }/*# sourceMappingURL=ContactUs.css.map */

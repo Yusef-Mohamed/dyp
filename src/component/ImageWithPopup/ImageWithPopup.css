@@ -5,7 +5,7 @@
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.4);
-  z-index: 1000;
+  z-index: 100000;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,7 +21,7 @@
   position: absolute;
   top: -50px;
   right: 0;
-  z-index: 1111;
+  z-index: 111111;
   cursor: pointer;
   color: rgb(170, 170, 170);
 }

@@ -3,7 +3,6 @@
   margin: 20px 0;
 }
 .home-for-login .carousel {
-  width: 90% !important;
   border-radius: 10px;
   margin: 20px auto;
 }
@@ -68,6 +67,7 @@
   margin: 10px;
 }
 .comment .content {
+  white-space: pre-wrap;
   background-color: #d9dde0;
   color: black;
   padding: 20px;
@@ -261,10 +261,4 @@
     width: 90% !important;
     margin: auto;
   }
-}
-.puplisher {
-  background-color: #129ef7;
-  padding: 2px 4px;
-  border-radius: 10px;
-  color: white;
 }/*# sourceMappingURL=hflogin.css.map */

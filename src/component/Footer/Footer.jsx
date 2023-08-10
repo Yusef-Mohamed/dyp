@@ -16,27 +16,26 @@ function Footer() {
         position: "relative",
         zIndex: "3",
       }}
-      className="text-white fw-bolder py-4"
+      className="text-white fw-bolder py-4 footer"
     >
       <div className="content-container">
         <div className="row py-5">
           <div
-            className="col-lg-5  text-center"
+            className="col-lg-4  text-center py-4"
             style={{
               display: "flex",
               flexDirection: "column",
               justifyContent: "center",
-              alignItems: "left",
+              alignItems: "center",
               gap: "40px",
             }}
           >
             <img className="w-50 " src={logo} alt="" />
-            <div style={{ width: "fit-content" }}>
+            <div>
               <a
                 href="https://www.facebook.com/profile.php?id=100095054437735"
                 target="_blank"
                 rel="noreferrer"
-                className="p-3"
               >
                 <FaFacebookF size={30} color="#ffcc00" />
               </a>
@@ -44,7 +43,6 @@ function Footer() {
                 href="https://www.instagram.com/wealth_makers_official/?igshid=Y2I2MzMwZWM3ZA"
                 target="_blank"
                 rel="noreferrer"
-                className="p-3"
               >
                 <AiFillInstagram size={30} color="#ffcc00" />
               </a>
@@ -52,7 +50,6 @@ function Footer() {
                 href="https://twitter.com/Wealth_Makers_"
                 target="_blank"
                 rel="noreferrer"
-                className="p-3"
               >
                 <AiOutlineTwitter size={30} color="#ffcc00" />
               </a>
@@ -60,7 +57,6 @@ function Footer() {
                 href="https://www.youtube.com/channel/UCKlzTSsJBGg48ElLpUDT9rA"
                 target="_blank"
                 rel="noreferrer"
-                className="p-3"
               >
                 <AiFillYoutube size={30} color="#ffcc00" />
               </a>
@@ -68,13 +64,12 @@ function Footer() {
                 href="https://www.tiktok.com/@wealth_makers_official"
                 target="_blank"
                 rel="noreferrer"
-                className="p-3"
               >
                 <FaTiktok size={30} color="#ffcc00" />
               </a>
             </div>
           </div>
-          <div className="col-lg-7 row py-3">
+          <div className="col-lg-8 row py-3">
             <div className="col-4">
               <h4>
                 <Link to={"/polises"} className="hoverGold">

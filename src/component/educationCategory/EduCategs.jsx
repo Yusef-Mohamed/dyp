@@ -26,8 +26,8 @@ const EduCategs = () => {
       .then((data) => setCategs(data.data));
   }, []);
   return (
-    <div className="edu-categ">
-      <Carousel>
+    <>
+      <Carousel style={{ marginTop: "40px" }}>
         <Carousel.Item interval={3000}>
           <img className="d-block w-100" src={one} alt="First slide" />
         </Carousel.Item>
@@ -38,21 +38,25 @@ const EduCategs = () => {
           <img className="d-block w-100" src={three} alt="Third slide" />
         </Carousel.Item>
       </Carousel>
-      {categs.map((cat) => {
-        return (
-          <>
-            <div
-              onClick={() => clickOnCateg(cat._id)}
-              className="category"
-              key={cat._id}
-            >
-              {cat.image ? <img src={cat.image} /> : <img src={catImage} />}
-              <span>{cat.title}</span>
-            </div>
-          </>
-        );
-      })}
-    </div>
+      <div className="edu-categ">
+        <div className="row" style={{ justifyContent: "center" }}>
+          {categs.map((cat) => {
+            return (
+              <div className="col-lg-4 col-md-6 col-sm-12">
+                <div
+                  onClick={() => clickOnCateg(cat._id)}
+                  className="category"
+                  key={cat._id}
+                >
+                  {cat.image ? <img src={cat.image} /> : <img src={catImage} />}
+                  <span>{cat.title}</span>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </>
   );
 };
 

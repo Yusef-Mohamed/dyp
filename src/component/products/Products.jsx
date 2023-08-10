@@ -134,7 +134,7 @@ function Products() {
             >
               <img
                 src={product.img}
-                style={{ height: "400px", margin: "0 auto" }}
+                style={{ maxWidth: "100%", margin: "0 auto" }}
                 alt=""
               />
             </div>
