@@ -98,29 +98,32 @@ const Lives = () => {
           return (
             <div className="live" key={live._id}>
               <div className="head">
-                <div className="creator">instructor : {live.creator.name}</div>
-                {live.course ? (
-                  <div className="course">
-                    course Name : {live.course.title}
-                  </div>
-                ) : (
-                  <div className="course">public</div>
-                )}
-
-                <span onClick={() => followLive(live.course._id, live._id)}>
-                  follow this
-                </span>
-              </div>
-              <div className="second">
-                <div className="title">title : {live.title}</div>
-                <div className="date">
-                  started at : {live.day} / {live.month} , at {live.hour}
+                <div className="creator">
+                  <span>{live.creator.name}</span>
+                  <span
+                    className="styled"
+                    onClick={() => followLive(live.course._id, live._id)}
+                  >
+                    follow this
+                  </span>
+                  <span>
+                    {live.day} / {live.month} , at {live.hour}
+                  </span>
                 </div>
-                <div className="durate">duration : {live.duration} hour</div>
+                <div>
+                  {live.course ? (
+                    <div className="course">{live.course.title}</div>
+                  ) : (
+                    <div className="course">public</div>
+                  )}
+                </div>
+              </div>
+              <div>
+                <div className="title"> {live.title}</div>
               </div>
               {live.link ? (
                 <a href={live.link} target="_blank" className="start-live">
-                  start live
+                  Watch live
                 </a>
               ) : (
                 <div className="prevent-life">

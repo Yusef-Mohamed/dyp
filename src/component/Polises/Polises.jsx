@@ -28,7 +28,7 @@ function Polises() {
           >
             <div className="policie ">
               <img src={pdf} alt="" />
-              <h6>Terms of Use:</h6>
+              <h6>Terms of Use</h6>
             </div>
           </a>
         </div>

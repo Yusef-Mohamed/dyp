@@ -1,0 +1,15 @@
+.miniImages img {
+  height: 75px;
+  cursor: pointer;
+}
+.miniImages {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.miniImages .active {
+  border: 2px solid var(--gold);
+}
