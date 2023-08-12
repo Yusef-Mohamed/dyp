@@ -95,6 +95,10 @@ const Side = () => {
           <img src={store} alt="Store" style={{ width: "25px" }} />{" "}
           <span>Store</span>
         </div>
+        <div className="momo" onClick={() => clickOnSide("freestore")}>
+          <img src={store} alt="Store" style={{ width: "25px" }} />{" "}
+          <span>Free Products</span>
+        </div>
         <span onClick={() => clickOnHome("cart")} className="momo  mobile-only">
           {num} <FiShoppingCart /> Cart
         </span>
