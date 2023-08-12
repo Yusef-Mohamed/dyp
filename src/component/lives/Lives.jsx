@@ -65,6 +65,7 @@ const Lives = () => {
     })
       .then((res) => res.json())
       .then((data) => {
+        console.log("fwff"+data);
         console.log(data);
         if (data.msg == "no lives for you") {
           setNoLves(true);

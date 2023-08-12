@@ -105,7 +105,8 @@ const Analytic = () => {
       .then((res) => res.json())
       .then((data) => {
         setPosts(data.data);
-        console.log(data.data)
+        console.log("sss"+data.data)
+     
       });
   }, []);
   return (
