@@ -15,6 +15,7 @@ import live from "../../assets/sidebarlogos/live.png";
 import store from "../../assets/sidebarlogos/store.png";
 import packagee from "../../assets/sidebarlogos/package.png";
 import { AppContext } from "../../App";
+import { toast } from "react-toastify";
 const Side = () => {
   const {
     currentStep,
@@ -68,10 +69,39 @@ const Side = () => {
       },
     });
   };
-
+  const active = window.sessionStorage.getItem("active");
+  const onActive = async () => {
+    fetch(`${route}/auth/sendVerifyCode`, {
+      method: "GET",
+      headers: {
+        Authorization: `Bearer ${sessionStorage.getItem("token")}`,
+        "Content-Type": "application/json",
+      },
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.succes === "true") {
+          history("/activate");
+        }
+      })
+      .catch((err) => console.log(err));
+  };
   return (
     <div className="side">
       <img src={logo} alt="" className="logo" />
+      {(active === "false" || !active) && (
+        <div
+          onClick={onActive}
+          className="btn btn-danger mobile-only"
+          style={{
+            cursor: "pointer",
+            whiteSpace: "nowrap",
+            fontSize: "12px",
+          }}
+        >
+          Active your email
+        </div>
+      )}
       <div className="list">
         <div className="momo" onClick={() => clickOnSide("home")}>
           <img src={home} alt="home" /> <span>Home</span>
@@ -100,13 +130,13 @@ const Side = () => {
           <span>Free Products</span>
         </div>
         <span onClick={() => clickOnHome("cart")} className="momo  mobile-only">
-          {num} <FiShoppingCart /> Cart
+          {num} <FiShoppingCart color="#ffcc00" /> Cart
         </span>
         <span
           className="user mobile-only momo"
           onClick={() => clickOnHome("profile")}
         >
-          <FaUserAlt /> Profile
+          <FaUserAlt color="#ffcc00" /> Profile
         </span>
         <div className="user mobile-only momo">
           <DropdownButton
