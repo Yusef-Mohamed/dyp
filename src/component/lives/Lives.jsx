@@ -59,7 +59,7 @@ const Lives = () => {
     fetch(`${route}/education/lives`, {
       method: "GET",
       headers: {
-        "Content-Type": "application/json",
+
         Authorization: `Bearer ${token}`,
       },
     })
