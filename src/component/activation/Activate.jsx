@@ -27,8 +27,19 @@ const Activate = () => {
     })
       .then((res) => res.json())
       .then((data) => {
+        console.log(data);
         if (data.token) {
-          history("/login");
+          sessionStorage.setItem("token", data.token);
+          sessionStorage.setItem("about", data.data.about);
+          sessionStorage.setItem("userName", data.data.name);
+          sessionStorage.setItem("login", true);
+          sessionStorage.setItem("active", data.data.emailVerified);
+          sessionStorage.setItem("email", data.data.email);
+          sessionStorage.setItem("phone", data.data.phone);
+          sessionStorage.setItem("role", data.data.role);
+          sessionStorage.setItem("id", data.data._id);
+
+          history("/loginHome");
           setLoader(false);
         } else {
           messageError(data.message);

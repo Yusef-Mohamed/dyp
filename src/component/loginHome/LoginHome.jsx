@@ -21,6 +21,7 @@ import Profile from "../profile/Profile";
 import Cart from "../cart/Cart";
 import Footer from "../Footer/Footer";
 import FreeStore from "../store/FreeStore";
+import { toast } from "react-toastify";
 
 const LoginHome = () => {
   const { currentStep, setCurrentStep } = useContext(AppContext);
@@ -88,6 +89,28 @@ const LoginHome = () => {
       .then((res) => res.json())
       .then((data) => setNum(data.numberOfCartItems));
   }, []);
+  const active = window.sessionStorage.getItem("active");
+  useEffect(() => {
+    if (active === "false" || !active) {
+      toast.error("You should active your email ");
+    }
+  }, [active]);
+  const onActive = async () => {
+    fetch(`${route}/auth/sendVerifyCode`, {
+      method: "GET",
+      headers: {
+        Authorization: `Bearer ${sessionStorage.getItem("token")}`,
+        "Content-Type": "application/json",
+      },
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.succes === "true") {
+          history("/activate");
+        }
+      })
+      .catch((err) => console.log(err));
+  };
   return (
     <div className="login-home">
       <div className="sideControler">
@@ -109,6 +132,15 @@ const LoginHome = () => {
             alt=""
             className="mobile-only"
           />
+          {(active === "false" || !active) && (
+            <div
+              onClick={onActive}
+              className="btn btn-danger"
+              style={{ cursor: "pointer" }}
+            >
+              Active your email
+            </div>
+          )}
           <span
             className="mobile-only"
             onClick={() =>

@@ -39,13 +39,13 @@ const Login = () => {
 
       if (response.token) {
         setLoader(false);
-
+        console.log(response);
         sessionStorage.setItem("token", response.token);
         sessionStorage.setItem("about", response.data.about);
         sessionStorage.setItem("userName", response.data.name);
         // sessionStorage.setItem("userId",response.user.id)
         sessionStorage.setItem("login", true);
-        sessionStorage.setItem("active", response.data.acive);
+        sessionStorage.setItem("active", response.data.emailVerified);
         sessionStorage.setItem("email", response.data.email);
         sessionStorage.setItem("phone", response.data.phone);
         sessionStorage.setItem("role", response.data.role);

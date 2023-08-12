@@ -60,7 +60,7 @@ const SignIn = () => {
         setLoader(false);
         history("/activate");
         sessionStorage.setItem("token", response.token);
-        console.log(response);
+        sessionStorage.setItem("active", response.data.emailVerified);
       } else {
         setLoader(false);
         console.log(response);

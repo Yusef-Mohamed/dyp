@@ -34,7 +34,6 @@ const PostCard = ({ post }) => {
       .then((res) => res.json())
       .then((data) => {
         setReactsNum(data.data);
-        console.log(data.data);
       });
   }, [post._id, route, refresh]);
   const createComment = (e) => {
@@ -65,7 +64,6 @@ const PostCard = ({ post }) => {
           setLoader(false);
           messageError("Comment not shared");
         }
-        console.log(data);
       })
       .catch((err) => console.log(err));
   };
