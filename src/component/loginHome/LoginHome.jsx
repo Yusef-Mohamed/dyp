@@ -91,9 +91,11 @@ const LoginHome = () => {
   }, []);
   const active = window.sessionStorage.getItem("active");
   useEffect(() => {
-    if (active === "false" || !active) {
-      toast.error("You should active your email ");
-    }
+    return () => {
+      if (active === "false" || !active) {
+        toast.error("You should active your email ");
+      }
+    };
   }, [active]);
   const onActive = async () => {
     fetch(`${route}/auth/sendVerifyCode`, {
@@ -135,8 +137,12 @@ const LoginHome = () => {
           {(active === "false" || !active) && (
             <div
               onClick={onActive}
-              className="btn btn-danger"
-              style={{ cursor: "pointer" }}
+              className="btn btn-danger pc-only"
+              style={{
+                cursor: "pointer",
+                whiteSpace: "nowrap",
+                fontSize: "12px",
+              }}
             >
               Active your email
             </div>

@@ -1,6 +1,5 @@
 .profile {
-  padding: 50px 15px;
-  width: 100%;
+  padding: 15px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -21,11 +20,10 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  gap: 30px;
   flex-wrap: wrap;
 }
 .profile .my-prods .paid-products .pr {
-  width: 25%;
+  height: 100%;
   border-radius: 10px;
   overflow: hidden;
   background-color: rgb(255, 254, 254);
@@ -41,9 +39,6 @@
 }
 .profile .my-prods .paid-products .pr img {
   max-width: 100%;
-  min-width: 100%;
-  max-height: 120px;
-  min-height: 120px;
 }
 .profile .my-prods .paid-products .pr .cssbuttons-io-button {
   display: flex;
@@ -60,7 +55,7 @@
   box-shadow: 0 0.7em 1.5em -0.5em rgba(77, 54, 208, 0.7450980392);
   letter-spacing: 0.05em;
   border-radius: 20em;
-  margin: 0 auto;
+  margin: auto auto 0;
 }
 .profile .my-prods .paid-products .pr .cssbuttons-io-button svg {
   margin-right: 8px;
@@ -71,44 +66,54 @@
 .profile .my-prods .paid-products .pr .cssbuttons-io-button:active {
   box-shadow: 0 0.3em 1em -0.5em rgba(77, 54, 208, 0.7450980392);
 }
-.profile .top, .profile .packs {
+.profile .top,
+.profile .packs {
   background-color: white;
   padding: 15px;
-  display: flex;
-  justify-content: space-between;
+  width: 100%;
+  margin: auto;
   border-radius: 7px;
-  align-items: center;
   box-shadow: 1px 1px 10px;
 }
-.profile .top .links, .profile .packs .links {
+.profile .top .links,
+.profile .packs .links {
   display: flex;
   flex-direction: column;
   gap: 10px;
   text-align: center;
 }
-.profile .top .links a, .profile .packs .links a {
+.profile .top .links a,
+.profile .packs .links a {
   text-transform: capitalize;
   background-color: var(--my-color);
   padding: 5px 10px;
   color: white;
   border-radius: 5px;
   text-decoration: none;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  width: 90%;
+  padding: 10px;
 }
-.profile .top .img, .profile .packs .img {
-  width: 25%;
-}
-.profile .top .img img, .profile .packs .img img {
-  max-width: 35%;
-  min-width: 35%;
-  max-height: 100px;
-  min-height: 100px;
+.profile .top .img img,
+.profile .packs .img img {
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
 }
-.profile .top .info, .profile .packs .info {
+.profile .top .info,
+.profile .packs .info {
   text-align: center;
   text-transform: capitalize;
 }
-.profile .top .info div, .profile .packs .info div {
+.profile .top .info div,
+.profile .packs .info div {
   margin-top: 12px;
 }
 .profile .packs {
@@ -132,4 +137,29 @@
   width: 100%;
   height: 100%;
   z-index: 0;
+}
+
+.telegramBot {
+  color: white;
+  padding: 15px;
+  width: 50%;
+  display: block;
+  text-align: center;
+  margin: auto;
+  background-color: var(--gold);
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+}
+
+.telegramBot:hover {
+  text-decoration: none;
+  color: black;
+  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
 }/*# sourceMappingURL=profile.css.map */
