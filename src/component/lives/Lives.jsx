@@ -27,6 +27,7 @@ const Lives = () => {
     fetch(`${route}/education/lives/searchByDate/${date}`)
       .then((res) => res.json())
       .then((data) => {
+        console.log(data)
         if (data.status) {
           setLives(data.data);
         } else {
@@ -38,6 +39,7 @@ const Lives = () => {
 
 
   const followLive = (course, id) => {
+    console.log(course + id)
     fetch(`${route}/education/lives/followLive/${course}/${id}`, {
       method: "PUT",
       headers: {
@@ -65,7 +67,7 @@ const Lives = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log("fwff"+data);
+        
         console.log(data);
         if (data.msg == "no lives for you") {
           setNoLves(true);
