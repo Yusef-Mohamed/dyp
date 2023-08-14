@@ -11,7 +11,7 @@ function GoogleTranslate() {
     window.googleTranslateElementInit = () => {
       new window.google.translate.TranslateElement(
         {
-          pageLanguage: "en,ar",
+          pageLanguage: "ar",
           includedLanguages: "ar,en",
         },
         "google_translate_element"
