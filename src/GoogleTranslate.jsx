@@ -1,6 +1,11 @@
 import React, { useEffect } from "react";
 
 function GoogleTranslate() {
+  window.addEventListener("click", (e) => {
+    if (e.target.value == "ar") {
+      window.location.reload();
+    }
+  });
   useEffect(() => {
     const script = document.createElement("script");
     script.type = "text/javascript";
@@ -12,7 +17,7 @@ function GoogleTranslate() {
       new window.google.translate.TranslateElement(
         {
           pageLanguage: "ar",
-          includedLanguages: "ar,en",
+          includedLanguages: "en,ar",
         },
         "google_translate_element"
       );
