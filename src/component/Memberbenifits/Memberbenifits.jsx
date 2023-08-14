@@ -32,7 +32,7 @@ function Memberbenifits() {
       <div className="container py-5">
         <div className="text-center">
           <h1 className="heading" style={{ textAlign: "left" }}>
-            Benefits
+            مزايا العضوية
           </h1>
         </div>
       </div>
@@ -94,7 +94,7 @@ function Memberbenifits() {
                   buy backage
                 </Link>
                 <Link to="/sign-in" className="btnCard">
-                  سجل الان واحصل علي ميزات مجانية
+                  سجل الان واحصل علي العديد من المزايا مجانية
                 </Link>
               </div>
             </SwiperSlide>

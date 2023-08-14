@@ -65,9 +65,9 @@ const Landing = () => {
           style={{ zIndex: "10" }}
           data-aos-duration="1000"
         >
-          <h1 className="heading">Feel Special</h1>
-          <p className="supheading">From Zero to Hero</p>
-          <Link to={"/login"}>Get Started</Link>
+          <h1 className="heading">اشعر بالتميز</h1>
+          <p className="supheading">من الصفر الي الاحتراف</p>
+          <Link to={"/login"}>ابدا الان </Link>
         </div>
       </div>
     </div>

@@ -48,44 +48,44 @@ const Nav = () => {
         </Link>
         <div className="list">
           <Link onClick={showMenu} to="/">
-            Home
+            الصفحة الرسمية
           </Link>
           <Link onClick={showMenu} to="/memberbenifits">
-            member benifits
+            العضويات
           </Link>
           <Link onClick={showMenu} to="/products">
-            Products
+            المنتجات
           </Link>
           <Link onClick={showMenu} to={"/leadership"}>
-            Leadership
+            القيادة
           </Link>
 
           <DropdownButton
             variant="none"
             className="navDrop"
             id="dropdown-basic-button"
-            title="who we are"
+            title="من نحن"
           >
             <Dropdown.Item>
               <Link onClick={showMenu} to={"/polises"}>
-                Polises
+                السياسات
               </Link>
             </Dropdown.Item>
             <Dropdown.Item>
               <Link onClick={showMenu} to={"/contact"}>
-                ContactUs
+                التواصل معنا
               </Link>
             </Dropdown.Item>
             <Dropdown.Item> </Dropdown.Item>
             <Dropdown.Item>
               <Link onClick={showMenu} to={"/aboutus"}>
-                AboutUs
+                من نحن
               </Link>
             </Dropdown.Item>
           </DropdownButton>
 
           <Link className="login" onClick={showMenu} to="/login">
-            Login
+            تسجيل الدخول المجاني
           </Link>
           <GoogleTranslate />
         </div>

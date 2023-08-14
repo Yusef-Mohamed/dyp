@@ -68,14 +68,16 @@ const Cart = () => {
   return (
     <div className="cart">
       <h2>My Cart</h2>
-      <div className="producs">
+      <div className="producs row">
         {products.map((pro, index) => {
           return (
-            <div className="pr" key={index}>
-              <img src={pro.product.imageCover} alt="" />
-              <div className="title">{pro.product.title}</div>
-              <div className="price">${pro.product.price}</div>
-              <span onClick={() => deleteFromCart(pro._id)}>Delete</span>
+            <div className="col-sm-6 col-md-4 col-lg-3">
+              <div className="pr" key={index}>
+                <img src={pro.product.imageCover} alt="" />
+                <div className="title">{pro.product.title}</div>
+                <div className="price">${pro.product.price}</div>
+                <span onClick={() => deleteFromCart(pro._id)}>Delete</span>
+              </div>
             </div>
           );
         })}

@@ -142,7 +142,7 @@ const Store = () => {
         {load ? <Loader /> : null}
         {products.map((pro) => {
           return (
-            <div key={pro._id} className=" col-6 col-md-4 col-lg-3 w-100">
+            <div key={pro._id} className=" col-sm-6 col-md-4 col-lg-3 w-100">
               <div class="card ">
                 <div class="card-img">
                   <Link to={`product/${pro._id}`}>

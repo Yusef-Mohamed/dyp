@@ -6,7 +6,7 @@ function Polises() {
     <div className="polises">
       <div className="layout"></div>
       <div className="contact container">
-        <h1 className="display-5 display-md-5 display-lg-3">Our Policies</h1>
+        <h1 className="display-5 display-md-5 display-lg-3">سياساتنا</h1>
         <div className="policies-container">
           <div></div>
           <a
@@ -16,7 +16,7 @@ function Polises() {
           >
             <div className="policie ">
               <img src={pdf} alt="" />
-              <h6>Policies & Procedures</h6>
+              <h6>السياسات والاحكام</h6>
             </div>
           </a>
           <div></div>
@@ -28,7 +28,7 @@ function Polises() {
           >
             <div className="policie ">
               <img src={pdf} alt="" />
-              <h6>Terms of Use</h6>
+              <h6>شروط الاستخدام</h6>
             </div>
           </a>
         </div>

@@ -5,11 +5,10 @@ function SubStory() {
   return (
     <div className="content-container  align-items-center">
       <div data-aos="fade-left" data-aos-duration="2000">
-        <h2 className="my-4 text-center heading">Success Stories</h2>
+        <h2 className="my-4 text-center heading">قصص النجاح</h2>
         <div className="border-bottom mx-auto "></div>
-        <p className=" text-center">
-          <b>Impacting lives</b> all around the world! Hear what some of our
-          members have to say.
+        <p className=" text-center" style={{ fontSize: "20px" }}>
+          هكذا تصنع عائلتنا قصص النجاح
         </p>
       </div>
       <div className="row my-5">

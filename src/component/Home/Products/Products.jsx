@@ -14,13 +14,8 @@ function Products() {
           data-aos="fade-left"
           data-aos-duration="1000"
         >
-          <h2 className="my-4 text-center text-sm-left heading">Products</h2>
-          <div className="border-bottom mx-auto mx-sm-3"></div>
-          <p>
-            <b>Access tools</b> that can help you reduce debt, repair and build
-            your credit, manage your budgets, save money, improve your financial
-            habits, and learn about the financial markets.
-          </p>
+          <h2 className="my-4 text-center heading">المنتجات</h2>
+          <div className="border-bottom mx-auto "></div>
         </div>
         <div
           className="col-md-7 p-0"

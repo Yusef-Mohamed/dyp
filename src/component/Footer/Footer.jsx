@@ -9,6 +9,7 @@ import {
   AiFillYoutube,
   AiOutlineTwitter,
 } from "react-icons/ai";
+
 function Footer() {
   return (
     <div
@@ -75,7 +76,7 @@ function Footer() {
             <div className="col-4">
               <h4>
                 <Link to={"/polises"} className="hoverGold">
-                  Polises
+                  السياسات
                 </Link>
               </h4>
               <ul style={{ listStyle: "none", margin: "10px", padding: "0" }}>
@@ -86,7 +87,7 @@ function Footer() {
                     rel="noopener noreferrer"
                     className="hoverGold"
                   >
-                    <h6>Policies & Procedures</h6>
+                    <h6>السياسات والاحكام</h6>
                   </a>
                 </li>
                 <li>
@@ -96,7 +97,7 @@ function Footer() {
                     rel="noopener noreferrer"
                     className="hoverGold"
                   >
-                    <h6>Terms of Use</h6>
+                    <h6>شروط الاستخدام</h6>
                   </a>
                 </li>
               </ul>
@@ -104,7 +105,7 @@ function Footer() {
             <div className="col-4">
               <h4>
                 <Link to={"/contact"} className="hoverGold">
-                  Contact Us
+                  تواصل معنا
                 </Link>
               </h4>
               <ul style={{ listStyle: "none", margin: "10px", padding: "0" }}>
@@ -115,7 +116,7 @@ function Footer() {
                     rel="noopener noreferrer"
                     className="hoverGold"
                   >
-                    <h6>Email</h6>
+                    <h6>البريد الالكتروني</h6>
                   </a>
                 </li>
                 <li>
@@ -133,29 +134,50 @@ function Footer() {
             <div className="col-4">
               <h4>
                 <Link to={"/aboutus"} className="hoverGold">
-                  About Us
+                  من نحن
                 </Link>
               </h4>
+              <ul style={{ listStyle: "none", margin: "10px", padding: "0" }}>
+                <li>
+                  <Link to={"/leadership"} className="hoverGold">
+                    القيادات
+                  </Link>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
+
         <div
+          className="flex-column flex-md-row d-flex"
           style={{
-            display: "flex",
             alignItems: "center",
             justifyContent: "center",
           }}
         >
-          <img
-            src={stipeLogo}
-            alt="PaymentMethods"
-            style={{ height: "50px" }}
-          />
-          <img
-            src={cryptopay}
-            alt="PaymentMethods"
-            style={{ height: "50px", margin: "0 10px " }}
-          />
+          <div>
+            <img
+              src={stipeLogo}
+              alt="PaymentMethods"
+              style={{ height: "50px" }}
+            />
+            <img
+              src={cryptopay}
+              alt="PaymentMethods"
+              style={{ height: "50px", margin: "0 10px " }}
+            />
+          </div>
+          <div>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3085.403628972377!2d11.040031099440826!3d49.437174478108155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479f56ee543dbfc7%3A0xf0aa75cabcc60947!2sKonstanzenstra%C3%9Fe%2064%2C%2090439%20N%C3%BCrnberg%2C%20Germany!5e0!3m2!1sen!2s!4v1692022989421!5m2!1sen!2s"
+              width="350"
+              height="300"
+              style={{ marginTop: "10px" }}
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
         </div>
       </div>
     </div>
