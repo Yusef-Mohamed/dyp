@@ -139,6 +139,13 @@ function Footer() {
               </h4>
               <ul style={{ listStyle: "none", margin: "10px", padding: "0" }}>
                 <li>
+                  <Link to={"/aboutus"} className="hoverGold">
+                    رؤيتنا
+                  </Link>
+                </li>
+              </ul>
+              <ul style={{ listStyle: "none", margin: "10px", padding: "0" }}>
+                <li>
                   <Link to={"/leadership"} className="hoverGold">
                     القيادات
                   </Link>
@@ -152,7 +159,7 @@ function Footer() {
           className="flex-column flex-md-row d-flex"
           style={{
             alignItems: "center",
-            justifyContent: "center",
+            justifyContent: "space-between",
           }}
         >
           <div>
@@ -170,8 +177,6 @@ function Footer() {
           <div>
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3085.403628972377!2d11.040031099440826!3d49.437174478108155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479f56ee543dbfc7%3A0xf0aa75cabcc60947!2sKonstanzenstra%C3%9Fe%2064%2C%2090439%20N%C3%BCrnberg%2C%20Germany!5e0!3m2!1sen!2s!4v1692022989421!5m2!1sen!2s"
-              width="350"
-              height="300"
               style={{ marginTop: "10px" }}
               allowfullscreen=""
               loading="lazy"
