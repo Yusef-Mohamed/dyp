@@ -77,7 +77,11 @@ function Memberbenifits() {
                 <h1>{packagee.title}</h1>
                 <h2>{packagee.price}$</h2>
 
-                <p>{packagee.description}</p>
+                <ul>
+                  {packagee.description.split(".").map((e) => (
+                    <li key={e}>{e}</li>
+                  ))}
+                </ul>
                 {packagee?.courses?.length != 0 ? (
                   <>
                     <h4>Courses</h4>
