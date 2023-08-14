@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 
 function GoogleTranslate() {
   window.addEventListener("click", (e) => {
-    if (e.target.value == "ar") {
+    if (e.target.value === "ar") {
       window.location.reload();
     }
   });
