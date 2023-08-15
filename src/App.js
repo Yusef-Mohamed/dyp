@@ -29,6 +29,13 @@ import ProductPage from "./component/productPage/ProductPage";
 export const AppContext = createContext();
 
 function App() {
+  // no inspect
+  // function disableContextMenu(event) {
+  //   event.preventDefault();
+  // }
+
+  // window.addEventListener("contextmenu", disableContextMenu);
+
   const [loader, setLoader] = useState(false);
   const [route, setRoute] = useState("https://api.wealthmakers-fx.com/api/v1");
   const [showMessage, setShowMessage] = useState(false);
@@ -42,6 +49,7 @@ function App() {
   const [currentStep, setCurrentStep] = useState("home");
   const [categoryId, setCategoryId] = useState("");
   const [done, setDone] = useState(false);
+  const [refresh, setRefresh] = useState(0);
   useEffect(() => {
     let timeout;
     if (showMessage) {
@@ -98,6 +106,8 @@ function App() {
         setNum,
         done,
         setDone,
+        refresh,
+        setRefresh,
       }}
     >
       <div className="App">

@@ -9,6 +9,8 @@ import two from "../../assets/panars/1-16.webp";
 import three from "../../assets/panars/1-17.webp";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
+import { AiFillStar } from "react-icons/ai";
+import { BsStarHalf } from "react-icons/bs";
 const FreeStore = () => {
   const { route, token, setNum } = useContext(AppContext);
   const [products, setProducts] = useState([]);
@@ -141,7 +143,7 @@ const FreeStore = () => {
         {load ? <Loader /> : null}
         {products.map((pro) => {
           return (
-            <div key={pro._id} className=" col-sm-6 col-md-4 col-lg-3 w-100">
+            <div key={pro._id} className=" col-6 col-md-4 col-lg-3 w-100">
               <div class="card ">
                 <div class="card-img">
                   <Link to={`product/${pro._id}`}>
@@ -154,14 +156,32 @@ const FreeStore = () => {
                     />{" "}
                   </Link>
                 </div>
-                <div class="card-info">
+                <div class="card-info mb-4">
                   <Link to={`product/${pro._id}`}>
                     <p class="text-title">{pro.title}</p>
                   </Link>
 
-                  <p class="text-body hoverGold">
-                    Product description and details
-                  </p>
+                  <div className=" text-center ">
+                    {pro?.ratingsQuantity === 0 && "No Rating "}
+                    {pro?.ratingsAverage && (
+                      <>
+                        {[...Array(Math.floor(pro?.ratingsAverage))].map(
+                          (_, index) => (
+                            <AiFillStar size={25} key={index} color="gold" />
+                          )
+                        )}
+                        {pro?.ratingsAverage % 1 !== 0 && (
+                          <BsStarHalf size={25} color="gold" />
+                        )}
+                        {[...Array(5 - Math.ceil(pro?.ratingsAverage))].map(
+                          (_, index) => (
+                            <AiFillStar size={25} key={index} />
+                          )
+                        )}
+                        ({pro?.ratingsQuantity})
+                      </>
+                    )}
+                  </div>
                 </div>
                 <div class="card-footer">
                   <span class="text-title hoverGold">

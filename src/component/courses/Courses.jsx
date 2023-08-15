@@ -24,7 +24,7 @@ const Courses = () => {
       .then((data) => {
         if (data.data) {
           setLessons(data.data);
-          console.log(data.data)
+          console.log(data.data);
           setLoadin(false);
         } else {
           setCurrentStep("packages");
@@ -49,7 +49,6 @@ const Courses = () => {
       .then((res) => res.json())
       .then((data) => {
         setCourses(data.data);
-       
       });
   }, []);
 
@@ -97,10 +96,7 @@ const Courses = () => {
             {lessons.map((lesson, index) => {
               if (lesson.type === "recorded") {
                 return (
-                  <div
-                    className="col-12 col-sm-6 col-md-4 col-lg-3 w-100"
-                    key={index}
-                  >
+                  <div className="col-6 col-md-4 col-lg-3 w-100" key={index}>
                     <div className="lesson w-100">
                       {/* <img src={lesson.image} /> */}
                       <ImageWithPopup
@@ -124,12 +120,9 @@ const Courses = () => {
         {chosen ? (
           <div className="row">
             {lessons.map((lesson, index) => {
-              if (lesson.type != "recorded") {
+              if (lesson.type !== "recorded") {
                 return (
-                  <div
-                    className="col-12 col-sm-6 col-md-4 col-lg-3 w-100"
-                    key={index}
-                  >
+                  <div className=" col-6 col-md-4 col-lg-3 w-100" key={index}>
                     <div className="lesson w-100">
                       <ImageWithPopup
                         src={lesson.image}

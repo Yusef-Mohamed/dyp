@@ -23,7 +23,6 @@ import Footer from "../Footer/Footer";
 import FreeStore from "../store/FreeStore";
 import { toast } from "react-toastify";
 
-
 const LoginHome = () => {
   const { currentStep, setCurrentStep } = useContext(AppContext);
   const { userName, setUserName, route, num, setNum } = useContext(AppContext);
@@ -168,11 +167,14 @@ const LoginHome = () => {
           </span>
           <div className="user pc-only">
             <span onClick={() => clickOnHome("profile")}>
-
-              {sessionStorage.getItem("profile") ? <img className="pr-image" src={sessionStorage.getItem("profile")} /> : <FaUserAlt />}
-
-              <FaUserAlt color="#ffcc00" />
-
+              {sessionStorage.getItem("profile") ? (
+                <img
+                  className="pr-image"
+                  src={sessionStorage.getItem("profile")}
+                />
+              ) : (
+                <FaUserAlt />
+              )}
             </span>
             <DropdownButton
               id="dropdown-basic-button"

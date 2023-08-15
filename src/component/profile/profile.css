@@ -1,5 +1,5 @@
 .profile {
-  padding: 15px;
+  margin: 15px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -17,6 +17,7 @@
   text-transform: capitalize;
 }
 .profile .my-prods .paid-products {
+  margin: auto;
   width: 100%;
   display: flex;
   justify-content: center;

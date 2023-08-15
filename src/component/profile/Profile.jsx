@@ -120,15 +120,19 @@ const Profile = () => {
             return (
               <div className="col-sm-6 col-md-4 mb-4 col-lg-3">
                 <div className="pr" key={index}>
-                  <img
-                    src={pro.imageCover ? pro.imageCover : noImage}
-                    onError={(e) => {
-                      console.log(e.target);
-                      e.target.src = noImage;
-                    }}
-                    alt=""
-                  />
-                  <div className="title">{pro.title}</div>
+                  <Link to={`product/${pro._id}`}>
+                    <img
+                      src={pro.imageCover ? pro.imageCover : noImage}
+                      onError={(e) => {
+                        console.log(e.target);
+                        e.target.src = noImage;
+                      }}
+                      alt=""
+                    />
+                  </Link>
+                  <div className="title">
+                    <Link to={`product/${pro._id}`}>{pro.title}</Link>
+                  </div>
 
                   <button
                     onClick={() => downloadBook(pro.pdf[0])}

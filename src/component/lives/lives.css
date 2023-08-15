@@ -14,7 +14,7 @@
 }
 .lives .react-calendar {
   border-radius: 10px;
-  width: 90% !important;
+  width: 100% !important;
   margin: 0 auto;
 }
 .lives .live {
@@ -22,7 +22,7 @@
   padding: 10px;
   border-radius: 10px;
   box-shadow: 1px 1px 12px;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
   text-transform: capitalize;
   display: flex;

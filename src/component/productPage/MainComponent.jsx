@@ -3,8 +3,12 @@ import { useParams } from "react-router-dom";
 import { AppContext } from "../../App";
 import "./product.css";
 import { toast } from "react-toastify";
+import noImage from "../../assets/no-image-svgrepo-com.svg";
+import Reviews from "./Reviews";
+import { AiFillStar } from "react-icons/ai";
+import { BsStarHalf } from "react-icons/bs";
 const MainComponent = () => {
-  const { route, token, setNum } = useContext(AppContext);
+  const { route, token, setNum, refresh } = useContext(AppContext);
   const [product, setProduct] = useState({});
   const [images, setImages] = useState([]);
   const [imageIndex, setImageIndex] = useState(0);
@@ -26,7 +30,7 @@ const MainComponent = () => {
           }
         });
     }
-  }, [token]);
+  }, [token, refresh]);
   const handelAction = function () {
     if (product.isFree) {
       fetch(`${route}/store/products/getFree/${id}`, {
@@ -64,10 +68,20 @@ const MainComponent = () => {
     <div class="details container py-4">
       <div class="row py-5">
         <div class="col-lg-5">
-          <img src={images[imageIndex]} className="w-100" alt="" />
+          <img
+            src={images[imageIndex]}
+            onError={(e) => {
+              e.target.src = noImage;
+            }}
+            className="w-100"
+            alt=""
+          />
           <div className="miniImages">
             {images?.map((image, index) => (
               <img
+                onError={(e) => {
+                  e.target.src = noImage;
+                }}
                 src={image}
                 onClick={() => setImageIndex(index)}
                 className={index === imageIndex ? "active" : ""}
@@ -86,19 +100,75 @@ const MainComponent = () => {
               ) : (
                 <>
                   <span style={{ color: "red", marginRight: "15px" }}>
-                    <del>${product.price}</del>
+                    <del>${product?.price}</del>
                   </span>
-                  <span>${product.priceAfterDiscount}</span>
+                  <span>${product?.priceAfterDiscount}</span>
                 </>
               )}
             </h4>
-            <p class="m-0">{product.description}</p>
+            <div className=" mb-4">
+              {product?.ratingsQuantity === 0 && "No Rating "}
+              {product?.ratingsAverage && (
+                <>
+                  {[...Array(Math.floor(product?.ratingsAverage))].map(
+                    (_, index) => (
+                      <AiFillStar size={30} key={index} color="gold" />
+                    )
+                  )}
+                  {product?.ratingsAverage % 1 !== 0 && (
+                    <BsStarHalf size={30} color="gold" />
+                  )}
+                  {[...Array(5 - Math.ceil(product?.ratingsAverage))].map(
+                    (_, index) => (
+                      <AiFillStar size={30} key={index} />
+                    )
+                  )}
+                  ({product?.ratingsQuantity})
+                </>
+              )}
+            </div>
+
+            <div>
+              <h4
+                style={{
+                  display: "flex",
+                  justifyContent: "start",
+                  alignItems: "center",
+                  gap: "10px",
+                }}
+              >
+                Category:
+                <span>
+                  <h5 className="m-0">{product?.category?.title}</h5>
+                </span>
+              </h4>
+            </div>
+            <div>
+              <h4
+                style={{
+                  display: "flex",
+                  justifyContent: "start",
+                  alignItems: "center",
+                  gap: "10px",
+                }}
+              >
+                Publisher:
+                <span>
+                  <h5 className="m-0">{product?.publisher}</h5>
+                </span>
+              </h4>
+            </div>
+            <div>
+              <h4>Description: </h4>
+              <p class="m-0">{product?.description}</p>
+            </div>
             <div class="btn btn-warning" onClick={handelAction}>
-              {product.isFree ? <>Get it for free</> : <>Add To Cart</>}
+              {product?.isFree ? <>Get it for free</> : <>Add To Cart</>}
             </div>
           </div>
         </div>
       </div>
+      <Reviews product={product} />
     </div>
   );
 };

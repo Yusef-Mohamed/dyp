@@ -114,7 +114,7 @@
 .store .card-info {
   padding-top: 10%;
 }
-.store svg {
+.store .card-button svg {
   width: 20px;
   height: 20px;
 }
@@ -147,8 +147,12 @@
   transition: 0.3s ease-in-out;
 }
 .store .card-img:hover {
-  transform: translateY(-25%);
+  transform: translateY(-10%);
   box-shadow: rgba(226, 196, 63, 0.25) 0px 13px 47px -5px, rgba(180, 71, 71, 0.3) 0px 8px 16px -8px;
+  -webkit-transform: translateY(-10%);
+  -moz-transform: translateY(-10%);
+  -ms-transform: translateY(-10%);
+  -o-transform: translateY(-10%);
 }
 .store .card-button:hover {
   border: 1px solid #ffcaa6;

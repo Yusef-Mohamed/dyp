@@ -13,8 +13,8 @@
   width: 100% !important;
 }
 .packages .card {
-  padding: 10px;
-  width: 70%;
+  padding: 15px;
+  width: 90%;
   background: lightgray;
   display: flex;
   align-items: center;
@@ -29,6 +29,9 @@
   transition: all 0.7s ease-in-out;
   margin: 0 auto;
   overflow: hidden;
+}
+.packages .card .desc {
+  margin: 10px;
 }
 .packages .card h3 {
   z-index: 3;
