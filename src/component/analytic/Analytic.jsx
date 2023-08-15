@@ -105,8 +105,7 @@ const Analytic = () => {
       .then((res) => res.json())
       .then((data) => {
         setPosts(data.data);
-        console.log("sss"+data.data)
-     
+        console.log("sss" + data.data);
       });
   }, []);
   return (
@@ -127,7 +126,7 @@ const Analytic = () => {
           <img className="d-block w-100" src={three} alt="Third slide" />
         </Carousel.Item>
       </Carousel>
-      {posts.map((post) => {
+      {posts?.map((post) => {
         return <PostCard post={post} key={post._id} />;
       })}
     </div>

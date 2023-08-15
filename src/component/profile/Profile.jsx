@@ -98,21 +98,27 @@ const Profile = () => {
       >
         Telegram bot
       </a>
-      <h3>My Packages</h3>
-      {sub ? (
-        <div className="packs row">
+
+      <div className="my-prods ">
+        <h3>My Packages</h3>
+
+        <div className="paid-products row ">
           {packs.map((pack) => {
             return (
-              <div className="col-sm-2 col-md-3 col-lg-4s">
-                <div className="pack " key={pack._id}>
-                  <img src={pack.image} alt="" />
+              <div className="col-sm-6 col-md-4 mb-4 col-lg-3">
+                <div className="pr " key={pack._id}>
+                  <img
+                    src={pack.image}
+                    onError={(e) => (e.target.src = noImage)}
+                    alt=""
+                  />
                   <div>{pack.title}</div>
                 </div>
               </div>
             );
           })}
         </div>
-      ) : null}
+      </div>
       <div className="my-prods ">
         <h3>My Products</h3>
         <div className="paid-products row ">
